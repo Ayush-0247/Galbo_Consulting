@@ -76,12 +76,37 @@
             Home
           </a>
 
-          <a
-            href="#"
-            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
-          >
-            About Galbo
-          </a>
+          <div class="relative group">
+            <button
+              class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase flex items-center gap-1 focus:outline-none"
+            >
+              About
+              <span
+                class="text-[9px] transition-transform duration-300 group-hover:rotate-180"
+              >
+                ▾
+              </span>
+            </button>
+
+            <!-- Dropdown -->
+            <div
+              class="absolute left-0 top-full mt-3 hidden group-hover:block bg-white shadow-lg rounded-md min-w-[180px] py-3 z-50"
+            >
+              <a
+                href="#"
+                class="block px-5 py-2 font-dmsans text-[12px] text-navy no-underline hover:bg-gray-100"
+              >
+                About Galbo
+              </a>
+
+              <a
+                href="#"
+                class="block px-5 py-2 font-dmsans text-[12px] text-navy no-underline hover:bg-gray-100"
+              >
+                Team
+              </a>
+            </div>
+          </div>
 
           <!-- SERVICES DROPDOWN -->
           <div class="relative group">
@@ -102,60 +127,60 @@
             >
               <div class="max-h-[500px] overflow-y-auto py-2">
                 <a
-                  href="Award&Recogniation.html"
+                  href=""
                   class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
                 >
                   Family Office Management
                 </a>
 
                 <a
-                  href="career.html"
+                  href=""
                   class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
                 >
-                  Real Estate Advisory
+                  Real Estate Acquisition
                 </a>
 
                 <a
-                  href="ClientPortal.html"
+                  href=""
                   class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
                 >
-                  Wealth Planning & Structuring
+                  Real Estate Entrepreneur Representation
                 </a>
 
                 <a
-                  href="Events.html"
+                  href=""
                   class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
                 >
-                  Banking & Capital Solution
+                  Banking & Asset Management Advisory
                 </a>
 
                 <a
-                  href="faq.html"
+                  href=""
                   class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
                 >
-                  Trusts & Estate Planning
+                  Corporate Structuring
                 </a>
 
-                <a
-                  href="GlobalOffices.html"
+                <!-- <a
+                  href=""
                   class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
                 >
                   Corporate Advisory & Structuring
                 </a>
 
                 <a
-                  href="InvesterRelation.html"
+                  href=""
                   class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
                 >
                   Cross Border Structuring
                 </a>
 
                 <a
-                  href="LegalAndCompliance.html"
+                  href=""
                   class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
                 >
                   Investment Advisory
-                </a>
+                </a> -->
 
                 <!-- <a
                   href="LuxuriousCorporateTestimonials.html"
@@ -213,7 +238,7 @@
             href="#"
             class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
           >
-            Team
+            General
           </a>
 
           <a
@@ -236,38 +261,52 @@
     </header>
 
     <!-- ═══════════ HERO ═══════════ -->
-    <section class="hero-bg min-h-[480px] flex items-center py-16">
-      <div
-        class="max-w-[1200px] mx-auto px-16 flex items-center justify-between w-full gap-12"
+<section
+  class="hero-bg min-h-[480px] flex items-center py-16 bg-cover bg-center bg-no-repeat relative"
+  style="
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)
+      ),
+      url('./images/cyprus-coastline.jpg.jpeg');
+  "
+>
+  <div
+    class="max-w-[1200px] mx-auto px-16 flex items-center justify-between w-full gap-12 relative z-10"
+  >
+    <div class="max-w-[500px]">
+      <h1
+        class="font-cormorant text-[54px] font-semibold text-white leading-[1.08]"
       >
-        <div class="max-w-[500px]">
-          <h1
-            class="font-cormorant text-[54px] font-semibold text-white leading-[1.08]"
-          >
-            Where Wealth<br />Meets Counsel.
-          </h1>
-          <p
-            class="font-dmsans text-[13px] text-white/80 leading-[1.85] mt-4 max-w-[360px]"
-          >
-            Boutique advisory for real estate, corporate<br />and high-net-worth
-            individuals in Cyprus and beyond.<br />Discretion. Precision.
-            Results.
-          </p>
-          <div class="flex items-center gap-5 mt-8">
-            <a
-              href="#"
-              class="bg-gold text-white font-dmsans text-[10px] font-bold tracking-[0.12em] uppercase px-6 py-[14px] no-underline"
-              >Request a Private Consultation</a
-            >
-            <a
-              href="#"
-              class="text-white font-dmsans text-[10px] font-semibold tracking-[0.12em] uppercase no-underline flex items-center gap-2"
-              >Learn More &nbsp;&#x2192;</a
-            >
-          </div>
-        </div>
+        Where Wealth<br />Meets Counsel.
+      </h1>
+
+      <p
+        class="font-dmsans text-[13px] text-white/80 leading-[1.85] mt-4 max-w-[360px]"
+      >
+        Boutique advisory for real estate, corporate<br />and high-net-worth
+        individuals in Cyprus and beyond.<br />Discretion. Precision.
+        Results.
+      </p>
+
+      <div class="flex items-center gap-5 mt-8">
+        <a
+          href="#"
+          class="bg-gold text-white font-dmsans text-[10px] font-bold tracking-[0.12em] uppercase px-6 py-[14px] no-underline"
+        >
+          Request a Private Consultation
+        </a>
+
+        <a
+          href="#"
+          class="text-white font-dmsans text-[10px] font-semibold tracking-[0.12em] uppercase no-underline flex items-center gap-2"
+        >
+          Learn More &nbsp;&#x2192;
+        </a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <!-- ═══════════ TRUST STRIP ═══════════ -->
     <section class="bg-white border-b border-[#ede8df] py-9">
@@ -729,7 +768,7 @@
 
             <!-- Name -->
             <div class="font-dmsans text-[13px] font-semibold text-[#1d2746]">
-              Clara T. Sfratty
+             Clara T. Snaty
             </div>
 
             <!-- Role -->
@@ -753,7 +792,7 @@
             </div>
 
             <div class="font-dmsans text-[13px] font-semibold text-[#1d2746]">
-              Emaldo Gjona
+             Ernalda Gjona
             </div>
 
             <div
@@ -1119,42 +1158,42 @@
               >FAQ</a
             >
             <a
-              href="career.html"
+              href="Award&Recogniation.html"
               class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
-              >Career</a
+              >Awards</a
             >
             <a
-              href="Events.html"
+              href="LegalAndCompliance.html"
               class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
-              >Events</a
+              >Legal And Compliance</a
             >
             <a
-              href="Partnership.html"
+              href="LuxuriousCorporateTestimonials.html"
               class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
-              >Partnership
+              >Testimonials
             </a>
             <a
-              href="ClientPortal.html"
+              href="Press&Media.html"
               class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
-              >Client Portal
+              >Press And Media
             </a>
-            <a
+            <!-- <a
               href="GlobalOffices.html"
               class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
-              >Global Offices
+              >
             </a>
             <a
               href="InvesterRelation.html"
               class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
             >
-              Investor Relation
+            
             </a>
             <a
               href="LuxuriousCorporateTestimonials.html"
               class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
             >
               Corporate Testimonials</a
-            >
+            > -->
           </div>
 
           <!-- Col 3 — Services -->
@@ -1162,46 +1201,35 @@
             <h4
               class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5 inline-block border-b border-gold pb-1"
             >
-              Quick Links
+              Services
             </h4>
             <a
-              href="Press&Media.html"
+              href=""
               class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
             >
-              Press & Media
+              Family Office Management
             </a>
             <a
-              href="PrivateMembership.html"
+              href=""
               class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
             >
-              Private Membership
+              Real Estate Acquisition
             </a>
             <a
-              href="Award&Recogniation.html"
+              href=""
               class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
             >
-              Awards & Recognition
+              Real Estate Entrepreneur Representation
             </a>
             <a
-              href="LegalAndCompliance.html"
+              href=""
               class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
-              >Legal and Compliance
+              >Banking & Asset Management Advisory
             </a>
             <a
-              href="SustainableConsultingWithEleganceAndImpact.html"
+              href=""
               class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
-              >Sustainable Consulting
-            </a>
-            <a
-              href="Webinars&InsightsHubDesign.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
-            >
-              Webinars and Insight Hub
-            </a>
-            <a
-              href="PhilanthropyandFoundation.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
-              >Philanthropy and Foundation
+              >Corporate Structuring
             </a>
           </div>
 
@@ -1229,7 +1257,7 @@
                 <circle cx="12" cy="10" r="3" />
               </svg>
               <span class="font-dmsans text-[13px] text-white leading-[1.65]"
-                >Pissouri, Cyprus<br />(Between Limassol and Paphos)</span
+                >Pissouri, Cyprus</span
               >
             </div>
 
@@ -1276,7 +1304,7 @@
               <a
                 href="mailto:info@galbo.consulting"
                 class="font-dmsans text-[13px] text-white no-underline"
-                >info@galbo.consulting</a
+                >info@znatylaw.com</a
               >
             </div>
 
@@ -1296,7 +1324,7 @@
                 <polyline points="12 6 12 12 16 14" />
               </svg>
               <span class="font-dmsans text-[13px] text-white leading-[1.65]"
-                >Mon – Fri: 9:00 – 17:00<br />(Cyprus time)</span
+                > Monday–Thursday, 10:00–18:00, Friday, 10:00-14:00 (Cyprus time)</span
               >
             </div>
           </div>
@@ -1336,7 +1364,7 @@
           class="border-t border-white/50 py-5 flex items-center justify-between"
         >
           <p class="font-dmsans text-[11.5px] text-white">
-            © 2025 Galbo Consulting. All rights reserved.
+            © 2026 Galbo Consulting. All rights reserved.
           </p>
           <div class="flex items-center gap-7">
             <a
