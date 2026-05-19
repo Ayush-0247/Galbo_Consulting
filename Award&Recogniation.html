@@ -7,24 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              gold: "#b8964f",
-              navy: "#0d1b2a",
-              "navy-cta": "#0f1e2e",
-              "navy-footer": "#08111c",
-            },
-           fontFamily: {
-  cormorant: ['"Cormorant Garamond"', "serif"],
-  dmsans: ['"DM Sans"', "sans-serif"],
-},
-          },
-        },
-      };
-    </script> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;700&display=swap"
       rel="stylesheet"
@@ -52,8 +34,10 @@
       .footer-link:hover {
         color: #b8964f !important;
       }
+      #mobile-menu {
+        transition: transform 0.3s ease-in-out;
+      }
     </style>
-    <style></style>
     <script>
       tailwind.config = {
         theme: {
@@ -84,6 +68,20 @@
           },
         },
       };
+
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        const body = document.body;
+        if (menu.classList.contains("translate-x-full")) {
+          menu.classList.remove("translate-x-full");
+          menu.classList.add("translate-x-0");
+          body.style.overflow = "hidden";
+        } else {
+          menu.classList.add("translate-x-full");
+          menu.classList.remove("translate-x-0");
+          body.style.overflow = "";
+        }
+      }
     </script>
 
     <style>
@@ -140,10 +138,10 @@
     <!-- ═══════════ NAVBAR ═══════════ -->
     <header class="bg-white border-b border-[#f0ece4] sticky top-0 z-50">
       <div
-        class="max-w-[1200px] mx-auto px-16 h-[68px] flex items-center justify-between"
+        class="max-w-[1200px] mx-auto px-6 lg:px-16 h-[68px] flex items-center justify-between"
       >
         <!-- Logo -->
-        <div class="text-center">
+        <div class="text-center flex-shrink-0">
           <img
             src="./images/galbo-consulting-logo.png"
             alt="Galbo Consulting Logo"
@@ -151,8 +149,8 @@
           />
         </div>
 
-        <!-- NAVIGATION -->
-        <nav class="flex items-center gap-8">
+        <!-- NAVIGATION (DESKTOP) -->
+        <nav class="hidden lg:flex items-center gap-8">
           <a
             href="index.html"
             class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline nav-active pb-[2px]"
@@ -240,55 +238,6 @@
                 >
                   Investment Advisory
                 </a>
-
-                <!-- <a
-                  href="LuxuriousCorporateTestimonials.html"
-                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
-                >
-                  Corporate Testimonials
-                </a>
-
-                <a
-                  href="Partnership.html"
-                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
-                >
-                  Partnership
-                </a>
-
-                <a
-                  href="PhilanthropyAndFoundation.html"
-                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
-                >
-                  Philanthropy & Foundation
-                </a>
-
-                <a
-                  href="Press&Media.html"
-                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
-                >
-                  Press & Media
-                </a>
-
-                <a
-                  href="PrivateMembership.html"
-                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
-                >
-                  Private Membership
-                </a>
-
-                <a
-                  href="SustainableConsultingWithEleganceAndImpact.html"
-                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
-                >
-                  Sustainable Consulting
-                </a>
-
-                <a
-                  href="Webinars&InsightsHubDesign.html"
-                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
-                >
-                  Webinars & Insights Hub
-                </a> -->
               </div>
             </div>
           </div>
@@ -308,20 +257,114 @@
           </a>
         </nav>
 
-        <!-- CTA BUTTON -->
+        <!-- CTA BUTTON (DESKTOP) -->
         <a
           href="#"
-          class="border border-gold text-gold font-dmsans text-[9px] font-semibold tracking-[0.12em] uppercase px-4 py-[10px] no-underline text-center leading-tight hover:bg-gold hover:text-white transition-colors duration-200"
+          class="hidden lg:flex border border-gold text-gold font-dmsans text-[9px] font-semibold tracking-[0.12em] uppercase px-4 py-[10px] no-underline text-center leading-tight hover:bg-gold hover:text-white transition-colors duration-200"
         >
           Request a<br />
           Private Consultation
         </a>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button
+          onclick="toggleMenu()"
+          class="lg:hidden text-navy p-2 focus:outline-none"
+          aria-label="Toggle Menu"
+        >
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <!-- MOBILE MENU OVERLAY -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden fixed inset-0 z-[60] bg-white translate-x-full overflow-hidden"
+      >
+        <div class="flex flex-col h-full">
+          <div
+            class="flex items-center justify-between px-6 h-[68px] border-b border-[#f0ece4]"
+          >
+            <img
+              src="./images/galbo-consulting-logo.png"
+              alt="Logo"
+              class="h-8 w-auto"
+            />
+            <button onclick="toggleMenu()" class="text-navy p-2">
+              <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+          </div>
+          <div class="flex-grow overflow-y-auto px-6 py-10 flex flex-col gap-8">
+            <a
+              href="index.html"
+              class="text-xl font-medium text-navy uppercase tracking-widest border-b border-galbo-border pb-4"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="text-xl font-medium text-navy uppercase tracking-widest border-b border-galbo-border pb-4"
+              >About Galbo</a
+            >
+            <div class="flex flex-col gap-6">
+              <span
+                class="text-xs font-bold text-galbo-gold uppercase tracking-[0.3em]"
+                >Our Services</span
+              >
+              <div
+                class="grid grid-cols-1 gap-4 pl-4 border-l-2 border-galbo-gold/30"
+              >
+                <a
+                  href="Award&Recogniation.html"
+                  class="text-sm font-medium text-navy/80"
+                  >Family Office Management</a
+                >
+                <a href="career.html" class="text-sm font-medium text-navy/80"
+                  >Real Estate Advisory</a
+                >
+                <a
+                  href="ClientPortal.html"
+                  class="text-sm font-medium text-navy/80"
+                  >Wealth Planning</a
+                >
+                <a href="Events.html" class="text-sm font-medium text-navy/80"
+                  >Banking Solutions</a
+                >
+                <a href="faq.html" class="text-sm font-medium text-navy/80"
+                  >Trusts & Estate</a
+                >
+                <a
+                  href="GlobalOffices.html"
+                  class="text-sm font-medium text-navy/80"
+                  >Corporate Advisory</a
+                >
+              </div>
+            </div>
+            <a
+              href="#"
+              class="text-xl font-medium text-navy uppercase tracking-widest border-b border-galbo-border pb-4"
+              >Team</a
+            >
+            <a
+              href="#"
+              class="text-xl font-medium text-navy uppercase tracking-widest border-b border-galbo-border pb-4"
+              >Contact</a
+            >
+          </div>
+          <div class="p-6 bg-galbo-bg border-t border-galbo-border">
+            <a
+              href="#"
+              class="block w-full bg-[#b8861b] text-white text-center font-bold uppercase py-5 text-[11px] tracking-widest shadow-lg rounded-sm"
+            >
+              Request Private Consultation
+            </a>
+          </div>
+        </div>
       </div>
     </header>
 
     <!-- Hero Section -->
     <section
-      class="hero-section text-white py-24 lg:py-32 px-6 lg:px-24 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      class="hero-section text-white py-20 lg:py-32 px-6 lg:px-24 relative overflow-hidden bg-cover bg-center bg-no-repeat"
       style="
         background-image: url(&quot;./images/awards-page/awards-page-hero-section.jpg&quot;);
       "
@@ -329,7 +372,7 @@
       <div class="absolute inset-0 bg-black/20"></div>
 
       <div
-        class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10"
+        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10"
       >
         <div>
           <nav
@@ -346,7 +389,9 @@
             Awards & Recognition
           </h4>
 
-          <h1 class="text-5xl lg:text-7xl font-cormorant mb-6 leading-[1.1]">
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-cormorant mb-6 lg:leading-[1.1]"
+          >
             Recognized for Excellence.<br />
             <span class="text-galbo-gold italic font-normal">
               Driven by Purpose.
@@ -365,23 +410,25 @@
     </section>
 
     <!-- Global Recognition Grid -->
-    <section class="bg-galbo-bg py-24 px-6 lg:px-24">
+    <section class="bg-galbo-bg py-20 lg:py-24 px-6 lg:px-24">
       <div class="max-w-7xl mx-auto text-center">
         <h5
           class="text-galbo-gold uppercase tracking-[0.4em] text-[11px] font-bold mb-4"
         >
           Global Recognition
         </h5>
-        <h2 class="text-4xl font-cormorant text-galbo-navy mb-16">
+        <h2
+          class="text-3xl lg:text-4xl font-cormorant text-galbo-navy mb-12 lg:mb-16"
+        >
           Honors That Reflect Our Standards
         </h2>
 
         <div
-          class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 border border-galbo-border bg-white/50"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border border-galbo-border bg-white"
         >
           <!-- Award 1 -->
           <div
-            class="award-card p-10 flex flex-col items-center border-b md:border-b-0 md:border-r border-galbo-border"
+            class="award-card p-10 flex flex-col items-center border-b sm:border-r border-galbo-border lg:border-r"
           >
             <div
               class="w-[160px] h-[80px] flex items-center justify-center mb-6"
@@ -412,7 +459,7 @@
 
           <!-- Award 2 -->
           <div
-            class="award-card p-10 flex flex-col items-center border-b md:border-b-0 md:border-r border-galbo-border"
+            class="award-card p-10 flex flex-col items-center border-b sm:border-r-0 md:border-r border-galbo-border"
           >
             <div
               class="w-[160px] h-[80px] flex items-center justify-center mb-6"
@@ -443,7 +490,7 @@
 
           <!-- Award 3 -->
           <div
-            class="award-card p-10 flex flex-col items-center border-b md:border-b-0 md:border-r border-galbo-border"
+            class="award-card p-10 flex flex-col items-center border-b sm:border-r md:border-r-0 lg:border-r border-galbo-border"
           >
             <div
               class="w-[160px] h-[80px] flex items-center justify-center mb-6"
@@ -474,7 +521,7 @@
 
           <!-- Award 4 -->
           <div
-            class="award-card p-10 flex flex-col items-center border-b md:border-b-0 md:border-r border-galbo-border"
+            class="award-card p-10 flex flex-col items-center border-b sm:border-r-0 lg:border-r border-galbo-border"
           >
             <div
               class="w-[160px] h-[80px] flex items-center justify-center mb-6"
@@ -502,7 +549,9 @@
           </div>
 
           <!-- Award 5 -->
-          <div class="award-card p-10 flex flex-col items-center">
+          <div
+            class="award-card p-10 flex flex-col items-center border-b sm:border-b-0 border-galbo-border"
+          >
             <div
               class="w-[160px] h-[80px] flex items-center justify-center mb-6"
             >
@@ -612,16 +661,18 @@
     </section>
 
     <!-- Industry Recognition -->
-    <section class="bg-galbo-bg py-24 px-6 lg:px-24">
+    <section class="bg-galbo-bg py-20 lg:py-24 px-6 lg:px-24">
       <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6"
+        >
           <div>
             <h5
               class="text-galbo-gold uppercase tracking-[0.3em] text-[10px] font-bold mb-4"
             >
               Featured in Leading Publications
             </h5>
-            <h2 class="text-4xl font-cormorant text-galbo-navy">
+            <h2 class="text-3xl lg:text-4xl font-cormorant text-galbo-navy">
               Industry Recognition
             </h2>
           </div>
@@ -634,7 +685,9 @@
           </a>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
+        >
           <!-- News Card 1 -->
           <div
             class="bg-white border border-galbo-border flex flex-col group overflow-hidden shadow-sm"
@@ -651,7 +704,6 @@
             <div
               class="aspect-video overflow-hidden bg-gray-100 flex items-center justify-center"
             >
-              <!-- Generic Unsplash image for "business meeting" -->
               <img
                 src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?ixid=M3w1ODc1MjR8MHwxfGFsbHwzMHx8fHwyfHwxNzExNjQ1NjA5fA&ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
                 alt="Business meeting"
@@ -684,7 +736,6 @@
             <div
               class="aspect-video overflow-hidden bg-gray-100 flex items-center justify-center"
             >
-              <!-- Generic Unsplash image for "business meeting" -->
               <img
                 src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?ixid=M3w1ODc1MjR8MHwxfGFsbHwzMHx8fHwyfHwxNzExNjQ1NjA5fA&ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
                 alt="Business meeting"
@@ -717,7 +768,6 @@
             <div
               class="aspect-video overflow-hidden flex items-center justify-center"
             >
-              <!-- Generic Unsplash image for "business meeting" -->
               <img
                 src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?ixid=M3w1ODc1MjR8MHwxfGFsbHwzMHx8fHwyfHwxNzExNjQ1NjA5fA&ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
                 alt="Business meeting"
@@ -750,7 +800,6 @@
             <div
               class="aspect-video overflow-hidden bg-gray-100 flex items-center justify-center"
             >
-              <!-- Generic Unsplash image for "business meeting" -->
               <img
                 src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?ixid=M3w1ODc1MjR8MHwxfGFsbHwzMHx8fHwyfHwxNzExNjQ1NjA5fA&ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
                 alt="Business meeting"
@@ -783,7 +832,6 @@
             <div
               class="aspect-video overflow-hidden flex items-center justify-center"
             >
-              <!-- Generic Unsplash image for "business meeting" -->
               <img
                 src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?ixid=M3w1ODc1MjR8MHwxfGFsbHwzMHx8fHwyfHwxNzExNjQ1NjA5fA&ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
                 alt="Business meeting"
@@ -806,7 +854,7 @@
 
     <!-- Certifications -->
     <section
-      class="bg-galbo-bg py-24 px-6 lg:px-24 border-t border-galbo-border"
+      class="bg-galbo-bg py-20 lg:py-24 px-6 lg:px-24 border-t border-galbo-border"
     >
       <div class="max-w-7xl mx-auto text-center">
         <h5
@@ -814,11 +862,15 @@
         >
           Our Commitment to Quality
         </h5>
-        <h2 class="text-4xl font-cormorant text-galbo-navy mb-16">
+        <h2
+          class="text-3xl lg:text-4xl font-cormorant text-galbo-navy mb-12 lg:mb-16"
+        >
           Certifications & Standards
         </h2>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12">
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-12"
+        >
           <div class="flex flex-col items-center">
             <div
               class="w-16 h-16 rounded-full border border-galbo-border flex items-center justify-center mb-6 bg-white shadow-sm"
@@ -889,7 +941,7 @@
               CySEC Authorized
             </h6>
             <p class="text-[10px] text-galbo-text-muted leading-tight">
-              Regulated by Cyprus Securities Commission
+              Regulated by Cyprus Commission
             </p>
           </div>
         </div>
@@ -897,11 +949,13 @@
     </section>
 
     <!-- ═══════════ CTA BAND ═══════════ -->
-    <section class="bg-navy-cta py-14 border border-white/50">
+    <section class="bg-navy-cta py-14 lg:py-16 border-y border-white/10">
       <div
-        class="max-w-[1200px] mx-auto px-16 flex items-center justify-between gap-12"
+        class="max-w-[1200px] mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12"
       >
-        <div class="flex items-center gap-7">
+        <div
+          class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-7"
+        >
           <svg
             width="60"
             height="70"
@@ -927,11 +981,14 @@
           </svg>
           <div>
             <h2
-              class="font-cormorant text-[30px] font-semibold text-white leading-[1.2]"
+              class="font-cormorant text-[26px] sm:text-[30px] font-semibold text-white leading-tight lg:leading-[1.2]"
             >
-              Your Goals. Our Counsel. Exceptional Results.
+              Your Goals. Our Counsel.<br class="hidden sm:block" />
+              Exceptional Results.
             </h2>
-            <p class="font-dmsans text-[13px] text-white/60 mt-2 leading-[1.6]">
+            <p
+              class="font-dmsans text-[13px] text-white/60 mt-3 leading-[1.6] max-w-xl"
+            >
               Let's discuss how we can help you navigate opportunities with
               confidence and achieve lasting success.
             </p>
@@ -939,33 +996,34 @@
         </div>
         <a
           href="#"
-          class="inline-flex items-center justify-center h-[38px] px-8 bg-[#b8861b] border border-[#8f6a14] rounded-md text-white font-dmsans text-[10px] font-bold tracking-[0.08em] uppercase no-underline whitespace-nowrap hover:bg-[#a87918] transition-all duration-200"
+          class="inline-flex items-center justify-center w-full sm:w-auto h-[48px] px-8 bg-[#b8861b] border border-[#8f6a14] rounded-sm text-white font-dmsans text-[10px] font-bold tracking-[0.08em] uppercase no-underline whitespace-nowrap hover:bg-[#a87918] transition-all duration-200"
         >
-          Request a Private Consultation
+          Request Private Consultation
         </a>
       </div>
     </section>
 
     <!-- ═══════════ FOOTER ═══════════ -->
     <footer class="bg-navy-cta pt-16">
-      <div class="max-w-[1200px] mx-auto px-16">
-        <!-- Main grid: 5 columns -->
-
+      <div class="max-w-[1200px] mx-auto px-6 lg:px-16">
+        <!-- Main grid -->
         <div
-          class="grid grid-cols-[200px_130px_240px_190px_190px] gap-12 pb-14"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[200px_130px_240px_190px_190px] gap-y-12 lg:gap-12 pb-14"
         >
           <!-- Col 1 — Brand -->
-          <div class="pr-10 border-r border-white/50 flex flex-col">
+          <div
+            class="lg:pr-10 lg:border-r border-white/50 flex flex-col pb-10 lg:pb-0 border-b lg:border-b-0"
+          >
             <!-- Logo -->
             <div class="mb-6">
-              <div>
-                <img src="/images/galbo-consulting-logo-dark.png" alt="" />
-              </div>
+              <img
+                src="/images/galbo-consulting-logo-dark.png"
+                alt="Galbo Consulting"
+              />
             </div>
 
             <p
-              class="font-dmsans text-[10px] text-white leading-[2] max-w-[260px]"
-              style="font-weight: 400"
+              class="font-dmsans text-[11px] text-white/70 leading-[1.8] max-w-[260px]"
             >
               Boutique advisory firm in Cyprus for real estate, corporate and
               high-net-worth clients.
@@ -976,394 +1034,232 @@
               <!-- LinkedIn -->
               <a
                 href="#"
-                style="
-                  width: 36px;
-                  height: 36px;
-                  min-width: 36px;
-                  border-radius: 50%;
-                  border: 1px solid rgba(255, 255, 255, 0.55);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  text-decoration: none;
-                  transition: border-color 0.3s;
-                "
-                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
-                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+                class="w-9 h-9 border border-white/30 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all"
               >
-                <svg
-                  width="15"
-                  height="15"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="rgba(255,255,255,0.92)"
-                  stroke-width="1.7"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"
-                  />
-                  <rect x="2" y="9" width="4" height="12" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
+                <i class="fa-brands fa-linkedin-in text-sm"></i>
               </a>
               <!-- Instagram -->
               <a
                 href="#"
-                style="
-                  width: 36px;
-                  height: 36px;
-                  min-width: 36px;
-                  border-radius: 50%;
-                  border: 1px solid rgba(255, 255, 255, 0.55);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  text-decoration: none;
-                  transition: border-color 0.3s;
-                "
-                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
-                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+                class="w-9 h-9 border border-white/30 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all"
               >
-                <svg
-                  width="15"
-                  height="15"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="rgba(255,255,255,0.92)"
-                  stroke-width="1.9"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" />
-                  <circle cx="12" cy="12" r="5" />
-                  <circle
-                    cx="17.5"
-                    cy="6.5"
-                    r="1.2"
-                    fill="rgba(255,255,255,0.92)"
-                    stroke="none"
-                  />
-                </svg>
+                <i class="fa-brands fa-instagram text-sm"></i>
               </a>
               <!-- YouTube -->
               <a
                 href="#"
-                style="
-                  width: 36px;
-                  height: 36px;
-                  min-width: 36px;
-                  border-radius: 50%;
-                  border: 1px solid rgba(255, 255, 255, 0.55);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  text-decoration: none;
-                  transition: border-color 0.3s;
-                "
-                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
-                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+                class="w-9 h-9 border border-white/30 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all"
               >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 1.96A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 1.95C5.12 20 12 20 12 20s6.88 0 8.6-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"
-                    stroke="rgba(255,255,255,0.92)"
-                    stroke-width="1.7"
-                  />
-                  <polygon
-                    points="9.75 15.02 15.5 12 9.75 8.98"
-                    fill="rgba(255,255,255,0.92)"
-                  />
-                </svg>
+                <i class="fa-brands fa-youtube text-sm"></i>
               </a>
               <!-- Facebook -->
               <a
                 href="#"
-                style="
-                  width: 36px;
-                  height: 36px;
-                  min-width: 36px;
-                  border-radius: 50%;
-                  border: 1px solid rgba(255, 255, 255, 0.55);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  text-decoration: none;
-                  transition: border-color 0.3s;
-                "
-                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
-                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+                class="w-9 h-9 border border-white/30 rounded-full flex items-center justify-center text-white/70 hover:border-white hover:text-white transition-all"
               >
-                <svg
-                  width="15"
-                  height="15"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="rgba(255,255,255,0.92)"
-                  stroke-width="1.9"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
-                  />
-                </svg>
+                <i class="fa-brands fa-facebook-f text-sm"></i>
               </a>
             </div>
           </div>
 
           <!-- Col 2 — Quick Links -->
-          <div class="pr-10 border-r border-white/50 flex flex-col">
+          <div
+            class="lg:pr-10 lg:border-r border-white/50 flex flex-col pb-10 lg:pb-0 border-b lg:border-b-0"
+          >
             <h4
-              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5 inline-block border-b border-gold pb-1"
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-6 inline-block border-b border-gold pb-1 w-fit"
             >
               Quick Links
             </h4>
-            <a
-              href="faq.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
-              >FAQ</a
-            >
-            <a
-              href="career.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
-              >Career</a
-            >
-            <a
-              href="Events.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
-              >Events</a
-            >
-            <a
-              href="Partnership.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
-              >Partnership
-            </a>
-            <a
-              href="ClientPortal.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
-              >Client Portal
-            </a>
-            <a
-              href="GlobalOffices.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
-              >Global Offices
-            </a>
-            <a
-              href="InvesterRelation.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
-            >
-              Investor Relation
-            </a>
-            <a
-              href="LuxuriousCorporateTestimonials.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
-            >
-              Corporate Testimonials</a
-            >
+            <div class="flex flex-col gap-3">
+              <a
+                href="faq.html"
+                class="footer-link text-[13px] text-white/80 no-underline transition-colors"
+                >FAQ</a
+              >
+              <a
+                href="career.html"
+                class="footer-link text-[13px] text-white/80 no-underline transition-colors"
+                >Career</a
+              >
+              <a
+                href="Events.html"
+                class="footer-link text-[13px] text-white/80 no-underline transition-colors"
+                >Events</a
+              >
+              <a
+                href="Partnership.html"
+                class="footer-link text-[13px] text-white/80 no-underline transition-colors"
+                >Partnership</a
+              >
+              <a
+                href="ClientPortal.html"
+                class="footer-link text-[13px] text-white/80 no-underline transition-colors"
+                >Client Portal</a
+              >
+              <a
+                href="GlobalOffices.html"
+                class="footer-link text-[13px] text-white/80 no-underline transition-colors"
+                >Global Offices</a
+              >
+              <a
+                href="InvesterRelation.html"
+                class="footer-link text-[13px] text-white/80 no-underline transition-colors"
+                >Investor Relation</a
+              >
+            </div>
           </div>
 
-          <!-- Col 3 — Services -->
-          <div class="pr-10 border-r border-white/50 flex flex-col">
+          <!-- Col 3 — Resources -->
+          <div
+            class="lg:pr-10 lg:border-r border-white/50 flex flex-col pb-10 lg:pb-0 border-b lg:border-b-0"
+          >
             <h4
-              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5 inline-block border-b border-gold pb-1"
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-6 inline-block border-b border-gold pb-1 w-fit"
             >
-              Quick Links
+              Resources
             </h4>
-            <a
-              href="Press&Media.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
-            >
-              Press & Media
-            </a>
-            <a
-              href="PrivateMembership.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
-            >
-              Private Membership
-            </a>
-            <a
-              href="Award&Recogniation.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
-            >
-              Awards & Recognition
-            </a>
-            <a
-              href="LegalAndCompliance.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
-              >Legal and Compliance
-            </a>
-            <a
-              href="SustainableConsultingWithEleganceAndImpact.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
-              >Sustainable Consulting
-            </a>
-            <a
-              href="Webinars&InsightsHubDesign.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
-            >
-              Webinars and Insight Hub
-            </a>
-            <a
-              href="PhilanthropyandFoundation.html"
-              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
-              >Philanthropy and Foundation
-            </a>
+            <div class="flex flex-col gap-3">
+              <a
+                href="Press&Media.html"
+                class="footer-link text-[13px] text-white/80 no-underline transition-colors"
+                >Press & Media</a
+              >
+              <a
+                href="PrivateMembership.html"
+                class="footer-link text-[13px] text-white/80 no-underline transition-colors"
+                >Private Membership</a
+              >
+              <a
+                href="Award&Recogniation.html"
+                class="footer-link text-[13px] text-white/80 no-underline transition-colors"
+                >Awards & Recognition</a
+              >
+              <a
+                href="LegalAndCompliance.html"
+                class="footer-link text-[13px] text-white/80 no-underline transition-colors"
+                >Legal & Compliance</a
+              >
+              <a
+                href="SustainableConsulting.html"
+                class="footer-link text-[13px] text-white/80 no-underline transition-colors"
+                >Sustainable Consulting</a
+              >
+              <a
+                href="Webinars.html"
+                class="footer-link text-[13px] text-white/80 no-underline transition-colors"
+                >Webinars & Insights</a
+              >
+              <a
+                href="Philanthropy.html"
+                class="footer-link text-[13px] text-white/80 no-underline transition-colors"
+                >Philanthropy</a
+              >
+            </div>
           </div>
 
           <!-- Col 4 — Contact -->
-          <div class="pr-10 border-r border-white/50 flex flex-col">
+          <div
+            class="lg:pr-10 lg:border-r border-white/50 flex flex-col pb-10 lg:pb-0 border-b lg:border-b-0"
+          >
             <h4
-              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5 inline-block border-b border-gold pb-1"
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-6 inline-block border-b border-gold pb-1 w-fit"
             >
               Contact
             </h4>
 
-            <div class="flex gap-[10px] mb-4 items-start">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(255,255,255,0.5)"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="flex-shrink-0 mt-[3px]"
-              >
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              <span class="font-dmsans text-[13px] text-white leading-[1.65]"
-                >Pissouri, Cyprus<br />(Between Limassol and Paphos)</span
-              >
-            </div>
-
-            <div class="flex gap-[10px] mb-4 items-center">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(255,255,255,0.5)"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="flex-shrink-0"
-              >
-                <path
-                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.09 1.22 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"
-                />
-              </svg>
-              <a
-                href="tel:+35725000194"
-                class="font-dmsans text-[13px] text-white no-underline"
-                >+357 25 000 194</a
-              >
-            </div>
-
-            <div class="flex gap-[10px] mb-4 items-center">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(255,255,255,0.5)"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="flex-shrink-0"
-              >
-                <path
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-              <a
-                href="mailto:info@galbo.consulting"
-                class="font-dmsans text-[13px] text-white no-underline"
-                >info@galbo.consulting</a
-              >
-            </div>
-
-            <div class="flex gap-[10px] items-start">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(255,255,255,0.5)"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="flex-shrink-0 mt-[3px]"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
-              <span class="font-dmsans text-[13px] text-white leading-[1.65]"
-                >Mon – Fri: 9:00 – 17:00<br />(Cyprus time)</span
-              >
+            <div class="flex flex-col gap-5">
+              <div class="flex gap-3 items-start">
+                <i
+                  class="fa-solid fa-location-dot text-white/40 mt-1 text-sm"
+                ></i>
+                <span class="text-[13px] text-white/80 leading-relaxed"
+                  >Pissouri, Cyprus</span
+                >
+              </div>
+              <div class="flex gap-3 items-center">
+                <i class="fa-solid fa-phone text-white/40 text-sm"></i>
+                <a href="" class="text-[13px] text-white/80 no-underline"
+                  >+357 25 000 194</a
+                >
+              </div>
+              <div class="flex gap-3 items-center">
+                <i class="fa-solid fa-envelope text-white/40 text-sm"></i>
+                <a
+                  href="mailto:info@galbo.consulting"
+                  class="text-[13px] text-white/80 no-underline"
+                >
+                  info@znatylaw.com</a
+                >
+              </div>
+              <div class="flex gap-3 items-start">
+                <i class="fa-solid fa-clock text-white/40 mt-1 text-sm"></i>
+                <span class="text-[13px] text-white/80 leading-relaxed">
+                  Monday–Thursday, 10:00–18:00, Friday, 10:00-14:00 (Cyprus
+                  time)</span
+                >
+              </div>
             </div>
           </div>
 
           <!-- Col 5 — Stay Informed -->
-          <div class="flex flex-col max-w-[230px]">
+          <div class="flex flex-col">
             <h4
-              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5 inline-block border-b border-gold pb-1"
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-6 inline-block border-b border-gold pb-1 w-fit"
             >
               Stay Informed
             </h4>
 
-            <p class="font-dmsans text-[13px] text-white/75 mb-5 leading-snug">
-              Subscribe to our insights
+            <p class="text-[13px] text-white/60 mb-6 font-medium">
+              Join our exclusive insights channel
             </p>
 
-            <!-- Input -->
-            <input
-              type="email"
-              placeholder="Your email address"
-              class="w-full h-[46px] bg-white border border-[#d9d9d9] rounded-md text-[#1d1d1d] placeholder:text-[#8d8d8d] font-dmsans text-[13px] px-5 outline-none mb-5 focus:border-[#b8861b] transition-colors duration-200"
-            />
-
-            <!-- Button -->
-            <button
-              class="w-[128px] h-[46px] bg-[#b8861b] border border-[#9a7418] rounded-md text-white font-dmsans text-[11px] font-semibold tracking-[0.03em] uppercase cursor-pointer hover:bg-[#a87918] transition-all duration-200"
-            >
-              Subscribe
-            </button>
+            <div class="space-y-4">
+              <input
+                type="email"
+                placeholder="Email address"
+                class="w-full h-12 bg-white/5 border border-white/20 rounded-sm text-white placeholder:text-white/30 font-dmsans text-sm px-4 outline-none focus:border-gold transition-colors"
+              />
+              <button
+                class="w-full h-12 bg-gold text-white font-bold uppercase text-[11px] tracking-widest rounded-sm hover:bg-[#a87918] transition-all shadow-lg"
+              >
+                Subscribe
+              </button>
+            </div>
           </div>
         </div>
 
-        <!-- end grid -->
-
         <!-- Bottom bar -->
         <div
-          class="border-t border-white/50 py-5 flex items-center justify-between"
+          class="border-t border-white/10 py-8 flex flex-col md:flex-row items-center justify-between gap-6"
         >
-          <p class="font-dmsans text-[11.5px] text-white">
-            © 2025 Galbo Consulting. All rights reserved.
+          <p class="font-dmsans text-[11px] text-white/40 order-2 md:order-1">
+            © 2026 Galbo Consulting. All rights reserved.
           </p>
-          <div class="flex items-center gap-7">
+          <div
+            class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 order-1 md:order-2"
+          >
             <a
               href="#"
-              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              class="text-[11px] text-white/40 no-underline hover:text-white transition-colors"
               >Privacy Policy</a
             >
             <a
               href="#"
-              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
-              >Terms & Conditions</a
+              class="text-[11px] text-white/40 no-underline hover:text-white transition-colors"
+              >Terms</a
             >
             <a
               href="#"
-              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
-              >General Service Agreement</a
+              class="text-[11px] text-white/40 no-underline hover:text-white transition-colors"
+              >Agreement</a
             >
           </div>
         </div>
       </div>
     </footer>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
