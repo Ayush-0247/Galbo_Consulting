@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Galbo Consulting - Webinars & Insights</title>
+    <title>Galbo Consulting | Webinars & Insights</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- ✅ FIX 1: Lucide icons CDN was missing -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <script>
@@ -15,108 +18,198 @@
         theme: {
           extend: {
             colors: {
-              "galbo-gold": "#C5A059",
-              "galbo-gold-light": "#D4B37D",
-              "galbo-dark": "#05070A",
-              "galbo-navy": "#0A0E14",
-              "galbo-slate": "#1F2937",
+              navy: "#0d1b2a",
+              "navy-cta": "#0d1b2a",
+              gold: "#b8861b",
+              "gold-light": "#b8964f",
+              "beige-bg": "#f9f7f2",
+              /* ✅ FIX 2: All galbo-* color aliases were missing — defined here */
+              "galbo-dark": "#0d1b2a",
+              "galbo-navy": "#0d1b2a",
+              "galbo-gold": "#b8861b",
             },
             fontFamily: {
-              sans: ["Inter", "sans-serif"],
-              serif: ["Playfair Display", "serif"],
+              heading: ["Cormorant Garamond", "serif"],
+              body: ["DM Sans", "sans-serif"],
+              cormorant: ["Cormorant Garamond", "serif"],
+              dmsans: ["DM Sans", "sans-serif"],
+              serif: ["Cormorant Garamond", "serif"],
             },
           },
         },
       };
     </script>
     <style>
+      .font-heading {
+        font-family: "Cormorant Garamond", serif;
+      }
+      .font-body {
+        font-family: "DM Sans", sans-serif;
+      }
+      .nav-active {
+        border-bottom: 2px solid #b8861b;
+      }
+      .footer-link:hover {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      /* ✅ FIX 3: gradient-overlay class was undefined */
       .gradient-overlay {
         background: linear-gradient(
-          to right,
-          rgba(5, 7, 10, 0.95) 30%,
-          rgba(5, 7, 10, 0.4) 100%
+          90deg,
+          rgba(13, 27, 42, 0.92) 0%,
+          rgba(13, 27, 42, 0.65) 50%,
+          rgba(13, 27, 42, 0.2) 100%
         );
-      }
-      .text-shadow {
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
       }
     </style>
   </head>
   <body class="bg-white font-sans text-gray-900 overflow-x-hidden">
-    <!-- Top Navbar -->
-    <nav
-      class="bg-galbo-dark text-white py-6 px-4 md:px-12 flex items-center justify-between border-b border-white/10 sticky top-0 z-50"
-    >
-      <div class="flex items-center space-x-2">
-        <div
-          class="w-8 h-8 flex items-center justify-center border border-galbo-gold rounded-full text-galbo-gold font-serif font-bold italic"
-        >
-          G
-        </div>
-        <div class="flex flex-col leading-none">
-          <span class="text-xl font-serif tracking-widest font-bold"
-            >GALBO</span
-          >
-          <span
-            class="text-[10px] tracking-[0.3em] font-light text-galbo-gold uppercase"
-            >Consulting</span
-          >
-        </div>
-      </div>
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <header class="bg-white border-b border-[#f0ece4] sticky top-0 z-50">
       <div
-        class="hidden lg:flex items-center space-x-8 text-[11px] font-semibold tracking-widest uppercase"
+        class="max-w-[1200px] mx-auto px-16 h-[68px] flex items-center justify-between"
       >
-        <a href="#" class="hover:text-galbo-gold transition-colors">Home</a>
+        <div class="text-center">
+          <img
+            src="./images/galbo-consulting-logo.png"
+            alt="Galbo Consulting Logo"
+            class="h-10 w-auto"
+          />
+        </div>
+        <nav class="flex items-center gap-8">
+          <a
+            href="index.html"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline nav-active pb-[2px]"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
+            >About</a
+          >
+          <div class="relative group">
+            <button
+              class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase flex items-center gap-1 focus:outline-none"
+            >
+              Services
+              <span
+                class="text-[9px] transition-transform duration-300 group-hover:rotate-180"
+                >▾</span
+              >
+            </button>
+            <div
+              class="absolute left-0 top-full mt-4 w-[320px] bg-white border border-[#e9e4da] shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+            >
+              <div class="max-h-[500px] overflow-y-auto py-2">
+                <a
+                  href="Award&Recogniation.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                  >Award & Recognition</a
+                >
+                <a
+                  href="career.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                  >Career</a
+                >
+                <a
+                  href="ClientPortal.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                  >Client Portal</a
+                >
+                <a
+                  href="Events.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                  >Events</a
+                >
+                <a
+                  href="faq.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                  >FAQ</a
+                >
+                <a
+                  href="GlobalOffices.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                  >Global Offices</a
+                >
+                <a
+                  href="InvesterRelation.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                  >Investor Relation</a
+                >
+                <a
+                  href="LegalAndCompliance.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                  >Legal & Compliance</a
+                >
+                <a
+                  href="LuxuriousCorporateTestimonials.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                  >Corporate Testimonials</a
+                >
+                <a
+                  href="Partnership.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                  >Partnership</a
+                >
+                <a
+                  href="PhilanthropyAndFoundation.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                  >Philanthropy & Foundation</a
+                >
+                <a
+                  href="Press&Media.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                  >Press & Media</a
+                >
+                <a
+                  href="PrivateMembership.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                  >Private Membership</a
+                >
+                <a
+                  href="SustainableConsultingWithEleganceAndImpact.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                  >Sustainable Consulting</a
+                >
+                <a
+                  href="Webinars&InsightsHubDesign.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                  >Webinars & Insights Hub</a
+                >
+              </div>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
+            >The Journal</a
+          >
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
+            >Contact</a
+          >
+        </nav>
         <a
           href="#"
-          class="hover:text-galbo-gold transition-colors border-b border-galbo-gold pb-1 pt-1"
-          >About</a
+          class="border border-gold text-gold font-dmsans text-[9px] font-semibold tracking-[0.12em] uppercase px-4 py-[10px] no-underline text-center leading-tight hover:bg-gold hover:text-white transition-colors duration-200"
         >
-        <div
-          class="group relative cursor-pointer flex items-center hover:text-galbo-gold transition-colors"
-        >
-          SERVICES <i data-lucide="chevron-down" class="w-3 h-3 ml-1"></i>
-        </div>
-        <a href="#" class="hover:text-galbo-gold transition-colors"
-          >Family Office</a
-        >
-        <a href="#" class="hover:text-galbo-gold transition-colors">Insights</a>
-        <div
-          class="group relative cursor-pointer flex items-center hover:text-galbo-gold transition-colors"
-        >
-          RESOURCES <i data-lucide="chevron-down" class="w-3 h-3 ml-1"></i>
-        </div>
-        <a href="#" class="hover:text-galbo-gold transition-colors">Careers</a>
-        <a href="#" class="hover:text-galbo-gold transition-colors">Contact</a>
+          Request a<br />Private Consultation
+        </a>
       </div>
-      <div class="flex items-center space-x-6">
-        <button
-          class="hidden md:block border border-galbo-gold px-5 py-2.5 text-[10px] font-bold tracking-widest uppercase hover:bg-galbo-gold hover:text-galbo-dark transition-all duration-300"
-        >
-          Request a Consultation
-        </button>
-        <div class="flex items-center space-x-1 cursor-pointer group">
-          <i
-            data-lucide="globe"
-            class="w-4 h-4 text-galbo-gold group-hover:scale-110 transition-transform"
-          ></i>
-          <span class="text-[10px] font-bold uppercase">EN</span>
-          <i data-lucide="chevron-down" class="w-3 h-3 text-galbo-gold"></i>
-        </div>
-      </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
+    <!-- ═══════════ HERO SECTION ═══════════ -->
     <section
       class="relative bg-galbo-dark text-white min-h-[600px] flex items-center overflow-hidden"
     >
-      <!-- Background Image Placeholder (Boardroom) -->
       <div class="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2069"
+          src="./images/webinar/webinar-hero.jpg"
           alt="Boardroom"
           class="w-full h-full object-cover opacity-40"
         />
+        <!-- ✅ FIX 3 applied: gradient-overlay now has CSS defined -->
         <div class="absolute inset-0 gradient-overlay"></div>
       </div>
 
@@ -129,7 +222,6 @@
             <i data-lucide="chevron-right" class="w-3 h-3 mx-2 opacity-60"></i>
             <span>Webinars & Insights</span>
           </nav>
-
           <p
             class="text-[11px] font-bold tracking-[0.2em] text-galbo-gold uppercase mb-4"
           >
@@ -139,13 +231,11 @@
             Knowledge That<br />
             <span class="text-galbo-gold italic">Empowers Decisions.</span>
           </h1>
-
           <p class="text-gray-400 text-sm leading-relaxed mb-10 max-w-lg">
             Explore expert-led webinars, panel discussions, and thought
             leadership sessions on wealth, strategy, and global trends that
             shape the future.
           </p>
-
           <button class="flex items-center space-x-3 group w-fit">
             <span
               class="border border-galbo-gold px-6 py-3 text-[11px] font-bold tracking-[0.2em] uppercase group-hover:bg-galbo-gold group-hover:text-galbo-dark transition-all duration-300"
@@ -161,38 +251,13 @@
         </div>
       </div>
 
-      <!-- Corporate Room Monitor Overlay -->
-      <div
-        class="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-64 hidden lg:flex items-center justify-center pointer-events-none opacity-80"
-      >
-        <div
-          class="w-full max-w-sm aspect-video bg-black/80 ring-8 ring-white/5 shadow-2xl flex flex-col items-center justify-center p-8"
-        >
-          <div
-            class="w-12 h-12 flex items-center justify-center border border-galbo-gold rounded-full text-galbo-gold font-serif font-bold italic text-2xl mb-4"
-          >
-            G
-          </div>
-          <div class="text-center">
-            <span class="text-xl font-serif tracking-widest font-bold"
-              >GALBO</span
-            >
-            <p
-              class="text-[8px] tracking-[0.3em] font-light text-galbo-gold uppercase"
-            >
-              Consulting
-            </p>
-          </div>
-        </div>
-      </div>
+     
     </section>
 
-    <!-- Featured Webinar Card -->
+    <!-- ═══════════ FEATURED WEBINAR CARD ═══════════ -->
     <section class="bg-galbo-dark pb-20">
-      <div class="container mx-auto px-4 md:px-12 -mt-48 relative z-20">
-        <div
-          class="bg-galbo-navy/80 backdrop-blur-md border border-white/10 overflow-hidden flex flex-col lg:flex-row"
-        >
+      <div class="container mx-auto px-4 md:px-12 mt-0 relative z-20">
+        <div class="flex flex-col lg:flex-row">
           <div class="flex-1 p-10 md:p-14">
             <p
               class="text-[10px] font-bold tracking-[0.2em] text-galbo-gold uppercase mb-6"
@@ -204,7 +269,6 @@
             >
               Global Wealth 2025:<br />Trends, Opportunities & Risks
             </h2>
-
             <div
               class="flex flex-wrap items-center gap-6 mb-8 text-[11px] text-gray-300 font-medium tracking-wide"
             >
@@ -224,13 +288,11 @@
                 Dr. Marco Galasso
               </div>
             </div>
-
             <p class="text-gray-400 text-sm leading-relaxed mb-10 max-w-lg">
               An in-depth analysis of the key macroeconomic trends, investor
               sentiment, and strategic opportunities shaping global wealth in
               2025.
             </p>
-
             <div class="flex flex-col sm:flex-row items-center gap-4">
               <button
                 class="w-full sm:w-auto bg-galbo-gold text-galbo-dark px-8 py-3.5 text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-white transition-all flex items-center justify-center"
@@ -249,35 +311,19 @@
               </button>
             </div>
           </div>
-
-          <div class="flex-1 relative group cursor-pointer overflow-hidden">
+          <div class="flex-1 relative bg-galbo-dark group cursor-pointer overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1470"
+              src="./images/webinar/image.png"
               alt="Global Wealth Network"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              class="w-full h-full mt-5 object-cover border border-galbo-gold rounded-2xl transition-transform duration-700 group-hover:scale-105"
             />
-            <div
-              class="absolute inset-0 bg-black/40 flex items-center justify-center transition-colors group-hover:bg-black/20"
-            >
-              <div
-                class="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center ring-2 ring-white/30 group-hover:scale-110 group-hover:ring-white/50 transition-all"
-              >
-                <div
-                  class="w-16 h-16 bg-white rounded-full flex items-center justify-center"
-                >
-                  <i
-                    data-lucide="play"
-                    class="w-6 h-6 text-galbo-dark fill-current ml-1"
-                  ></i>
-                </div>
-              </div>
-            </div>
+        
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Upcoming Webinars Section -->
+    <!-- ═══════════ UPCOMING WEBINARS ═══════════ -->
     <section class="py-24 bg-white">
       <div class="container mx-auto px-4 md:px-12">
         <div
@@ -297,7 +343,7 @@
           </a>
         </div>
 
-        <!-- Webinar List Item 1 -->
+        <!-- Item 1 -->
         <div
           class="flex flex-col lg:flex-row items-center gap-8 py-10 border-b border-gray-100 group"
         >
@@ -307,7 +353,7 @@
             <img
               src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1470"
               alt="Webinar"
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              class="w-full rounded-md  h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div
               class="absolute top-4 left-4 bg-white px-2 py-1 text-center shadow-md"
@@ -335,24 +381,24 @@
             class="flex-none lg:w-48 text-[11px] text-gray-600 font-medium space-y-2"
           >
             <div class="flex items-center">
-              <i data-lucide="clock" class="w-4 h-4 text-galbo-gold mr-3"></i>
-              11:00 AM (EET)
+              <i data-lucide="clock" class="w-4 h-4 text-galbo-gold mr-3"></i
+              >11:00 AM (EET)
             </div>
             <div class="flex items-center">
-              <i data-lucide="user" class="w-4 h-4 text-galbo-gold mr-3"></i>
-              Anna Kyriakou
+              <i data-lucide="user" class="w-4 h-4 text-galbo-gold mr-3"></i
+              >Anna Kyriakou
             </div>
           </div>
           <div class="flex-none">
             <button
-              class="border border-galbo-gold/40 text-[10px] font-bold tracking-widest uppercase px-6 py-3 hover:bg-galbo-gold hover:text-white transition-all flex items-center"
-            >
+  class="border border-galbo-gold/40 text-[10px] font-bold tracking-widest uppercase px-6 py-3 hover:bg-galbo-gold hover:text-white transition-all flex items-center text-galbo-gold"
+>
               Register <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
             </button>
           </div>
         </div>
 
-        <!-- Webinar List Item 2 -->
+        <!-- Item 2 -->
         <div
           class="flex flex-col lg:flex-row items-center gap-8 py-10 border-b border-gray-100 group"
         >
@@ -362,7 +408,7 @@
             <img
               src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=1470"
               alt="Webinar"
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              class="w-full h-full rounded-md object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div
               class="absolute top-4 left-4 bg-white px-2 py-1 text-center shadow-md"
@@ -390,24 +436,24 @@
             class="flex-none lg:w-48 text-[11px] text-gray-600 font-medium space-y-2"
           >
             <div class="flex items-center">
-              <i data-lucide="clock" class="w-4 h-4 text-galbo-gold mr-3"></i>
-              03:00 PM (EET)
+              <i data-lucide="clock" class="w-4 h-4 text-galbo-gold mr-3"></i
+              >03:00 PM (EET)
             </div>
             <div class="flex items-center">
-              <i data-lucide="user" class="w-4 h-4 text-galbo-gold mr-3"></i>
-              Michael Sophocleous
+              <i data-lucide="user" class="w-4 h-4 text-galbo-gold mr-3"></i
+              >Michael Sophocleous
             </div>
           </div>
           <div class="flex-none">
             <button
-              class="border border-galbo-gold/40 text-[10px] font-bold tracking-widest uppercase px-6 py-3 hover:bg-galbo-gold hover:text-white transition-all flex items-center"
-            >
+  class="border border-galbo-gold/40 text-[10px] font-bold tracking-widest uppercase px-6 py-3 hover:bg-galbo-gold hover:text-white transition-all flex items-center text-galbo-gold"
+>
               Register <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
             </button>
           </div>
         </div>
 
-        <!-- Webinar List Item 3 -->
+        <!-- Item 3 -->
         <div
           class="flex flex-col lg:flex-row items-center gap-8 py-10 border-b border-gray-100 group"
         >
@@ -415,9 +461,9 @@
             class="relative flex-none w-full lg:w-48 aspect-video lg:aspect-square overflow-hidden shadow-sm"
           >
             <img
-              src="https://images.unsplash.com/photo-1473186578172-c141e6798ee4?auto=format&fit=crop&q=80&w=1470"
+              src="https://th.bing.com/th/id/OIP.Stgf5jOh0AOrFHz73kar4QHaHa?w=156&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
               alt="Webinar"
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              class="w-full rounded-md  h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div
               class="absolute top-4 left-4 bg-white px-2 py-1 text-center shadow-md"
@@ -445,18 +491,18 @@
             class="flex-none lg:w-48 text-[11px] text-gray-600 font-medium space-y-2"
           >
             <div class="flex items-center">
-              <i data-lucide="clock" class="w-4 h-4 text-galbo-gold mr-3"></i>
-              11:00 AM (EET)
+              <i data-lucide="clock" class="w-4 h-4 text-galbo-gold mr-3"></i
+              >11:00 AM (EET)
             </div>
             <div class="flex items-center">
-              <i data-lucide="user" class="w-4 h-4 text-galbo-gold mr-3"></i>
-              Elena Papadopoulos
+              <i data-lucide="user" class="w-4 h-4 text-galbo-gold mr-3"></i
+              >Elena Papadopoulos
             </div>
           </div>
           <div class="flex-none">
             <button
-              class="border border-galbo-gold/40 text-[10px] font-bold tracking-widest uppercase px-6 py-3 hover:bg-galbo-gold hover:text-white transition-all flex items-center"
-            >
+  class="border border-galbo-gold/40 text-[10px] font-bold tracking-widest uppercase px-6 py-3 hover:bg-galbo-gold hover:text-white transition-all flex items-center text-galbo-gold"
+>
               Register <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
             </button>
           </div>
@@ -464,7 +510,7 @@
       </div>
     </section>
 
-    <!-- On-Demand Library -->
+    <!-- ═══════════ ON-DEMAND LIBRARY ═══════════ -->
     <section class="py-24 bg-gray-50">
       <div class="container mx-auto px-4 md:px-12">
         <div class="flex items-center justify-between mb-16">
@@ -483,7 +529,7 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          <!-- Video Card 1 -->
+          <!-- Card 1 -->
           <div class="group cursor-pointer">
             <div
               class="relative aspect-video mb-4 overflow-hidden rounded shadow-sm"
@@ -491,18 +537,18 @@
               <img
                 src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1470"
                 alt="Outlook"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                class="w-full h-full object-cover "
               />
-              <div
-                class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                <div class="bg-white/90 p-2 rounded-full">
-                  <i
-                    data-lucide="play"
-                    class="w-4 h-4 text-galbo-dark fill-current"
-                  ></i>
-                </div>
-              </div>
+            <div
+  class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+>
+  <div class="bg-white/90 p-2 rounded-full">
+    <i
+      data-lucide="play"
+      class="w-4 h-4 text-galbo-dark fill-current"
+    ></i>
+  </div>
+</div>
               <div
                 class="absolute bottom-2 right-2 bg-black/70 text-[8px] text-white px-1.5 py-0.5 rounded font-bold"
               >
@@ -520,8 +566,7 @@
               April 15, 2024
             </p>
           </div>
-
-          <!-- Video Card 2 -->
+          <!-- Card 2 -->
           <div class="group cursor-pointer">
             <div
               class="relative aspect-video mb-4 overflow-hidden rounded shadow-sm"
@@ -531,16 +576,16 @@
                 alt="PE"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div
-                class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                <div class="bg-white/90 p-2 rounded-full">
-                  <i
-                    data-lucide="play"
-                    class="w-4 h-4 text-galbo-dark fill-current"
-                  ></i>
-                </div>
-              </div>
+             <div
+  class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+>
+  <div class="bg-white/90 p-2 rounded-full">
+    <i
+      data-lucide="play"
+      class="w-4 h-4 text-galbo-dark fill-current"
+    ></i>
+  </div>
+</div>
               <div
                 class="absolute bottom-2 right-2 bg-black/70 text-[8px] text-white px-1.5 py-0.5 rounded font-bold"
               >
@@ -558,8 +603,7 @@
               March 22, 2024
             </p>
           </div>
-
-          <!-- Video Card 3 -->
+          <!-- Card 3 -->
           <div class="group cursor-pointer">
             <div
               class="relative aspect-video mb-4 overflow-hidden rounded shadow-sm"
@@ -569,16 +613,16 @@
                 alt="Asset Protection"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div
-                class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                <div class="bg-white/90 p-2 rounded-full">
-                  <i
-                    data-lucide="play"
-                    class="w-4 h-4 text-galbo-dark fill-current"
-                  ></i>
-                </div>
-              </div>
+             <div
+  class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+>
+  <div class="bg-white/90 p-2 rounded-full">
+    <i
+      data-lucide="play"
+      class="w-4 h-4 text-galbo-dark fill-current"
+    ></i>
+  </div>
+</div>
               <div
                 class="absolute bottom-2 right-2 bg-black/70 text-[8px] text-white px-1.5 py-0.5 rounded font-bold"
               >
@@ -596,8 +640,7 @@
               February 10, 2024
             </p>
           </div>
-
-          <!-- Video Card 4 -->
+          <!-- Card 4 -->
           <div class="group cursor-pointer">
             <div
               class="relative aspect-video mb-4 overflow-hidden rounded shadow-sm"
@@ -607,9 +650,9 @@
                 alt="Regulatory"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div
-                class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-              >
+             <div
+  class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+>
                 <div class="bg-white/90 p-2 rounded-full">
                   <i
                     data-lucide="play"
@@ -634,8 +677,7 @@
               January 18, 2024
             </p>
           </div>
-
-          <!-- Video Card 5 -->
+          <!-- Card 5 -->
           <div class="group cursor-pointer">
             <div
               class="relative aspect-video mb-4 overflow-hidden rounded shadow-sm"
@@ -646,8 +688,8 @@
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div
-                class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-              >
+  class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+>
                 <div class="bg-white/90 p-2 rounded-full">
                   <i
                     data-lucide="play"
@@ -674,7 +716,7 @@
           </div>
         </div>
 
-        <!-- Topic Explore -->
+        <!-- Explore by Topic -->
         <div class="mt-20 pt-16 border-t border-gray-200">
           <p
             class="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-400 mb-8"
@@ -772,371 +814,446 @@
       </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="py-20 bg-galbo-navy relative overflow-hidden">
-      <!-- Abstract Decoration Path -->
-      <div class="absolute inset-0 opacity-10 pointer-events-none">
-        <svg
-          class="w-full h-full"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0 100 Q 25 25 100 0"
+    <!-- ═══════════ CTA BAND (PROVIDED) ═══════════ -->
+    <section class="bg-navy-cta py-14 border border-white/50">
+      <div
+        class="max-w-[1200px] mx-auto px-16 flex items-center justify-between gap-12"
+      >
+        <div class="flex items-center gap-7">
+          <svg
+            width="60"
+            height="70"
+            viewBox="0 0 60 70"
             fill="none"
-            stroke="#C5A059"
-            stroke-width="0.1"
-          />
-          <path
-            d="M0 80 Q 30 20 100 10"
-            fill="none"
-            stroke="#C5A059"
-            stroke-width="0.1"
-          />
-        </svg>
-      </div>
-
-      <div class="container mx-auto px-4 md:px-12 relative z-10">
-        <div
-          class="flex flex-col lg:flex-row items-center justify-between gap-12"
-        >
-          <div class="flex items-start gap-6 max-w-xl">
-            <div
-              class="flex-none w-16 h-16 border border-galbo-gold rounded-full flex items-center justify-center"
+            class="flex-shrink-0"
+          >
+            <path
+              d="M30 3L4 14v23c0 17 11 28 26 32 15-4 26-15 26-32V14L30 3z"
+              fill="#b8964f"
+            />
+            <text
+              x="30"
+              y="46"
+              text-anchor="middle"
+              font-family="Cormorant Garamond,serif"
+              font-size="28"
+              font-weight="600"
+              fill="#0d1b2a"
             >
-              <i data-lucide="mail" class="w-6 h-6 text-galbo-gold"></i>
-            </div>
-            <div>
-              <h4 class="text-2xl font-serif text-white mb-2">
-                Stay Ahead with Expert Insights
-              </h4>
-              <p class="text-gray-400 text-sm">
-                Subscribe to receive invitations to our webinars and the latest
-                insights on wealth, strategy, and global trends.
-              </p>
-            </div>
-          </div>
-
-          <div class="w-full lg:w-fit">
-            <form
-              class="flex flex-col sm:flex-row gap-4 w-full lg:min-w-[500px]"
+              G
+            </text>
+          </svg>
+          <div>
+            <h2
+              class="font-cormorant text-[30px] font-semibold text-white leading-[1.2]"
             >
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                class="flex-grow bg-white px-6 py-4 text-sm focus:outline-none focus:ring-1 focus:ring-galbo-gold transition-all"
-              />
-              <button
-                type="submit"
-                class="flex-none bg-galbo-gold text-galbo-dark px-10 py-4 text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-white transition-all"
-              >
-                Subscribe
-              </button>
-            </form>
-            <p
-              class="mt-4 text-[10px] text-gray-500 italic text-center lg:text-left"
-            >
-              We respect your privacy. Unsubscribe at any time.
+              Your Goals. Our Counsel. Exceptional Results.
+            </h2>
+            <p class="font-dmsans text-[13px] text-white/60 mt-2 leading-[1.6]">
+              Let's discuss how we can help you navigate opportunities with
+              confidence and achieve lasting success.
             </p>
           </div>
         </div>
+        <a
+          href="#"
+          class="inline-flex items-center justify-center h-[38px] px-8 bg-[#b8861b] border border-[#8f6a14] rounded-md text-white font-dmsans text-[10px] font-bold tracking-[0.08em] uppercase no-underline whitespace-nowrap hover:bg-[#a87918] transition-all duration-200"
+        >
+          Request a Private Consultation
+        </a>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-galbo-dark text-white pt-24 pb-12">
-      <div class="container mx-auto px-4 md:px-12">
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="bg-navy-cta pt-16">
+      <div class="max-w-[1200px] mx-auto px-16">
+        <!-- Main grid: 5 columns -->
+
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-20"
+          class="grid grid-cols-[200px_130px_240px_190px_190px] gap-12 pb-14"
         >
-          <!-- Brand & Pitch -->
-          <div class="lg:col-span-2">
-            <div class="flex items-center space-x-2 mb-8">
-              <div
-                class="w-8 h-8 flex items-center justify-center border border-galbo-gold rounded-full text-galbo-gold font-serif font-bold italic"
-              >
-                G
-              </div>
-              <div class="flex flex-col leading-none">
-                <span class="text-xl font-serif tracking-widest font-bold"
-                  >GALBO</span
-                >
-                <span
-                  class="text-[10px] tracking-[0.3em] font-light text-galbo-gold uppercase"
-                  >Consulting</span
-                >
+          <!-- Col 1 — Brand -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <!-- Logo -->
+            <div class="mb-6">
+              <div>
+                <img src="/images/galbo-consulting-logo-dark.png" alt="" />
               </div>
             </div>
-            <p class="text-gray-400 text-xs leading-relaxed max-w-xs mb-8">
-              Boutique advisory for real estate, corporate and family wealth.
-              Discretion. Precision. Results.
+
+            <p
+              class="font-dmsans text-[10px] text-white leading-[2] max-w-[260px]"
+              style="font-weight: 400"
+            >
+              Boutique advisory firm in Cyprus for real estate, corporate and
+              high-net-worth clients.
             </p>
-            <div class="flex items-center space-x-4">
+
+            <!-- Social Icons -->
+            <div class="flex items-center gap-3 mt-8">
+              <!-- LinkedIn -->
               <a
                 href="#"
-                class="w-8 h-8 flex items-center justify-center border border-white/10 hover:border-galbo-gold hover:text-galbo-gold transition-all"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
               >
-                <i data-lucide="linkedin" class="w-4 h-4"></i>
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.92)"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
               </a>
+              <!-- Instagram -->
               <a
                 href="#"
-                class="w-8 h-8 flex items-center justify-center border border-white/10 hover:border-galbo-gold hover:text-galbo-gold transition-all"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
               >
-                <i data-lucide="instagram" class="w-4 h-4"></i>
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.92)"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="5" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1.2"
+                    fill="rgba(255,255,255,0.92)"
+                    stroke="none"
+                  />
+                </svg>
               </a>
+              <!-- YouTube -->
               <a
                 href="#"
-                class="w-8 h-8 flex items-center justify-center border border-white/10 hover:border-galbo-gold hover:text-galbo-gold transition-all"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
               >
-                <i data-lucide="youtube" class="w-4 h-4"></i>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 1.96A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 1.95C5.12 20 12 20 12 20s6.88 0 8.6-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"
+                    stroke="rgba(255,255,255,0.92)"
+                    stroke-width="1.7"
+                  />
+                  <polygon
+                    points="9.75 15.02 15.5 12 9.75 8.98"
+                    fill="rgba(255,255,255,0.92)"
+                  />
+                </svg>
               </a>
+              <!-- Facebook -->
               <a
                 href="#"
-                class="w-8 h-8 flex items-center justify-center border border-white/10 hover:border-galbo-gold hover:text-galbo-gold transition-all"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
               >
-                <i data-lucide="mail" class="w-4 h-4"></i>
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.92)"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                  />
+                </svg>
               </a>
             </div>
           </div>
 
-          <!-- Column 1 -->
-          <div>
-            <h6
-              class="text-[10px] font-bold tracking-[0.3em] uppercase text-white mb-8 border-l-2 border-galbo-gold pl-4"
+          <!-- Col 2 — Quick Links -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <h4
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5"
             >
               Quick Links
-            </h6>
-            <ul
-              class="text-[11px] text-gray-400 space-y-4 tracking-wide font-medium"
+            </h4>
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >Home</a
             >
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >About Us</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Services</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Family Office</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Insights</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Resources</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Careers</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Contact</a
-                >
-              </li>
-            </ul>
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >About Us</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >Services</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >The Journal</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >Contact</a
+            >
           </div>
 
-          <!-- Column 2 -->
-          <div>
-            <h6
-              class="text-[10px] font-bold tracking-[0.3em] uppercase text-white mb-8 border-l-2 border-galbo-gold pl-4"
+          <!-- Col 3 — Services -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <h4
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5"
             >
               Services
-            </h6>
-            <ul
-              class="text-[11px] text-gray-400 space-y-4 tracking-wide font-medium"
+            </h4>
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Family Office Management</a
             >
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Wealth Planning & Strategy</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Tax & Structuring</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Family Office Services</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Investment Advisory</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Risk Management</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Succession Planning</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Cross-Border Solutions</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Philanthropy Advisory</a
-                >
-              </li>
-            </ul>
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Real Estate Acquisition</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Real Estate Entrepreneur Representation</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Banking & Asset Management Advisory</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Corporate Structuring</a
+            >
           </div>
 
-          <!-- Column 3 -->
-          <div>
-            <h6
-              class="text-[10px] font-bold tracking-[0.3em] uppercase text-white mb-8 border-l-2 border-galbo-gold pl-4"
+          <!-- Col 4 — Contact -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <h4
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5"
             >
-              Resources
-            </h6>
-            <ul
-              class="text-[11px] text-gray-400 space-y-4 tracking-wide font-medium"
-            >
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Articles</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Guides & Reports</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Case Studies</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Videos & Webinars</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >FAQs</a
-                >
-              </li>
-            </ul>
-            <h6
-              class="text-[10px] font-bold tracking-[0.3em] uppercase text-white mt-12 mb-8 border-l-2 border-galbo-gold pl-4"
-            >
-              Legal
-            </h6>
-            <ul
-              class="text-[11px] text-gray-400 space-y-4 tracking-wide font-medium"
-            >
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Terms & Conditions</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >Cookies Policy</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-galbo-gold transition-colors"
-                  >AML Policy</a
-                >
-              </li>
-            </ul>
+              Contact
+            </h4>
+
+            <div class="flex gap-[10px] mb-4 items-start">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0 mt-[3px]"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span class="font-dmsans text-[13px] text-white leading-[1.65]"
+                >Pissouri, Cyprus<br />(Between Limassol and Paphos)</span
+              >
+            </div>
+
+            <div class="flex gap-[10px] mb-4 items-center">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.09 1.22 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"
+                />
+              </svg>
+              <a
+                href="tel:+35725000194"
+                class="font-dmsans text-[13px] text-white no-underline"
+                >+357 25 000 194</a
+              >
+            </div>
+
+            <div class="flex gap-[10px] mb-4 items-center">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <a
+                href="mailto:info@galbo.consulting"
+                class="font-dmsans text-[13px] text-white no-underline"
+                >info@galbo.consulting</a
+              >
+            </div>
+
+            <div class="flex gap-[10px] items-start">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0 mt-[3px]"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span class="font-dmsans text-[13px] text-white leading-[1.65]"
+                >Mon – Fri: 9:00 – 17:00<br />(Cyprus time)</span
+              >
+            </div>
           </div>
 
-          <!-- Column 4 Info -->
-          <div>
-            <h6
-              class="text-[10px] font-bold tracking-[0.3em] uppercase text-white mb-8 border-l-2 border-galbo-gold pl-4"
+          <!-- Col 5 — Stay Informed -->
+          <div class="flex flex-col max-w-[230px]">
+            <h4
+              class="font-dmsans text-[11px] font-semibold tracking-[0.08em] uppercase text-white mb-4"
             >
-              Our Offices
-            </h6>
-            <ul
-              class="text-[11px] text-gray-400 space-y-6 tracking-wide font-medium"
+              Stay Informed
+            </h4>
+
+            <p class="font-dmsans text-[13px] text-white/75 mb-5 leading-snug">
+              Subscribe to our insights
+            </p>
+
+            <!-- Input -->
+            <input
+              type="email"
+              placeholder="Your email address"
+              class="w-full h-[46px] bg-white border border-[#d9d9d9] rounded-md text-[#1d1d1d] placeholder:text-[#8d8d8d] font-dmsans text-[13px] px-5 outline-none mb-5 focus:border-[#b8861b] transition-colors duration-200"
+            />
+
+            <!-- Button -->
+            <button
+              class="w-[128px] h-[46px] bg-[#b8861b] border border-[#9a7418] rounded-md text-white font-dmsans text-[11px] font-semibold tracking-[0.03em] uppercase cursor-pointer hover:bg-[#a87918] transition-all duration-200"
             >
-              <li class="flex items-start">
-                <i
-                  data-lucide="map-pin"
-                  class="w-4 h-4 text-galbo-gold mr-3 shrink-0"
-                ></i>
-                <span
-                  >Paphos, Cyprus<br /><span
-                    class="text-[9px] uppercase tracking-widest opacity-50 font-bold"
-                    >(Licensed & Regulated)</span
-                  ></span
-                >
-              </li>
-              <li class="flex items-center">
-                <i data-lucide="phone" class="w-4 h-4 text-galbo-gold mr-3"></i>
-                <span>+357 26 000 794</span>
-              </li>
-              <li class="flex items-center">
-                <i data-lucide="mail" class="w-4 h-4 text-galbo-gold mr-3"></i>
-                <a
-                  href="mailto:info@galboconsulting.com"
-                  class="text-galbo-gold hover:underline"
-                  >info@galboconsulting.com</a
-                >
-              </li>
-              <li class="flex items-center">
-                <i data-lucide="clock" class="w-4 h-4 text-galbo-gold mr-3"></i>
-                <span>Mon - Fri 9:00 - 17:00 (Cyprus time)</span>
-              </li>
-            </ul>
+              Subscribe
+            </button>
           </div>
         </div>
 
+        <!-- end grid -->
+
+        <!-- Bottom bar -->
         <div
-          class="pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6"
+          class="border-t border-white/50 py-5 flex items-center justify-between"
         >
-          <p
-            class="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-medium"
-          >
-            &copy; 2025 Galbo Consulting. All rights reserved.
+          <p class="font-dmsans text-[11.5px] text-white">
+            © 2025 Galbo Consulting. All rights reserved.
           </p>
-          <button
-            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-            class="group flex items-center justify-center w-10 h-10 border border-white/10 hover:border-galbo-gold transition-all"
-          >
-            <i
-              data-lucide="arrow-up"
-              class="w-4 h-4 text-gray-500 group-hover:text-galbo-gold"
-            ></i>
-          </button>
+          <div class="flex items-center gap-7">
+            <a
+              href="#"
+              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              >Terms & Conditions</a
+            >
+            <a
+              href="#"
+              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              >General Service Agreement</a
+            >
+          </div>
         </div>
       </div>
     </footer>
 
     <script>
-      // Initialize Lucide icons
       lucide.createIcons();
     </script>
   </body>
