@@ -1,0 +1,1479 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legal & Compliance Center | Galbo Consulting</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: "#b8964f",
+              navy: "#0d1b2a",
+              "navy-cta": "#0d1b2a",
+              "off-white": "#fbfaf7",
+              "soft-gold": "#b8964f",
+            },
+            fontFamily: {
+              cormorant: ['"Cormorant Garamond"', "serif"],
+              dmsans: ['"DM Sans"', "sans-serif"],
+            },
+            letterSpacing: {
+              "widest-extra": "0.18em",
+              "widest-logo": "0.42em",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .nav-active {
+        border-bottom: 1.5px solid #b8964f;
+      }
+      .footer-link:hover {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      body {
+        font-family: "DM Sans", sans-serif;
+        background-color: #ffffff;
+      }
+      .bg-pattern {
+        background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+        opacity: 0.03;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- HEADER PROVIDED -->
+    <header class="bg-white border-b border-[#f0ece4] sticky top-0 z-50">
+      <div
+        class="max-w-[1200px] mx-auto px-16 h-[68px] flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="text-center">
+          <div class="flex flex-col items-center">
+            <div
+              class="font-cormorant text-[20px] font-semibold tracking-[0.16em] text-navy uppercase leading-none"
+            >
+              GALBO
+            </div>
+            <div
+              class="font-dmsans text-[6px] tracking-[0.42em] text-navy/75 uppercase mt-[2px] ml-[2px]"
+            >
+              CONSULTING
+            </div>
+          </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="flex items-center gap-8">
+          <a
+            href="index.html"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline pb-[2px]"
+          >
+            Home
+          </a>
+
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
+          >
+            About
+          </a>
+
+          <!-- SERVICES DROPDOWN -->
+          <div class="relative group">
+            <button
+              class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase flex items-center gap-1 focus:outline-none nav-active"
+            >
+              Services
+              <span
+                class="text-[9px] transition-transform duration-300 group-hover:rotate-180"
+              >
+                ▾
+              </span>
+            </button>
+
+            <!-- DROPDOWN MENU -->
+            <div
+              class="absolute left-0 top-full mt-4 w-[320px] bg-white border border-[#e9e4da] shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+            >
+              <div class="max-h-[500px] overflow-y-auto py-2">
+                <a
+                  href="Award&Recogniation.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Award & Recognition
+                </a>
+
+                <a
+                  href="career.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Career
+                </a>
+
+                <a
+                  href="ClientPortal.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Client Portal
+                </a>
+
+                <a
+                  href="Events.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Events
+                </a>
+
+                <a
+                  href="faq.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  FAQ
+                </a>
+
+                <a
+                  href="GlobalOffices.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Global Offices
+                </a>
+
+                <a
+                  href="InvesterRelation.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Investor Relation
+                </a>
+
+                <a
+                  href="LegalAndCompliance.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Legal & Compliance
+                </a>
+
+                <a
+                  href="LuxuriousCorporateTestimonials.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Corporate Testimonials
+                </a>
+
+                <a
+                  href="Partnership.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Partnership
+                </a>
+
+                <a
+                  href="PhilanthropyAndFoundation.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Philanthropy & Foundation
+                </a>
+
+                <a
+                  href="Press&Media.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Press & Media
+                </a>
+
+                <a
+                  href="PrivateMembership.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Private Membership
+                </a>
+
+                <a
+                  href="SustainableConsultingWithEleganceAndImpact.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Sustainable Consulting
+                </a>
+
+                <a
+                  href="Webinars&InsightsHubDesign.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Webinars & Insights Hub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
+          >
+            The Journal
+          </a>
+
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
+          >
+            Contact
+          </a>
+        </nav>
+
+        <!-- CTA BUTTON -->
+        <a
+          href="#"
+          class="border border-gold text-gold font-dmsans text-[9px] font-semibold tracking-[0.12em] uppercase px-4 py-[10px] no-underline text-center leading-tight hover:bg-gold hover:text-white transition-colors duration-200"
+        >
+          Request a<br />
+          Private Consultation
+        </a>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT START -->
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-navy overflow-hidden">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
+          alt="Office Background"
+          class="w-full h-full object-cover opacity-20"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent"
+        ></div>
+      </div>
+
+      <div class="max-w-[1200px] mx-auto px-16 relative z-10 pt-8 pb-32">
+        <!-- Breadcrumbs -->
+        <div
+          class="flex items-center gap-2 text-[10px] font-medium text-white/40 uppercase tracking-[0.2em] mb-16"
+        >
+          <a href="#" class="hover:text-gold transition-colors">Home</a>
+          <span class="text-[8px]">&rsaquo;</span>
+          <span class="text-white/80">Legal & Compliance Center</span>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="max-w-[550px]">
+            <span
+              class="text-gold text-[11px] font-bold tracking-[0.2em] uppercase block mb-5"
+              >Legal & Compliance Center</span
+            >
+            <h1
+              class="font-cormorant text-[64px] font-normal leading-[1.05] mb-8"
+            >
+              <span class="text-white block">Integrity. Compliance.</span>
+              <span class="text-gold">Trust. Always.</span>
+            </h1>
+            <p
+              class="text-white/60 text-[16px] leading-[1.8] mb-12 max-w-[480px] font-light"
+            >
+              At Galbo Consulting, we uphold the highest standards of legal
+              integrity and regulatory compliance across all jurisdictions in
+              which we operate.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center gap-4 border border-gold text-gold px-12 py-5 text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-gold hover:text-navy transition-all duration-300 group"
+            >
+              Our Commitment to Compliance
+              <span
+                class="text-[18px] group-hover:translate-x-2 transition-transform"
+                >&rsaquo;</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLIANCE FRAMEWORK SECTION -->
+    <section class="bg-[#fbfbf9] py-32 relative overflow-hidden">
+      <div class="absolute inset-0 bg-pattern"></div>
+      <div class="max-w-[1200px] mx-auto px-16 relative z-10">
+        <div class="text-center mb-24">
+          <span
+            class="text-gold text-[10px] font-bold tracking-[0.25em] uppercase block mb-5"
+            >Our Compliance Framework</span
+          >
+          <h2
+            class="font-cormorant text-[42px] text-navy font-normal leading-tight mb-8"
+          >
+            Built on Principles. Driven by Responsibility.
+          </h2>
+          <div class="w-16 h-[1px] bg-gold/30 mx-auto mb-8"></div>
+          <p
+            class="max-w-[760px] mx-auto text-navy/50 text-[15px] leading-[1.8] font-light"
+          >
+            Our compliance framework ensures we operate ethically,
+            transparently, and in full alignment with international laws and
+            regulations.
+          </p>
+        </div>
+
+        <!-- Framework Grid -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-10 gap-y-16"
+        >
+          <!-- Item 1 -->
+          <div class="flex flex-col items-center text-center group">
+            <div
+              class="w-16 h-16 rounded-full border border-gold/20 flex items-center justify-center mb-8 bg-white shadow-sm group-hover:border-gold transition-colors duration-500"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#b8964f"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+            </div>
+            <h3
+              class="text-navy text-[13.5px] font-bold mb-4 tracking-wider uppercase"
+            >
+              Regulatory<br />Compliance
+            </h3>
+            <p class="text-navy/50 text-[11.5px] leading-[1.7] px-2">
+              Adhering to global regulations and industry best practices across
+              all our services.
+            </p>
+          </div>
+          <!-- Item 2 -->
+          <div class="flex flex-col items-center text-center group">
+            <div
+              class="w-16 h-16 rounded-full border border-gold/20 flex items-center justify-center mb-8 bg-white shadow-sm group-hover:border-gold transition-colors duration-500"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#b8964f"
+                stroke-width="1.2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m16 12-4-4-4 4" />
+                <path d="M12 16V8" />
+              </svg>
+            </div>
+            <h3
+              class="text-navy text-[13.5px] font-bold mb-4 tracking-wider uppercase"
+            >
+              Risk<br />Management
+            </h3>
+            <p class="text-navy/50 text-[11.5px] leading-[1.7] px-2">
+              Proactive identification, assessment, and mitigation of legal and
+              operational risks.
+            </p>
+          </div>
+          <!-- Item 3 -->
+          <div class="flex flex-col items-center text-center group">
+            <div
+              class="w-16 h-16 rounded-full border border-gold/20 flex items-center justify-center mb-8 bg-white shadow-sm group-hover:border-gold transition-colors duration-500"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#b8964f"
+                stroke-width="1.2"
+              >
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </div>
+            <h3
+              class="text-navy text-[13.5px] font-bold mb-4 tracking-wider uppercase"
+            >
+              Data<br />Protection
+            </h3>
+            <p class="text-navy/50 text-[11.5px] leading-[1.7] px-2">
+              Committed to safeguarding client data with strict privacy and
+              security protocols.
+            </p>
+          </div>
+          <!-- Item 4 -->
+          <div class="flex flex-col items-center text-center group">
+            <div
+              class="w-16 h-16 rounded-full border border-gold/20 flex items-center justify-center mb-8 bg-white shadow-sm group-hover:border-gold transition-colors duration-500"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#b8964f"
+                stroke-width="1.2"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+              </svg>
+            </div>
+            <h3
+              class="text-navy text-[13.5px] font-bold mb-4 tracking-wider uppercase"
+            >
+              Ethics &<br />Integrity
+            </h3>
+            <p class="text-navy/50 text-[11.5px] leading-[1.7] px-2">
+              Upholding the highest ethical standards in every client
+              relationship.
+            </p>
+          </div>
+          <!-- Item 5 -->
+          <div class="flex flex-col items-center text-center group">
+            <div
+              class="w-16 h-16 rounded-full border border-gold/20 flex items-center justify-center mb-8 bg-white shadow-sm group-hover:border-gold transition-colors duration-500"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#b8964f"
+                stroke-width="1.2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M7 10h10M12 7v10" />
+              </svg>
+            </div>
+            <h3
+              class="text-navy text-[13.5px] font-bold mb-4 tracking-wider uppercase"
+            >
+              Employee<br />Compliance
+            </h3>
+            <p class="text-navy/50 text-[11.5px] leading-[1.7] px-2">
+              Regular training and awareness programs to promote a culture of
+              compliance.
+            </p>
+          </div>
+          <!-- Item 6 -->
+          <div class="flex flex-col items-center text-center group">
+            <div
+              class="w-16 h-16 rounded-full border border-gold/20 flex items-center justify-center mb-8 bg-white shadow-sm group-hover:border-gold transition-colors duration-500"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#b8964f"
+                stroke-width="1.2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path
+                  d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-navy text-[13.5px] font-bold mb-4 tracking-wider uppercase"
+            >
+              Global<br />Standards
+            </h3>
+            <p class="text-navy/50 text-[11.5px] leading-[1.7] px-2">
+              Operating in accordance with international laws and cross-border
+              requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- KEY COMPLIANCE AREAS -->
+    <section class="bg-[#050b12] py-32 relative">
+      <div
+        class="max-w-[1200px] mx-auto px-16 relative z-10 flex flex-col lg:flex-row gap-24"
+      >
+        <!-- Left Info -->
+        <div class="lg:w-[35%]">
+          <span
+            class="text-gold text-[10px] font-bold tracking-[0.25em] uppercase block mb-6"
+            >Key Compliance Areas</span
+          >
+          <h2
+            class="font-cormorant text-[48px] text-white font-normal leading-[1.05] mb-10"
+          >
+            Our Legal & Compliance Capabilities
+          </h2>
+          <div class="w-16 h-[1.5px] bg-gold mb-10"></div>
+          <p class="text-white/40 text-[15px] leading-[1.8] mb-12 font-light">
+            A comprehensive approach to legal adherence and regulatory
+            excellence, ensuring your global operations remain secure and
+            compliant.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-4 border border-white/10 text-white/80 px-10 py-5 text-[10px] font-bold tracking-[0.2em] uppercase hover:border-gold hover:text-gold transition-all duration-300 group"
+          >
+            Learn More About Our Framework
+            <span
+              class="text-[14px] group-hover:translate-x-2 transition-transform"
+              >&rsaquo;</span
+            >
+          </a>
+        </div>
+
+        <!-- Right Grid -->
+        <div
+          class="lg:w-[65%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-white/5 border border-white/5"
+        >
+          <!-- Card 1 -->
+          <div
+            class="bg-[#050b12] p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-white/[0.03] group"
+          >
+            <div
+              class="mb-5 text-gold/60 group-hover:text-gold transition-colors"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <polyline points="16 11 18 13 22 9" />
+              </svg>
+            </div>
+            <h4
+              class="text-gold text-[11px] font-bold uppercase tracking-[0.18em] mb-4"
+            >
+              AML & KYC
+            </h4>
+            <p class="text-white/30 text-[10.5px] leading-[1.6]">
+              Robust anti-money laundering and know-your-customer processes.
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="bg-[#050b12] p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-white/[0.03] group border-l border-white/5 md:border-l-0 lg:border-l border-white/5"
+          >
+            <div
+              class="mb-5 text-gold/60 group-hover:text-gold transition-colors"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </div>
+            <h4
+              class="text-gold text-[11px] font-bold uppercase tracking-[0.18em] mb-4"
+            >
+              GDPR Compliance
+            </h4>
+            <p class="text-white/30 text-[10.5px] leading-[1.6]">
+              Full compliance with GDPR and global data protection regulations.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="bg-[#050b12] p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-white/[0.03] group lg:border-l border-white/5"
+          >
+            <div
+              class="mb-5 text-gold/60 group-hover:text-gold transition-colors"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+            </div>
+            <h4
+              class="text-gold text-[11px] font-bold uppercase tracking-[0.18em] mb-4"
+            >
+              Sanctions Screening
+            </h4>
+            <p class="text-white/30 text-[10.5px] leading-[1.6]">
+              Continuous screening against global sanctions and watchlists.
+            </p>
+          </div>
+          <!-- Card 4 -->
+          <div
+            class="bg-[#050b12] p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-white/[0.03] group lg:border-l border-white/5"
+          >
+            <div
+              class="mb-5 text-gold/60 group-hover:text-gold transition-colors"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h4
+              class="text-gold text-[11px] font-bold uppercase tracking-[0.18em] mb-4"
+            >
+              Licenses & Registrations
+            </h4>
+            <p class="text-white/30 text-[10.5px] leading-[1.6]">
+              Licensed and regulated entities across key jurisdictions
+              worldwide.
+            </p>
+          </div>
+          <!-- Card 5 -->
+          <div
+            class="bg-[#050b12] p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-white/[0.03] group border-t border-white/5"
+          >
+            <div
+              class="mb-5 text-gold/60 group-hover:text-gold transition-colors"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <path d="M4 11a9 9 0 0 1 9 9" />
+                <path d="M4 4a16 16 0 0 1 16 16" />
+                <circle cx="5" cy="19" r="1" />
+              </svg>
+            </div>
+            <h4
+              class="text-gold text-[11px] font-bold uppercase tracking-[0.18em] mb-4"
+            >
+              Cross-Border
+            </h4>
+            <p class="text-white/30 text-[10.5px] leading-[1.6]">
+              Ensuring compliance with multi-jurisdictional legal requirements.
+            </p>
+          </div>
+          <!-- Card 6 -->
+          <div
+            class="bg-[#050b12] p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-white/[0.03] group border-t lg:border-l border-white/5"
+          >
+            <div
+              class="mb-5 text-gold/60 group-hover:text-gold transition-colors"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h4
+              class="text-gold text-[11px] font-bold uppercase tracking-[0.18em] mb-4"
+            >
+              Conflict of Interest
+            </h4>
+            <p class="text-white/30 text-[10.5px] leading-[1.6]">
+              Strict policies to identify and manage potential conflicts of
+              interest.
+            </p>
+          </div>
+          <!-- Card 7 -->
+          <div
+            class="bg-[#050b12] p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-white/[0.03] group border-t lg:border-l border-white/5"
+          >
+            <div
+              class="mb-5 text-gold/60 group-hover:text-gold transition-colors"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <path
+                  d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                />
+              </svg>
+            </div>
+            <h4
+              class="text-gold text-[11px] font-bold uppercase tracking-[0.18em] mb-4"
+            >
+              Record Keeping
+            </h4>
+            <p class="text-white/30 text-[10.5px] leading-[1.6]">
+              Accurate and secure record keeping in line with legal obligations.
+            </p>
+          </div>
+          <!-- Card 8 -->
+          <div
+            class="bg-[#050b12] p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-white/[0.03] group border-t lg:border-l border-white/5"
+          >
+            <div
+              class="mb-5 text-gold/60 group-hover:text-gold transition-colors"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <path
+                  d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                />
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+              </svg>
+            </div>
+            <h4
+              class="text-gold text-[11px] font-bold uppercase tracking-[0.18em] mb-4"
+            >
+              3rd Party Due Diligence
+            </h4>
+            <p class="text-white/30 text-[10.5px] leading-[1.6]">
+              Comprehensive due diligence on partners and service providers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POLICIES & DOCUMENTS -->
+    <section class="bg-white py-32 relative">
+      <div class="max-w-[1200px] mx-auto px-16">
+        <div class="mb-20">
+          <span
+            class="text-gold text-[10px] font-bold tracking-[0.25em] uppercase block mb-5"
+            >Policies & Documents</span
+          >
+          <h2
+            class="font-cormorant text-[42px] text-navy font-normal leading-tight mb-8"
+          >
+            Important Information
+          </h2>
+          <div class="w-16 h-[1px] bg-gold mb-8"></div>
+          <p
+            class="max-w-[580px] text-navy/50 text-[15.5px] leading-[1.8] font-light"
+          >
+            Access our key legal policies and compliance documents for a
+            comprehensive understanding of our operational standards. All
+            documents are available for download.
+          </p>
+        </div>
+
+        <!-- Documents Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-[22px]">
+          <!-- Doc 1 -->
+          <div
+            class="border border-navy/5 p-12 flex flex-col items-center text-center transition-all duration-500 bg-[#fbfbf9]/40 hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:border-gold/20 group cursor-pointer rounded-[4px]"
+          >
+            <div
+              class="mb-8 text-gold/70 group-hover:text-gold transition-colors"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h4
+              class="text-navy text-[13px] font-bold mb-14 tracking-wide uppercase group-hover:text-gold transition-colors"
+            >
+              Privacy<br />Policy
+            </h4>
+            <div
+              class="mt-auto flex items-center gap-3 text-[10px] font-bold text-navy/30 group-hover:text-gold transition-colors"
+            >
+              <span class="tracking-widest">PDF</span>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+            </div>
+          </div>
+          <!-- Doc 2 -->
+          <div
+            class="border border-navy/5 p-12 flex flex-col items-center text-center transition-all duration-500 bg-[#fbfbf9]/40 hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:border-gold/20 group cursor-pointer rounded-[4px]"
+          >
+            <div
+              class="mb-8 text-gold/70 group-hover:text-gold transition-colors"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+              </svg>
+            </div>
+            <h4
+              class="text-navy text-[13px] font-bold mb-14 tracking-wide uppercase group-hover:text-gold transition-colors"
+            >
+              Terms &<br />Conditions
+            </h4>
+            <div
+              class="mt-auto flex items-center gap-3 text-[10px] font-bold text-navy/30 group-hover:text-gold transition-colors"
+            >
+              <span class="tracking-widest">PDF</span>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+            </div>
+          </div>
+          <!-- Doc 3 -->
+          <div
+            class="border border-navy/5 p-12 flex flex-col items-center text-center transition-all duration-500 bg-[#fbfbf9]/40 hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:border-gold/20 group cursor-pointer rounded-[4px]"
+          >
+            <div
+              class="mb-8 text-gold/70 group-hover:text-gold transition-colors"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="6" />
+                <circle cx="12" cy="12" r="2" />
+              </svg>
+            </div>
+            <h4
+              class="text-navy text-[13px] font-bold mb-14 tracking-wide uppercase group-hover:text-gold transition-colors"
+            >
+              Cookies<br />Policy
+            </h4>
+            <div
+              class="mt-auto flex items-center gap-3 text-[10px] font-bold text-navy/30 group-hover:text-gold transition-colors"
+            >
+              <span class="tracking-widest">PDF</span>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+            </div>
+          </div>
+          <!-- Doc 4 -->
+          <div
+            class="border border-navy/5 p-12 flex flex-col items-center text-center transition-all duration-500 bg-[#fbfbf9]/40 hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:border-gold/20 group cursor-pointer rounded-[4px]"
+          >
+            <div
+              class="mb-8 text-gold/70 group-hover:text-gold transition-colors"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <h4
+              class="text-navy text-[13px] font-bold mb-14 tracking-wide uppercase group-hover:text-gold transition-colors"
+            >
+              AML<br />Policy
+            </h4>
+            <div
+              class="mt-auto flex items-center gap-3 text-[10px] font-bold text-navy/30 group-hover:text-gold transition-colors"
+            >
+              <span class="tracking-widest">PDF</span>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+            </div>
+          </div>
+          <!-- Doc 5 -->
+          <div
+            class="border border-navy/5 p-12 flex flex-col items-center text-center transition-all duration-500 bg-[#fbfbf9]/40 hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:border-gold/20 group cursor-pointer rounded-[4px]"
+          >
+            <div
+              class="mb-8 text-gold/70 group-hover:text-gold transition-colors"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+              >
+                <path
+                  d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                />
+              </svg>
+            </div>
+            <h4
+              class="text-navy text-[13px] font-bold mb-14 tracking-wide uppercase group-hover:text-gold transition-colors"
+            >
+              Complaints<br />Procedure
+            </h4>
+            <div
+              class="mt-auto flex items-center gap-3 text-[10px] font-bold text-navy/30 group-hover:text-gold transition-colors"
+            >
+              <span class="tracking-widest">PDF</span>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT END -->
+
+    <!-- ═══════════ CTA BAND PROVIDED ═══════════ -->
+    <section class="bg-navy-cta py-14 border border-white/50">
+      <div
+        class="max-w-[1200px] mx-auto px-16 flex items-center justify-between gap-12"
+      >
+        <div class="flex items-center gap-7">
+          <svg
+            width="60"
+            height="70"
+            viewBox="0 0 60 70"
+            fill="none"
+            class="flex-shrink-0"
+          >
+            <path
+              d="M30 3L4 14v23c0 17 11 28 26 32 15-4 26-15 26-32V14L30 3z"
+              fill="#b8964f"
+            />
+            <text
+              x="30"
+              y="46"
+              text-anchor="middle"
+              font-family="Cormorant Garamond,serif"
+              font-size="28"
+              font-weight="600"
+              fill="#0d1b2a"
+            >
+              G
+            </text>
+          </svg>
+          <div>
+            <h2
+              class="font-cormorant text-[30px] font-semibold text-white leading-[1.2]"
+            >
+              Your Goals. Our Counsel. Exceptional Results.
+            </h2>
+            <p class="font-dmsans text-[13px] text-white/60 mt-2 leading-[1.6]">
+              Let's discuss how we can help you navigate opportunities with
+              confidence and achieve lasting success.
+            </p>
+          </div>
+        </div>
+        <a
+          href="#"
+          class="inline-flex items-center justify-center h-[38px] px-8 bg-[#b8861b] border border-[#8f6a14] rounded-md text-white font-dmsans text-[10px] font-bold tracking-[0.08em] uppercase no-underline whitespace-nowrap hover:bg-[#a87918] transition-all duration-200"
+        >
+          Request a Private Consultation
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="bg-navy-cta pt-16">
+      <div class="max-w-[1200px] mx-auto px-16">
+        <!-- Main grid: 5 columns -->
+
+        <div
+          class="grid grid-cols-[200px_130px_240px_190px_190px] gap-12 pb-14"
+        >
+          <!-- Col 1 — Brand -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <!-- Logo -->
+            <div class="mb-6">
+              <div>
+                <img src="/images/galbo-consulting-logo-dark.png" alt="" />
+              </div>
+            </div>
+
+            <p
+              class="font-dmsans text-[10px] text-white leading-[2] max-w-[260px]"
+              style="font-weight: 400"
+            >
+              Boutique advisory firm in Cyprus for real estate, corporate and
+              high-net-worth clients.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="flex items-center gap-3 mt-8">
+              <!-- LinkedIn -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.92)"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.92)"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="5" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1.2"
+                    fill="rgba(255,255,255,0.92)"
+                    stroke="none"
+                  />
+                </svg>
+              </a>
+              <!-- YouTube -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 1.96A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 1.95C5.12 20 12 20 12 20s6.88 0 8.6-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"
+                    stroke="rgba(255,255,255,0.92)"
+                    stroke-width="1.7"
+                  />
+                  <polygon
+                    points="9.75 15.02 15.5 12 9.75 8.98"
+                    fill="rgba(255,255,255,0.92)"
+                  />
+                </svg>
+              </a>
+              <!-- Facebook -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.92)"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 2 — Quick Links -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <h4
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5"
+            >
+              Quick Links
+            </h4>
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >About Us</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >Services</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >The Journal</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Col 3 — Services -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <h4
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5"
+            >
+              Services
+            </h4>
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Family Office Management</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Real Estate Acquisition</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Real Estate Entrepreneur Representation</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Banking & Asset Management Advisory</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Corporate Structuring</a
+            >
+          </div>
+
+          <!-- Col 4 — Contact -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <h4
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5"
+            >
+              Contact
+            </h4>
+
+            <div class="flex gap-[10px] mb-4 items-start">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0 mt-[3px]"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span class="font-dmsans text-[13px] text-white leading-[1.65]"
+                >Pissouri, Cyprus<br />(Between Limassol and Paphos)</span
+              >
+            </div>
+
+            <div class="flex gap-[10px] mb-4 items-center">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.09 1.22 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"
+                />
+              </svg>
+              <a
+                href="tel:+35725000194"
+                class="font-dmsans text-[13px] text-white no-underline"
+                >+357 25 000 194</a
+              >
+            </div>
+
+            <div class="flex gap-[10px] mb-4 items-center">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <a
+                href="mailto:info@galbo.consulting"
+                class="font-dmsans text-[13px] text-white no-underline"
+                >info@galbo.consulting</a
+              >
+            </div>
+
+            <div class="flex gap-[10px] items-start">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0 mt-[3px]"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span class="font-dmsans text-[13px] text-white leading-[1.65]"
+                >Mon – Fri: 9:00 – 17:00<br />(Cyprus time)</span
+              >
+            </div>
+          </div>
+
+          <!-- Col 5 — Stay Informed -->
+          <div class="flex flex-col max-w-[230px]">
+            <h4
+              class="font-dmsans text-[11px] font-semibold tracking-[0.08em] uppercase text-white mb-4"
+            >
+              Stay Informed
+            </h4>
+
+            <p class="font-dmsans text-[13px] text-white/75 mb-5 leading-snug">
+              Subscribe to our insights
+            </p>
+
+            <!-- Input -->
+            <input
+              type="email"
+              placeholder="Your email address"
+              class="w-full h-[46px] bg-white border border-[#d9d9d9] rounded-md text-[#1d1d1d] placeholder:text-[#8d8d8d] font-dmsans text-[13px] px-5 outline-none mb-5 focus:border-[#b8861b] transition-colors duration-200"
+            />
+
+            <!-- Button -->
+            <button
+              class="w-[128px] h-[46px] bg-[#b8861b] border border-[#9a7418] rounded-md text-white font-dmsans text-[11px] font-semibold tracking-[0.03em] uppercase cursor-pointer hover:bg-[#a87918] transition-all duration-200"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        <!-- end grid -->
+
+        <!-- Bottom bar -->
+        <div
+          class="border-t border-white/50 py-5 flex items-center justify-between"
+        >
+          <p class="font-dmsans text-[11.5px] text-white">
+            © 2025 Galbo Consulting. All rights reserved.
+          </p>
+          <div class="flex items-center gap-7">
+            <a
+              href="#"
+              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              >Terms & Conditions</a
+            >
+            <a
+              href="#"
+              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              >General Service Agreement</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

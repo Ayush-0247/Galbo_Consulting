@@ -1,0 +1,1143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galbo Consulting - Webinars & Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "galbo-gold": "#C5A059",
+              "galbo-gold-light": "#D4B37D",
+              "galbo-dark": "#05070A",
+              "galbo-navy": "#0A0E14",
+              "galbo-slate": "#1F2937",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gradient-overlay {
+        background: linear-gradient(
+          to right,
+          rgba(5, 7, 10, 0.95) 30%,
+          rgba(5, 7, 10, 0.4) 100%
+        );
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body class="bg-white font-sans text-gray-900 overflow-x-hidden">
+    <!-- Top Navbar -->
+    <nav
+      class="bg-galbo-dark text-white py-6 px-4 md:px-12 flex items-center justify-between border-b border-white/10 sticky top-0 z-50"
+    >
+      <div class="flex items-center space-x-2">
+        <div
+          class="w-8 h-8 flex items-center justify-center border border-galbo-gold rounded-full text-galbo-gold font-serif font-bold italic"
+        >
+          G
+        </div>
+        <div class="flex flex-col leading-none">
+          <span class="text-xl font-serif tracking-widest font-bold"
+            >GALBO</span
+          >
+          <span
+            class="text-[10px] tracking-[0.3em] font-light text-galbo-gold uppercase"
+            >Consulting</span
+          >
+        </div>
+      </div>
+      <div
+        class="hidden lg:flex items-center space-x-8 text-[11px] font-semibold tracking-widest uppercase"
+      >
+        <a href="#" class="hover:text-galbo-gold transition-colors">Home</a>
+        <a
+          href="#"
+          class="hover:text-galbo-gold transition-colors border-b border-galbo-gold pb-1 pt-1"
+          >About</a
+        >
+        <div
+          class="group relative cursor-pointer flex items-center hover:text-galbo-gold transition-colors"
+        >
+          SERVICES <i data-lucide="chevron-down" class="w-3 h-3 ml-1"></i>
+        </div>
+        <a href="#" class="hover:text-galbo-gold transition-colors"
+          >Family Office</a
+        >
+        <a href="#" class="hover:text-galbo-gold transition-colors">Insights</a>
+        <div
+          class="group relative cursor-pointer flex items-center hover:text-galbo-gold transition-colors"
+        >
+          RESOURCES <i data-lucide="chevron-down" class="w-3 h-3 ml-1"></i>
+        </div>
+        <a href="#" class="hover:text-galbo-gold transition-colors">Careers</a>
+        <a href="#" class="hover:text-galbo-gold transition-colors">Contact</a>
+      </div>
+      <div class="flex items-center space-x-6">
+        <button
+          class="hidden md:block border border-galbo-gold px-5 py-2.5 text-[10px] font-bold tracking-widest uppercase hover:bg-galbo-gold hover:text-galbo-dark transition-all duration-300"
+        >
+          Request a Consultation
+        </button>
+        <div class="flex items-center space-x-1 cursor-pointer group">
+          <i
+            data-lucide="globe"
+            class="w-4 h-4 text-galbo-gold group-hover:scale-110 transition-transform"
+          ></i>
+          <span class="text-[10px] font-bold uppercase">EN</span>
+          <i data-lucide="chevron-down" class="w-3 h-3 text-galbo-gold"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="relative bg-galbo-dark text-white min-h-[600px] flex items-center overflow-hidden"
+    >
+      <!-- Background Image Placeholder (Boardroom) -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2069"
+          alt="Boardroom"
+          class="w-full h-full object-cover opacity-40"
+        />
+        <div class="absolute inset-0 gradient-overlay"></div>
+      </div>
+
+      <div class="container mx-auto px-4 md:px-12 relative z-10 pt-20 pb-40">
+        <div class="flex flex-col max-w-2xl">
+          <nav
+            class="flex items-center text-[10px] uppercase tracking-widest text-galbo-gold mb-8 font-bold"
+          >
+            <span class="opacity-60">Home</span>
+            <i data-lucide="chevron-right" class="w-3 h-3 mx-2 opacity-60"></i>
+            <span>Webinars & Insights</span>
+          </nav>
+
+          <p
+            class="text-[11px] font-bold tracking-[0.2em] text-galbo-gold uppercase mb-4"
+          >
+            Webinars & Insights
+          </p>
+          <h1 class="text-5xl md:text-6xl font-serif leading-tight mb-8">
+            Knowledge That<br />
+            <span class="text-galbo-gold italic">Empowers Decisions.</span>
+          </h1>
+
+          <p class="text-gray-400 text-sm leading-relaxed mb-10 max-w-lg">
+            Explore expert-led webinars, panel discussions, and thought
+            leadership sessions on wealth, strategy, and global trends that
+            shape the future.
+          </p>
+
+          <button class="flex items-center space-x-3 group w-fit">
+            <span
+              class="border border-galbo-gold px-6 py-3 text-[11px] font-bold tracking-[0.2em] uppercase group-hover:bg-galbo-gold group-hover:text-galbo-dark transition-all duration-300"
+            >
+              Browse all sessions
+            </span>
+            <div
+              class="bg-galbo-gold p-3 rounded-full group-hover:translate-x-1 transition-transform"
+            >
+              <i data-lucide="arrow-right" class="w-4 h-4 text-galbo-dark"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Corporate Room Monitor Overlay -->
+      <div
+        class="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-64 hidden lg:flex items-center justify-center pointer-events-none opacity-80"
+      >
+        <div
+          class="w-full max-w-sm aspect-video bg-black/80 ring-8 ring-white/5 shadow-2xl flex flex-col items-center justify-center p-8"
+        >
+          <div
+            class="w-12 h-12 flex items-center justify-center border border-galbo-gold rounded-full text-galbo-gold font-serif font-bold italic text-2xl mb-4"
+          >
+            G
+          </div>
+          <div class="text-center">
+            <span class="text-xl font-serif tracking-widest font-bold"
+              >GALBO</span
+            >
+            <p
+              class="text-[8px] tracking-[0.3em] font-light text-galbo-gold uppercase"
+            >
+              Consulting
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Webinar Card -->
+    <section class="bg-galbo-dark pb-20">
+      <div class="container mx-auto px-4 md:px-12 -mt-48 relative z-20">
+        <div
+          class="bg-galbo-navy/80 backdrop-blur-md border border-white/10 overflow-hidden flex flex-col lg:flex-row"
+        >
+          <div class="flex-1 p-10 md:p-14">
+            <p
+              class="text-[10px] font-bold tracking-[0.2em] text-galbo-gold uppercase mb-6"
+            >
+              Featured Webinar
+            </p>
+            <h2
+              class="text-3xl md:text-4xl font-serif text-white mb-6 leading-tight"
+            >
+              Global Wealth 2025:<br />Trends, Opportunities & Risks
+            </h2>
+
+            <div
+              class="flex flex-wrap items-center gap-6 mb-8 text-[11px] text-gray-300 font-medium tracking-wide"
+            >
+              <div class="flex items-center">
+                <i
+                  data-lucide="calendar"
+                  class="w-4 h-4 text-galbo-gold mr-2"
+                ></i>
+                May 28, 2025
+              </div>
+              <div class="flex items-center">
+                <i data-lucide="clock" class="w-4 h-4 text-galbo-gold mr-2"></i>
+                11:00 AM (EET)
+              </div>
+              <div class="flex items-center">
+                <i data-lucide="user" class="w-4 h-4 text-galbo-gold mr-2"></i>
+                Dr. Marco Galasso
+              </div>
+            </div>
+
+            <p class="text-gray-400 text-sm leading-relaxed mb-10 max-w-lg">
+              An in-depth analysis of the key macroeconomic trends, investor
+              sentiment, and strategic opportunities shaping global wealth in
+              2025.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center gap-4">
+              <button
+                class="w-full sm:w-auto bg-galbo-gold text-galbo-dark px-8 py-3.5 text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-white transition-all flex items-center justify-center"
+              >
+                Register now
+                <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+              </button>
+              <button
+                class="w-full sm:w-auto border border-galbo-gold text-white px-8 py-3.5 text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-galbo-gold hover:text-galbo-dark transition-all flex items-center justify-center group"
+              >
+                <i
+                  data-lucide="play"
+                  class="w-4 h-4 mr-2 fill-white group-hover:fill-current"
+                ></i>
+                Watch Trailer
+              </button>
+            </div>
+          </div>
+
+          <div class="flex-1 relative group cursor-pointer overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1470"
+              alt="Global Wealth Network"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-black/40 flex items-center justify-center transition-colors group-hover:bg-black/20"
+            >
+              <div
+                class="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center ring-2 ring-white/30 group-hover:scale-110 group-hover:ring-white/50 transition-all"
+              >
+                <div
+                  class="w-16 h-16 bg-white rounded-full flex items-center justify-center"
+                >
+                  <i
+                    data-lucide="play"
+                    class="w-6 h-6 text-galbo-dark fill-current ml-1"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Webinars Section -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4 md:px-12">
+        <div
+          class="flex items-center justify-between mb-16 border-b border-gray-100 pb-8"
+        >
+          <h3
+            class="text-[11px] font-bold tracking-[0.3em] uppercase text-gray-500"
+          >
+            Upcoming Webinars
+          </h3>
+          <a
+            href="#"
+            class="text-[11px] font-bold tracking-[0.2em] uppercase text-galbo-gold hover:text-galbo-dark transition-colors flex items-center"
+          >
+            View all upcoming
+            <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+          </a>
+        </div>
+
+        <!-- Webinar List Item 1 -->
+        <div
+          class="flex flex-col lg:flex-row items-center gap-8 py-10 border-b border-gray-100 group"
+        >
+          <div
+            class="relative flex-none w-full lg:w-48 aspect-video lg:aspect-square overflow-hidden shadow-sm"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1470"
+              alt="Webinar"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div
+              class="absolute top-4 left-4 bg-white px-2 py-1 text-center shadow-md"
+            >
+              <div
+                class="text-[10px] font-bold uppercase tracking-widest border-b border-gray-100 pb-0.5"
+              >
+                Jun
+              </div>
+              <div class="text-xl font-serif font-bold text-galbo-gold">04</div>
+            </div>
+          </div>
+          <div class="flex-grow">
+            <h4
+              class="text-xl font-serif mb-3 group-hover:text-galbo-gold transition-colors"
+            >
+              Family Office Governance: Best Practices for Longevity
+            </h4>
+            <p class="text-gray-500 text-sm max-w-2xl">
+              Building resilient governance structures that preserve legacy and
+              ensure intergenerational success.
+            </p>
+          </div>
+          <div
+            class="flex-none lg:w-48 text-[11px] text-gray-600 font-medium space-y-2"
+          >
+            <div class="flex items-center">
+              <i data-lucide="clock" class="w-4 h-4 text-galbo-gold mr-3"></i>
+              11:00 AM (EET)
+            </div>
+            <div class="flex items-center">
+              <i data-lucide="user" class="w-4 h-4 text-galbo-gold mr-3"></i>
+              Anna Kyriakou
+            </div>
+          </div>
+          <div class="flex-none">
+            <button
+              class="border border-galbo-gold/40 text-[10px] font-bold tracking-widest uppercase px-6 py-3 hover:bg-galbo-gold hover:text-white transition-all flex items-center"
+            >
+              Register <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Webinar List Item 2 -->
+        <div
+          class="flex flex-col lg:flex-row items-center gap-8 py-10 border-b border-gray-100 group"
+        >
+          <div
+            class="relative flex-none w-full lg:w-48 aspect-video lg:aspect-square overflow-hidden shadow-sm"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=1470"
+              alt="Webinar"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div
+              class="absolute top-4 left-4 bg-white px-2 py-1 text-center shadow-md"
+            >
+              <div
+                class="text-[10px] font-bold uppercase tracking-widest border-b border-gray-100 pb-0.5"
+              >
+                Jun
+              </div>
+              <div class="text-xl font-serif font-bold text-galbo-gold">18</div>
+            </div>
+          </div>
+          <div class="flex-grow">
+            <h4
+              class="text-xl font-serif mb-3 group-hover:text-galbo-gold transition-colors"
+            >
+              Cross-Border Tax Planning in a Changing World
+            </h4>
+            <p class="text-gray-500 text-sm max-w-2xl">
+              Navigating global tax complexities and adopting efficient
+              structures for long-term wealth.
+            </p>
+          </div>
+          <div
+            class="flex-none lg:w-48 text-[11px] text-gray-600 font-medium space-y-2"
+          >
+            <div class="flex items-center">
+              <i data-lucide="clock" class="w-4 h-4 text-galbo-gold mr-3"></i>
+              03:00 PM (EET)
+            </div>
+            <div class="flex items-center">
+              <i data-lucide="user" class="w-4 h-4 text-galbo-gold mr-3"></i>
+              Michael Sophocleous
+            </div>
+          </div>
+          <div class="flex-none">
+            <button
+              class="border border-galbo-gold/40 text-[10px] font-bold tracking-widest uppercase px-6 py-3 hover:bg-galbo-gold hover:text-white transition-all flex items-center"
+            >
+              Register <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Webinar List Item 3 -->
+        <div
+          class="flex flex-col lg:flex-row items-center gap-8 py-10 border-b border-gray-100 group"
+        >
+          <div
+            class="relative flex-none w-full lg:w-48 aspect-video lg:aspect-square overflow-hidden shadow-sm"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1473186578172-c141e6798ee4?auto=format&fit=crop&q=80&w=1470"
+              alt="Webinar"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div
+              class="absolute top-4 left-4 bg-white px-2 py-1 text-center shadow-md"
+            >
+              <div
+                class="text-[10px] font-bold uppercase tracking-widest border-b border-gray-100 pb-0.5"
+              >
+                Jul
+              </div>
+              <div class="text-xl font-serif font-bold text-galbo-gold">02</div>
+            </div>
+          </div>
+          <div class="flex-grow">
+            <h4
+              class="text-xl font-serif mb-3 group-hover:text-galbo-gold transition-colors"
+            >
+              ESG Investing: Value, Impact & the Road Ahead
+            </h4>
+            <p class="text-gray-500 text-sm max-w-2xl">
+              Understanding ESG integration, impact measurement, and future
+              opportunities.
+            </p>
+          </div>
+          <div
+            class="flex-none lg:w-48 text-[11px] text-gray-600 font-medium space-y-2"
+          >
+            <div class="flex items-center">
+              <i data-lucide="clock" class="w-4 h-4 text-galbo-gold mr-3"></i>
+              11:00 AM (EET)
+            </div>
+            <div class="flex items-center">
+              <i data-lucide="user" class="w-4 h-4 text-galbo-gold mr-3"></i>
+              Elena Papadopoulos
+            </div>
+          </div>
+          <div class="flex-none">
+            <button
+              class="border border-galbo-gold/40 text-[10px] font-bold tracking-widest uppercase px-6 py-3 hover:bg-galbo-gold hover:text-white transition-all flex items-center"
+            >
+              Register <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- On-Demand Library -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto px-4 md:px-12">
+        <div class="flex items-center justify-between mb-16">
+          <h3
+            class="text-[11px] font-bold tracking-[0.3em] uppercase text-gray-500"
+          >
+            On-Demand Library
+          </h3>
+          <a
+            href="#"
+            class="text-[11px] font-bold tracking-[0.2em] uppercase text-galbo-gold hover:text-galbo-dark transition-colors flex items-center"
+          >
+            View all recordings
+            <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <!-- Video Card 1 -->
+          <div class="group cursor-pointer">
+            <div
+              class="relative aspect-video mb-4 overflow-hidden rounded shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1470"
+                alt="Outlook"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <div class="bg-white/90 p-2 rounded-full">
+                  <i
+                    data-lucide="play"
+                    class="w-4 h-4 text-galbo-dark fill-current"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="absolute bottom-2 right-2 bg-black/70 text-[8px] text-white px-1.5 py-0.5 rounded font-bold"
+              >
+                45:32
+              </div>
+            </div>
+            <h5
+              class="text-sm font-serif font-bold group-hover:text-galbo-gold mb-1 transition-colors"
+            >
+              Global Market Outlook 2024
+            </h5>
+            <p
+              class="text-[10px] text-gray-500 uppercase tracking-widest font-semibold"
+            >
+              April 15, 2024
+            </p>
+          </div>
+
+          <!-- Video Card 2 -->
+          <div class="group cursor-pointer">
+            <div
+              class="relative aspect-video mb-4 overflow-hidden rounded shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=1470"
+                alt="PE"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <div class="bg-white/90 p-2 rounded-full">
+                  <i
+                    data-lucide="play"
+                    class="w-4 h-4 text-galbo-dark fill-current"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="absolute bottom-2 right-2 bg-black/70 text-[8px] text-white px-1.5 py-0.5 rounded font-bold"
+              >
+                38:11
+              </div>
+            </div>
+            <h5
+              class="text-sm font-serif font-bold group-hover:text-galbo-gold mb-1 transition-colors"
+            >
+              Private Equity: Opportunities in a Volatile Market
+            </h5>
+            <p
+              class="text-[10px] text-gray-500 uppercase tracking-widest font-semibold"
+            >
+              March 22, 2024
+            </p>
+          </div>
+
+          <!-- Video Card 3 -->
+          <div class="group cursor-pointer">
+            <div
+              class="relative aspect-video mb-4 overflow-hidden rounded shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&q=80&w=1470"
+                alt="Asset Protection"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <div class="bg-white/90 p-2 rounded-full">
+                  <i
+                    data-lucide="play"
+                    class="w-4 h-4 text-galbo-dark fill-current"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="absolute bottom-2 right-2 bg-black/70 text-[8px] text-white px-1.5 py-0.5 rounded font-bold"
+              >
+                41:05
+              </div>
+            </div>
+            <h5
+              class="text-sm font-serif font-bold group-hover:text-galbo-gold mb-1 transition-colors"
+            >
+              Asset Protection Strategies for High-Net-Worth Individuals
+            </h5>
+            <p
+              class="text-[10px] text-gray-500 uppercase tracking-widest font-semibold"
+            >
+              February 10, 2024
+            </p>
+          </div>
+
+          <!-- Video Card 4 -->
+          <div class="group cursor-pointer">
+            <div
+              class="relative aspect-video mb-4 overflow-hidden rounded shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1374"
+                alt="Regulatory"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <div class="bg-white/90 p-2 rounded-full">
+                  <i
+                    data-lucide="play"
+                    class="w-4 h-4 text-galbo-dark fill-current"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="absolute bottom-2 right-2 bg-black/70 text-[8px] text-white px-1.5 py-0.5 rounded font-bold"
+              >
+                36:47
+              </div>
+            </div>
+            <h5
+              class="text-sm font-serif font-bold group-hover:text-galbo-gold mb-1 transition-colors"
+            >
+              Regulatory Updates for Family Offices
+            </h5>
+            <p
+              class="text-[10px] text-gray-500 uppercase tracking-widest font-semibold"
+            >
+              January 18, 2024
+            </p>
+          </div>
+
+          <!-- Video Card 5 -->
+          <div class="group cursor-pointer">
+            <div
+              class="relative aspect-video mb-4 overflow-hidden rounded shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1470"
+                alt="Digital Assets"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <div class="bg-white/90 p-2 rounded-full">
+                  <i
+                    data-lucide="play"
+                    class="w-4 h-4 text-galbo-dark fill-current"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="absolute bottom-2 right-2 bg-black/70 text-[8px] text-white px-1.5 py-0.5 rounded font-bold"
+              >
+                39:20
+              </div>
+            </div>
+            <h5
+              class="text-sm font-serif font-bold group-hover:text-galbo-gold mb-1 transition-colors"
+            >
+              Digital Assets: Understanding the New Paradigm
+            </h5>
+            <p
+              class="text-[10px] text-gray-500 uppercase tracking-widest font-semibold"
+            >
+              December 12, 2023
+            </p>
+          </div>
+        </div>
+
+        <!-- Topic Explore -->
+        <div class="mt-20 pt-16 border-t border-gray-200">
+          <p
+            class="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-400 mb-8"
+          >
+            Explore by Topic
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <button
+              class="flex items-center space-x-2 border border-gray-200 px-4 py-2 hover:border-galbo-gold transition-colors group"
+            >
+              <i
+                data-lucide="briefcase"
+                class="w-3.5 h-3.5 text-galbo-gold opacity-60 group-hover:opacity-100 transition-opacity"
+              ></i>
+              <span class="text-[11px] font-semibold text-gray-700"
+                >Wealth Management</span
+              >
+            </button>
+            <button
+              class="flex items-center space-x-2 border border-gray-200 px-4 py-2 hover:border-galbo-gold transition-colors group"
+            >
+              <i
+                data-lucide="users"
+                class="w-3.5 h-3.5 text-galbo-gold opacity-60 group-hover:opacity-100 transition-opacity"
+              ></i>
+              <span class="text-[11px] font-semibold text-gray-700"
+                >Family Office</span
+              >
+            </button>
+            <button
+              class="flex items-center space-x-2 border border-gray-200 px-4 py-2 hover:border-galbo-gold transition-colors group"
+            >
+              <i
+                data-lucide="layers"
+                class="w-3.5 h-3.5 text-galbo-gold opacity-60 group-hover:opacity-100 transition-opacity"
+              ></i>
+              <span class="text-[11px] font-semibold text-gray-700"
+                >Tax & Structuring</span
+              >
+            </button>
+            <button
+              class="flex items-center space-x-2 border border-gray-200 px-4 py-2 hover:border-galbo-gold transition-colors group"
+            >
+              <i
+                data-lucide="trending-up"
+                class="w-3.5 h-3.5 text-galbo-gold opacity-60 group-hover:opacity-100 transition-opacity"
+              ></i>
+              <span class="text-[11px] font-semibold text-gray-700"
+                >Investments</span
+              >
+            </button>
+            <button
+              class="flex items-center space-x-2 border border-gray-200 px-4 py-2 hover:border-galbo-gold transition-colors group"
+            >
+              <i
+                data-lucide="shield-check"
+                class="w-3.5 h-3.5 text-galbo-gold opacity-60 group-hover:opacity-100 transition-opacity"
+              ></i>
+              <span class="text-[11px] font-semibold text-gray-700"
+                >Governance</span
+              >
+            </button>
+            <button
+              class="flex items-center space-x-2 border border-gray-200 px-4 py-2 hover:border-galbo-gold transition-colors group"
+            >
+              <i
+                data-lucide="alert-triangle"
+                class="w-3.5 h-3.5 text-galbo-gold opacity-60 group-hover:opacity-100 transition-opacity"
+              ></i>
+              <span class="text-[11px] font-semibold text-gray-700"
+                >Risk Management</span
+              >
+            </button>
+            <button
+              class="flex items-center space-x-2 border border-gray-200 px-4 py-2 hover:border-galbo-gold transition-colors group"
+            >
+              <i
+                data-lucide="leaf"
+                class="w-3.5 h-3.5 text-galbo-gold opacity-60 group-hover:opacity-100 transition-opacity"
+              ></i>
+              <span class="text-[11px] font-semibold text-gray-700"
+                >ESG & Sustainability</span
+              >
+            </button>
+            <button
+              class="flex items-center space-x-2 border border-galbo-gold bg-galbo-gold/5 px-4 py-2"
+            >
+              <i data-lucide="grid" class="w-3.5 h-3.5 text-galbo-gold"></i>
+              <span class="text-[11px] font-semibold text-galbo-gold"
+                >All Topics</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-galbo-navy relative overflow-hidden">
+      <!-- Abstract Decoration Path -->
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <svg
+          class="w-full h-full"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0 100 Q 25 25 100 0"
+            fill="none"
+            stroke="#C5A059"
+            stroke-width="0.1"
+          />
+          <path
+            d="M0 80 Q 30 20 100 10"
+            fill="none"
+            stroke="#C5A059"
+            stroke-width="0.1"
+          />
+        </svg>
+      </div>
+
+      <div class="container mx-auto px-4 md:px-12 relative z-10">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-12"
+        >
+          <div class="flex items-start gap-6 max-w-xl">
+            <div
+              class="flex-none w-16 h-16 border border-galbo-gold rounded-full flex items-center justify-center"
+            >
+              <i data-lucide="mail" class="w-6 h-6 text-galbo-gold"></i>
+            </div>
+            <div>
+              <h4 class="text-2xl font-serif text-white mb-2">
+                Stay Ahead with Expert Insights
+              </h4>
+              <p class="text-gray-400 text-sm">
+                Subscribe to receive invitations to our webinars and the latest
+                insights on wealth, strategy, and global trends.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-fit">
+            <form
+              class="flex flex-col sm:flex-row gap-4 w-full lg:min-w-[500px]"
+            >
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                class="flex-grow bg-white px-6 py-4 text-sm focus:outline-none focus:ring-1 focus:ring-galbo-gold transition-all"
+              />
+              <button
+                type="submit"
+                class="flex-none bg-galbo-gold text-galbo-dark px-10 py-4 text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-white transition-all"
+              >
+                Subscribe
+              </button>
+            </form>
+            <p
+              class="mt-4 text-[10px] text-gray-500 italic text-center lg:text-left"
+            >
+              We respect your privacy. Unsubscribe at any time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-galbo-dark text-white pt-24 pb-12">
+      <div class="container mx-auto px-4 md:px-12">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-20"
+        >
+          <!-- Brand & Pitch -->
+          <div class="lg:col-span-2">
+            <div class="flex items-center space-x-2 mb-8">
+              <div
+                class="w-8 h-8 flex items-center justify-center border border-galbo-gold rounded-full text-galbo-gold font-serif font-bold italic"
+              >
+                G
+              </div>
+              <div class="flex flex-col leading-none">
+                <span class="text-xl font-serif tracking-widest font-bold"
+                  >GALBO</span
+                >
+                <span
+                  class="text-[10px] tracking-[0.3em] font-light text-galbo-gold uppercase"
+                  >Consulting</span
+                >
+              </div>
+            </div>
+            <p class="text-gray-400 text-xs leading-relaxed max-w-xs mb-8">
+              Boutique advisory for real estate, corporate and family wealth.
+              Discretion. Precision. Results.
+            </p>
+            <div class="flex items-center space-x-4">
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center border border-white/10 hover:border-galbo-gold hover:text-galbo-gold transition-all"
+              >
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center border border-white/10 hover:border-galbo-gold hover:text-galbo-gold transition-all"
+              >
+                <i data-lucide="instagram" class="w-4 h-4"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center border border-white/10 hover:border-galbo-gold hover:text-galbo-gold transition-all"
+              >
+                <i data-lucide="youtube" class="w-4 h-4"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center border border-white/10 hover:border-galbo-gold hover:text-galbo-gold transition-all"
+              >
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 1 -->
+          <div>
+            <h6
+              class="text-[10px] font-bold tracking-[0.3em] uppercase text-white mb-8 border-l-2 border-galbo-gold pl-4"
+            >
+              Quick Links
+            </h6>
+            <ul
+              class="text-[11px] text-gray-400 space-y-4 tracking-wide font-medium"
+            >
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Family Office</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Insights</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Resources</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2 -->
+          <div>
+            <h6
+              class="text-[10px] font-bold tracking-[0.3em] uppercase text-white mb-8 border-l-2 border-galbo-gold pl-4"
+            >
+              Services
+            </h6>
+            <ul
+              class="text-[11px] text-gray-400 space-y-4 tracking-wide font-medium"
+            >
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Wealth Planning & Strategy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Tax & Structuring</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Family Office Services</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Investment Advisory</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Risk Management</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Succession Planning</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Cross-Border Solutions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Philanthropy Advisory</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div>
+            <h6
+              class="text-[10px] font-bold tracking-[0.3em] uppercase text-white mb-8 border-l-2 border-galbo-gold pl-4"
+            >
+              Resources
+            </h6>
+            <ul
+              class="text-[11px] text-gray-400 space-y-4 tracking-wide font-medium"
+            >
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Articles</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Guides & Reports</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Case Studies</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Videos & Webinars</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >FAQs</a
+                >
+              </li>
+            </ul>
+            <h6
+              class="text-[10px] font-bold tracking-[0.3em] uppercase text-white mt-12 mb-8 border-l-2 border-galbo-gold pl-4"
+            >
+              Legal
+            </h6>
+            <ul
+              class="text-[11px] text-gray-400 space-y-4 tracking-wide font-medium"
+            >
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >Cookies Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-galbo-gold transition-colors"
+                  >AML Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4 Info -->
+          <div>
+            <h6
+              class="text-[10px] font-bold tracking-[0.3em] uppercase text-white mb-8 border-l-2 border-galbo-gold pl-4"
+            >
+              Our Offices
+            </h6>
+            <ul
+              class="text-[11px] text-gray-400 space-y-6 tracking-wide font-medium"
+            >
+              <li class="flex items-start">
+                <i
+                  data-lucide="map-pin"
+                  class="w-4 h-4 text-galbo-gold mr-3 shrink-0"
+                ></i>
+                <span
+                  >Paphos, Cyprus<br /><span
+                    class="text-[9px] uppercase tracking-widest opacity-50 font-bold"
+                    >(Licensed & Regulated)</span
+                  ></span
+                >
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="phone" class="w-4 h-4 text-galbo-gold mr-3"></i>
+                <span>+357 26 000 794</span>
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="mail" class="w-4 h-4 text-galbo-gold mr-3"></i>
+                <a
+                  href="mailto:info@galboconsulting.com"
+                  class="text-galbo-gold hover:underline"
+                  >info@galboconsulting.com</a
+                >
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="clock" class="w-4 h-4 text-galbo-gold mr-3"></i>
+                <span>Mon - Fri 9:00 - 17:00 (Cyprus time)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="pt-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          <p
+            class="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-medium"
+          >
+            &copy; 2025 Galbo Consulting. All rights reserved.
+          </p>
+          <button
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+            class="group flex items-center justify-center w-10 h-10 border border-white/10 hover:border-galbo-gold transition-all"
+          >
+            <i
+              data-lucide="arrow-up"
+              class="w-4 h-4 text-gray-500 group-hover:text-galbo-gold"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

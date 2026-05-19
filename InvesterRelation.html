@@ -1,0 +1,1253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galbo Consulting - Investor Relations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      .gold-text {
+        color: #c5a059;
+      }
+      .gold-bg {
+        background-color: #c5a059;
+      }
+      .gold-border {
+        border-color: #c5a059;
+      }
+      .bg-navy-dark {
+        background-color: #010915;
+      }
+      .bg-navy-card {
+        background-color: #020e1f;
+      }
+      .bg-light-section {
+        background-color: #f8f9fa;
+      }
+      .border-navy-light {
+        border-color: #0a1c32;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #010915;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c5a059;
+        border-radius: 4px;
+      }
+
+      .nav-link {
+        transition: color 0.3s ease;
+      }
+      .nav-link:hover {
+        color: #c5a059;
+      }
+
+      .transition-transform {
+        transition: transform 0.3s ease;
+      }
+
+      .hover-lift:hover {
+        transform: translateY(-4px);
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .nav-active {
+        border-bottom: 2px solid #b8964f;
+      }
+      input::placeholder {
+        color: rgba(255, 255, 255, 0.35);
+      }
+      .service-card:hover {
+        box-shadow: 0 4px 24px rgba(184, 150, 79, 0.13);
+      }
+      .footer-link:hover {
+        color: #b8964f !important;
+      }
+    </style>
+    <style></style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: "#b8964f",
+              navy: "#0d1b2a",
+              "navy-cta": "#0f1e2e",
+              "navy-footer": "#08111c",
+
+              "galbo-gold": "#c69c6d",
+              "galbo-dark": "#0a1118",
+              "galbo-navy": "#0d1821",
+              "galbo-bg": "#f9f8f6",
+              "galbo-border": "#e5e1da",
+              "galbo-text-muted": "#666666",
+            },
+
+            fontFamily: {
+              cormorant: ['"Cormorant Garamond"', "font-cormorant"],
+              dmsans: ['"DM Sans"', "sans-font-cormorant"],
+            },
+
+            letterSpacing: {
+              "widest-plus": "0.3em",
+              "super-wide": "0.5em",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .font-cormorant {
+        font-family: "Cormorant Garamond", font-cormorant;
+      }
+      .hero-section {
+        background:
+          linear-gradient(rgba(10, 17, 24, 0.85), rgba(10, 17, 24, 0.85)),
+          url("./images/investor-relation/image.png");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .glass-award {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .award-card:hover {
+        background-color: #fff;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        transform: translateY(-4px);
+        transition: all 0.3s ease;
+        z-index: 10;
+      }
+
+      .nav-item::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: #c69c6d;
+        transition: width 0.3s ease;
+      }
+      .nav-item:hover::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="font-dmsans bg-[#010915] text-white overflow-x-hidden">
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <header
+      id="navbar"
+      class="bg-white border-b border-[#f0ece4] sticky top-0 z-50 transition-all duration-300"
+    >
+      <div
+        class="max-w-[1200px] mx-auto px-16 h-[68px] flex items-center justify-between"
+      >
+        <!-- C:\Users\USER\OneDrive\Desktop\Flinque Platform\flinque-frontend\public\pages\construction\images\galbo-consulting-logo.png -->
+        <div class="text-center">
+          <!-- Logo -->
+          <img
+            src="./images/galbo-consulting-logo.png"
+            alt="Galbo Consulting Logo"
+            class="h-10 w-auto"
+          />
+        </div>
+        <nav class="flex items-center gap-8">
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline nav-active pb-[2px]"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
+            >About</a
+          >
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline flex items-center gap-1"
+            >Services <span class="text-[9px]">▾</span></a
+          >
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
+            >The Journal</a
+          >
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
+            >Contact</a
+          >
+        </nav>
+        <a
+          href="#"
+          class="border border-gold text-gold font-dmsans text-[9px] font-semibold tracking-[0.12em] uppercase px-4 py-[10px] no-underline text-center leading-tight hover:bg-gold hover:text-white transition-colors duration-200"
+          >Request a<br />Private Consultation</a
+        >
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center pt-24">
+      <!-- Hero Background -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="./images/investor-relation/image.png"
+          alt="Luxury Boardroom"
+          class="w-full h-full object-cover opacity-60"
+          referrerpolicy="no-referrer"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-[#010915] via-[#010915]/80 to-transparent"
+        ></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div
+        class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+      >
+        <div>
+          <!-- Breadcrumb -->
+          <nav
+            class="flex items-center gap-2 text-[10px] tracking-widest uppercase text-white/50 mb-12"
+          >
+            <span>Home</span>
+            <i data-lucide="chevron-right" class="w-3 h-3"></i>
+            <span class="text-white/80">Investor Relations</span>
+          </nav>
+
+          <h4
+            class="gold-text text-xs font-bold tracking-[0.3em] uppercase mb-6"
+          >
+            Investor Relations
+          </h4>
+          <h1
+            class="text-5xl md:text-7xl font-bold leading-tight mb-8 font-cormorant"
+          >
+            Transparent Today. <br />
+            <span class="gold-text">Stronger Tomorrow.</span>
+          </h1>
+          <p class="text-white/70 text-lg leading-relaxed max-w-lg mb-10">
+            Our commitment to transparency, governance, and long-term value
+            creation guides every decision we make. Explore our financial
+            performance, strategies, and corporate governance.
+          </p>
+
+          <button
+            class="flex items-center gap-3 border gold-border gold-text text-xs font-bold tracking-widest uppercase px-8 py-4 hover:bg-[#c5a059] hover:text-white transition-colors group"
+          >
+            <span>Overview Presentation</span>
+            <i
+              data-lucide="download"
+              class="w-4 h-4 transition-transform group-hover:translate-y-1"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#050a14] py-20 px-6 lg:px-12">
+      <div class="max-w-7xl mx-auto">
+        <!-- MAIN LAYOUT -->
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 items-stretch">
+          <!-- LEFT CONTENT -->
+          <div class="lg:col-span-1 flex flex-col justify-center pr-4">
+            <h4
+              class="text-gold text-[9px] font-bold tracking-[0.28em] uppercase mb-4"
+            >
+              Financial Highlights
+            </h4>
+
+            <h2
+              class="font-cormorant text-[42px] leading-[1.05] text-white mb-5"
+            >
+              Consistent Growth.<br />
+              Sustainable Value.
+            </h2>
+
+            <p class="text-white/55 text-[12px] leading-[1.9] max-w-[260px]">
+              Our performance reflects our disciplined approach, strong client
+              relationships, and commitment to excellence.
+            </p>
+          </div>
+
+          <!-- RIGHT CARDS -->
+          <div class="lg:col-span-4">
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-[2px]"
+            >
+              <!-- CARD 1 -->
+              <div
+                class="border border-[#1a2940] bg-[#08111d] px-8 py-9 text-center hover:border-[#b88945]/40 transition-all duration-300"
+              >
+                <div class="flex justify-center mb-5">
+                  <i
+                    data-lucide="coins"
+                    class="w-[20px] h-[20px] text-[#b88945]"
+                  ></i>
+                </div>
+
+                <h3
+                  class="font-cormorant text-[38px] leading-none text-white mb-3"
+                >
+                  €128.7M
+                </h3>
+
+                <p
+                  class="text-[10px] uppercase tracking-[0.08em] text-white/55 mb-5"
+                >
+                  Total Revenue (FY 2024)
+                </p>
+
+                <div
+                  class="flex items-center justify-center gap-1 text-[10px] text-[#41b96f] font-semibold"
+                >
+                  <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                  <span>+18.6% vs FY 2023</span>
+                </div>
+              </div>
+
+              <!-- CARD 2 -->
+              <div
+                class="border border-[#1a2940] bg-[#08111d] px-8 py-9 text-center hover:border-[#b88945]/40 transition-all duration-300"
+              >
+                <div class="flex justify-center mb-5">
+                  <i
+                    data-lucide="bar-chart-3"
+                    class="w-[20px] h-[20px] text-[#b88945]"
+                  ></i>
+                </div>
+
+                <h3
+                  class="font-cormorant text-[38px] leading-none text-white mb-3"
+                >
+                  €42.3M
+                </h3>
+
+                <p
+                  class="text-[10px] uppercase tracking-[0.08em] text-white/55 mb-5"
+                >
+                  Operating Profit (FY 2024)
+                </p>
+
+                <div
+                  class="flex items-center justify-center gap-1 text-[10px] text-[#41b96f] font-semibold"
+                >
+                  <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                  <span>+22.1% vs FY 2023</span>
+                </div>
+              </div>
+
+              <!-- CARD 3 -->
+              <div
+                class="border border-[#1a2940] bg-[#08111d] px-8 py-9 text-center hover:border-[#b88945]/40 transition-all duration-300"
+              >
+                <div class="flex justify-center mb-5">
+                  <i
+                    data-lucide="pie-chart"
+                    class="w-[20px] h-[20px] text-[#b88945]"
+                  ></i>
+                </div>
+
+                <h3
+                  class="font-cormorant text-[38px] leading-none text-white mb-3"
+                >
+                  32.9%
+                </h3>
+
+                <p
+                  class="text-[10px] uppercase tracking-[0.08em] text-white/55 mb-5"
+                >
+                  Operating Margin
+                </p>
+
+                <div
+                  class="flex items-center justify-center gap-1 text-[10px] text-[#41b96f] font-semibold"
+                >
+                  <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                  <span>+3.4% vs FY 2023</span>
+                </div>
+              </div>
+
+              <!-- CARD 4 -->
+              <div
+                class="border border-[#1a2940] bg-[#08111d] px-8 py-9 text-center hover:border-[#b88945]/40 transition-all duration-300"
+              >
+                <div class="flex justify-center mb-5">
+                  <i
+                    data-lucide="users"
+                    class="w-[20px] h-[20px] text-[#b88945]"
+                  ></i>
+                </div>
+
+                <h3
+                  class="font-cormorant text-[38px] leading-none text-white mb-3"
+                >
+                  210+
+                </h3>
+
+                <p
+                  class="text-[10px] uppercase tracking-[0.08em] text-white/55 mb-5"
+                >
+                  Professionals Worldwide
+                </p>
+
+                <div
+                  class="flex items-center justify-center gap-1 text-[10px] text-[#41b96f] font-semibold"
+                >
+                  <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                  <span>+15.3% vs FY 2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTNOTE -->
+        <p
+          class="text-center text-[9px] tracking-[0.18em] text-white/25 uppercase mt-12"
+        >
+          All figures are for the fiscal year ended 31 December 2024.
+        </p>
+      </div>
+    </section>
+
+    <!-- Reports and Governance Section -->
+    <section
+      class="bg-[#f2f4f7] py-24 px-6 lg:px-12 text-gray-900 overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Reports Column -->
+        <div class="pr-0 lg:pr-12 border-r-0 lg:border-r border-gray-200">
+          <h4
+            class="gold-text text-xs font-bold tracking-[0.3em] uppercase mb-4"
+          >
+            Reports & Presentations
+          </h4>
+          <h2 class="text-3xl font-bold font-cormorant mb-6">
+            Financial Reports & Updates
+          </h2>
+          <p class="text-gray-500 text-sm mb-10">
+            Access our annual reports, financial statements, and investor
+            presentations.
+          </p>
+
+          <div class="space-y-6 mb-12">
+            <!-- Report Item -->
+            <div
+              class="flex items-center justify-between group cursor-pointer p-4 hover:bg-white transition-all bg-white/50 border border-transparent hover:border-gray-200"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-[#010915] flex items-center justify-center rounded"
+                >
+                  <i data-lucide="file-text" class="gold-text w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm">Annual Report 2024</h4>
+                  <p class="text-[11px] text-gray-500">
+                    Comprehensive overview of our performance.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-2 gold-text text-[10px] font-bold tracking-widest uppercase"
+              >
+                <span>Download</span>
+                <i data-lucide="download" class="w-3 h-3"></i>
+              </div>
+            </div>
+            <!-- Report Item -->
+            <div
+              class="flex items-center justify-between group cursor-pointer p-4 hover:bg-white transition-all bg-white/50 border border-transparent hover:border-gray-200"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-[#010915] flex items-center justify-center rounded"
+                >
+                  <i data-lucide="file-text" class="gold-text w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm">Financial Statements 2024</h4>
+                  <p class="text-[11px] text-gray-500">
+                    Audited financial data for the fiscal year.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-2 gold-text text-[10px] font-bold tracking-widest uppercase"
+              >
+                <span>Download</span>
+                <i data-lucide="download" class="w-3 h-3"></i>
+              </div>
+            </div>
+            <!-- Report Item -->
+            <div
+              class="flex items-center justify-between group cursor-pointer p-4 hover:bg-white transition-all bg-white/50 border border-transparent hover:border-gray-200"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-[#010915] flex items-center justify-center rounded"
+                >
+                  <i data-lucide="file-text" class="gold-text w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm">
+                    Investor Presentation Q1 2025
+                  </h4>
+                  <p class="text-[11px] text-gray-500">
+                    Latest quarterly updates and outlook.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-2 gold-text text-[10px] font-bold tracking-widest uppercase"
+              >
+                <span>Download</span>
+                <i data-lucide="download" class="w-3 h-3"></i>
+              </div>
+            </div>
+            <!-- Report Item -->
+            <div
+              class="flex items-center justify-between group cursor-pointer p-4 hover:bg-white transition-all bg-white/50 border border-transparent hover:border-gray-200"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-[#010915] flex items-center justify-center rounded"
+                >
+                  <i data-lucide="file-text" class="gold-text w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm">Corporate Fact Sheet</h4>
+                  <p class="text-[11px] text-gray-500">
+                    Key facts and figures at a glance.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-2 gold-text text-[10px] font-bold tracking-widest uppercase"
+              >
+                <span>Download</span>
+                <i data-lucide="download" class="w-3 h-3"></i>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 border gold-border gold-text text-[10px] font-bold tracking-widest uppercase px-8 py-3 hover:bg-[#c5a059] hover:text-white transition-colors"
+          >
+            View All Reports <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+
+        <!-- Governance Column -->
+        <div class="pl-0 lg:pl-12">
+          <h4
+            class="gold-text text-xs font-bold tracking-[0.3em] uppercase mb-4"
+          >
+            Governance
+          </h4>
+          <h2 class="text-3xl font-bold font-cormorant mb-6">
+            Strong Governance. Lasting Trust.
+          </h2>
+          <p class="text-gray-500 text-sm mb-10">
+            We uphold the highest standards of corporate governance, ethical
+            conduct, and risk management.
+          </p>
+
+          <div class="space-y-6 mb-12">
+            <!-- Governance Item -->
+            <div
+              class="flex items-center justify-between group cursor-pointer p-4 hover:bg-white transition-all bg-white/50 border border-transparent hover:border-gray-200"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-white flex items-center justify-center rounded shadow-sm"
+                >
+                  <i data-lucide="shield-check" class="gold-text w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm">Corporate Governance</h4>
+                  <p class="text-[11px] text-gray-500">
+                    Our framework ensures accountability and transparency.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="gold-text transition-transform group-hover:translate-x-1"
+              >
+                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <!-- Governance Item -->
+            <div
+              class="flex items-center justify-between group cursor-pointer p-4 hover:bg-white transition-all bg-white/50 border border-transparent hover:border-gray-200"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-white flex items-center justify-center rounded shadow-sm"
+                >
+                  <i data-lucide="scale" class="gold-text w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm">Board of Directors</h4>
+                  <p class="text-[11px] text-gray-500">
+                    Experienced leaders guiding our strategy and vision.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="gold-text transition-transform group-hover:translate-x-1"
+              >
+                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <!-- Governance Item -->
+            <div
+              class="flex items-center justify-between group cursor-pointer p-4 hover:bg-white transition-all bg-white/50 border border-transparent hover:border-gray-200"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-white flex items-center justify-center rounded shadow-sm"
+                >
+                  <i data-lucide="file-check" class="gold-text w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm">Policies & Charters</h4>
+                  <p class="text-[11px] text-gray-500">
+                    Guiding principles for ethical and sustainable business.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="gold-text transition-transform group-hover:translate-x-1"
+              >
+                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <!-- Governance Item -->
+            <div
+              class="flex items-center justify-between group cursor-pointer p-4 hover:bg-white transition-all bg-white/50 border border-transparent hover:border-gray-200"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-white flex items-center justify-center rounded shadow-sm"
+                >
+                  <i data-lucide="users" class="gold-text w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm">Risk Management</h4>
+                  <p class="text-[11px] text-gray-500">
+                    A proactive approach to managing risks globally.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="gold-text transition-transform group-hover:translate-x-1"
+              >
+                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 border gold-border gold-text text-[10px] font-bold tracking-widest uppercase px-8 py-3 hover:bg-[#c5a059] hover:text-white transition-colors"
+          >
+            View Governance <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investor Outlook Section -->
+    <section class="bg-[#020e1f] py-20 px-6 lg:px-12 border-y border-white/5">
+      <div
+        class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16"
+      >
+        <div class="lg:w-1/2">
+          <h4
+            class="gold-text text-[10px] font-bold tracking-[0.3em] uppercase mb-4"
+          >
+            Investor Outlook
+          </h4>
+          <h2
+            class="text-3xl font-bold font-cormorant mb-6 lowercase first-letter:uppercase"
+          >
+            Focused on long-term value creation
+          </h2>
+          <p class="text-white/60 text-sm leading-relaxed max-w-lg">
+            We remain committed to expanding our global footprint, investing in
+            innovation, and delivering exceptional value to our clients and
+            shareholders.
+          </p>
+        </div>
+        <div class="lg:w-1/2 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center group">
+            <div
+              class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center mx-auto mb-4 group-hover:gold-border"
+            >
+              <i data-lucide="target" class="gold-text w-6 h-6"></i>
+            </div>
+            <p
+              class="text-[10px] font-bold tracking-widest uppercase text-white/80"
+            >
+              Strategic Expansion <br />
+              in High-growth markets
+            </p>
+          </div>
+          <div class="text-center group">
+            <div
+              class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center mx-auto mb-4 group-hover:gold-border"
+            >
+              <i data-lucide="cpu" class="gold-text w-6 h-6"></i>
+            </div>
+            <p
+              class="text-[10px] font-bold tracking-widest uppercase text-white/80"
+            >
+              Investment in <br />
+              technology and innovation
+            </p>
+          </div>
+          <div class="text-center group">
+            <div
+              class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center mx-auto mb-4 group-hover:gold-border"
+            >
+              <i data-lucide="trending-up" class="gold-text w-6 h-6"></i>
+            </div>
+            <p
+              class="text-[10px] font-bold tracking-widest uppercase text-white/80"
+            >
+              Sustainable growth <br />
+              and client value creation
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stay Informed Section -->
+    <section class="bg-white py-16 px-6 lg:px-12 text-gray-900">
+      <div
+        class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12"
+      >
+        <div class="flex items-center gap-6">
+          <div
+            class="w-16 h-16 bg-[#010915] rounded-full flex items-center justify-center relative"
+          >
+            <div
+              class="absolute -inset-1 border border-dashed border-[#c5a059] rounded-full"
+            ></div>
+            <i data-lucide="mail" class="gold-text w-6 h-6"></i>
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold font-cormorant">Stay Informed</h2>
+            <p class="text-xs text-gray-500">
+              Subscribe to receive our latest investor updates and financial
+              announcements.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex-1 max-w-md w-full">
+          <form class="flex gap-2">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="flex-1 bg-gray-100 border-none px-6 py-4 text-sm focus:ring-1 focus:ring-[#c5a059] outline-none"
+            />
+            <button
+              type="submit"
+              class="bg-[#010915] text-white text-[10px] font-bold tracking-widest uppercase px-8 py-4 hover:bg-[#c5a059] transition-colors"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+        <div class="text-right">
+          <p class="text-[10px] tracking-widest uppercase text-gray-400 mb-1">
+            Investor inquiries, please contact:
+          </p>
+          <div class="flex items-center gap-2 justify-end">
+            <i data-lucide="mail-search" class="w-4 h-4 gold-text"></i>
+            <a
+              href="mailto:ir@galboconsulting.com"
+              class="font-bold text-sm hover:gold-text"
+              >ir@galboconsulting.com</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CTA BAND ═══════════ -->
+    <section class="bg-navy-cta py-14 border border-white/50">
+      <div
+        class="max-w-[1200px] mx-auto px-16 flex items-center justify-between gap-12"
+      >
+        <div class="flex items-center gap-7">
+          <svg
+            width="60"
+            height="70"
+            viewBox="0 0 60 70"
+            fill="none"
+            class="flex-shrink-0"
+          >
+            <path
+              d="M30 3L4 14v23c0 17 11 28 26 32 15-4 26-15 26-32V14L30 3z"
+              fill="#b8964f"
+            />
+            <text
+              x="30"
+              y="46"
+              text-anchor="middle"
+              font-family="Cormorant Garamond,font-cormorant"
+              font-size="28"
+              font-weight="600"
+              fill="#0d1b2a"
+            >
+              G
+            </text>
+          </svg>
+          <div>
+            <h2
+              class="font-cormorant text-[30px] font-semibold text-white leading-[1.2]"
+            >
+              Your Goals. Our Counsel. Exceptional Results.
+            </h2>
+            <p class="font-dmsans text-[13px] text-white/60 mt-2 leading-[1.6]">
+              Let's discuss how we can help you navigate opportunities with
+              confidence and achieve lasting success.
+            </p>
+          </div>
+        </div>
+        <a
+          href="#"
+          class="inline-flex items-center justify-center h-[38px] px-8 bg-[#b8861b] border border-[#8f6a14] rounded-md text-white font-dmsans text-[10px] font-bold tracking-[0.08em] uppercase no-underline whitespace-nowrap hover:bg-[#a87918] transition-all duration-200"
+        >
+          Request a Private Consultation
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="bg-navy-cta pt-16">
+      <div class="max-w-[1200px] mx-auto px-16">
+        <!-- Main grid: 5 columns -->
+
+        <div
+          class="grid grid-cols-[200px_130px_240px_190px_190px] gap-12 pb-14"
+        >
+          <!-- Col 1 — Brand -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <!-- Logo -->
+            <div class="mb-6">
+              <div>
+                <img src="/images/galbo-consulting-logo-dark.png" alt="" />
+              </div>
+            </div>
+
+            <p
+              class="font-dmsans text-[10px] text-white leading-[2] max-w-[260px]"
+              style="font-weight: 400"
+            >
+              Boutique advisory firm in Cyprus for real estate, corporate and
+              high-net-worth clients.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="flex items-center gap-3 mt-8">
+              <!-- LinkedIn -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.92)"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.92)"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="5" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1.2"
+                    fill="rgba(255,255,255,0.92)"
+                    stroke="none"
+                  />
+                </svg>
+              </a>
+              <!-- YouTube -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 1.96A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 1.95C5.12 20 12 20 12 20s6.88 0 8.6-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"
+                    stroke="rgba(255,255,255,0.92)"
+                    stroke-width="1.7"
+                  />
+                  <polygon
+                    points="9.75 15.02 15.5 12 9.75 8.98"
+                    fill="rgba(255,255,255,0.92)"
+                  />
+                </svg>
+              </a>
+              <!-- Facebook -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.92)"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 2 — Quick Links -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <h4
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5"
+            >
+              Quick Links
+            </h4>
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >About Us</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >Services</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >The Journal</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Col 3 — Services -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <h4
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5"
+            >
+              Services
+            </h4>
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Family Office Management</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Real Estate Acquisition</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Real Estate Entrepreneur Representation</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Banking & Asset Management Advisory</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Corporate Structuring</a
+            >
+          </div>
+
+          <!-- Col 4 — Contact -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <h4
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5"
+            >
+              Contact
+            </h4>
+
+            <div class="flex gap-[10px] mb-4 items-start">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0 mt-[3px]"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span class="font-dmsans text-[13px] text-white leading-[1.65]"
+                >Pissouri, Cyprus<br />(Between Limassol and Paphos)</span
+              >
+            </div>
+
+            <div class="flex gap-[10px] mb-4 items-center">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.09 1.22 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"
+                />
+              </svg>
+              <a
+                href="tel:+35725000194"
+                class="font-dmsans text-[13px] text-white no-underline"
+                >+357 25 000 194</a
+              >
+            </div>
+
+            <div class="flex gap-[10px] mb-4 items-center">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <a
+                href="mailto:info@galbo.consulting"
+                class="font-dmsans text-[13px] text-white no-underline"
+                >info@galbo.consulting</a
+              >
+            </div>
+
+            <div class="flex gap-[10px] items-start">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0 mt-[3px]"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span class="font-dmsans text-[13px] text-white leading-[1.65]"
+                >Mon – Fri: 9:00 – 17:00<br />(Cyprus time)</span
+              >
+            </div>
+          </div>
+
+          <!-- Col 5 — Stay Informed -->
+          <div class="flex flex-col max-w-[230px]">
+            <h4
+              class="font-dmsans text-[11px] font-semibold tracking-[0.08em] uppercase text-white mb-4"
+            >
+              Stay Informed
+            </h4>
+
+            <p class="font-dmsans text-[13px] text-white/75 mb-5 leading-snug">
+              Subscribe to our insights
+            </p>
+
+            <!-- Input -->
+            <input
+              type="email"
+              placeholder="Your email address"
+              class="w-full h-[46px] bg-white border border-[#d9d9d9] rounded-md text-[#1d1d1d] placeholder:text-[#8d8d8d] font-dmsans text-[13px] px-5 outline-none mb-5 focus:border-[#b8861b] transition-colors duration-200"
+            />
+
+            <!-- Button -->
+            <button
+              class="w-[128px] h-[46px] bg-[#b8861b] border border-[#9a7418] rounded-md text-white font-dmsans text-[11px] font-semibold tracking-[0.03em] uppercase cursor-pointer hover:bg-[#a87918] transition-all duration-200"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        <!-- end grid -->
+
+        <!-- Bottom bar -->
+        <div
+          class="border-t border-white/50 py-5 flex items-center justify-between"
+        >
+          <p class="font-dmsans text-[11.5px] text-white">
+            © 2025 Galbo Consulting. All rights reserved.
+          </p>
+          <div class="flex items-center gap-7">
+            <a
+              href="#"
+              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              >Terms & Conditions</a
+            >
+            <a
+              href="#"
+              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              >General Service Agreement</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("navbar");
+
+        if (window.scrollY > 50) {
+          nav.classList.add("bg-white/95", "backdrop-blur-md", "shadow-sm");
+        } else {
+          nav.classList.remove("bg-white/95", "backdrop-blur-md", "shadow-sm");
+        }
+      });
+    </script>
+  </body>
+</html>

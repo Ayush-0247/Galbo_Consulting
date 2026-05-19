@@ -1,0 +1,1084 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galbo Consulting - Events</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: "#b8964f",
+              navy: "#0d1b2a",
+              "navy-cta": "#0f1e2e",
+              "navy-footer": "#08111c",
+            },
+            fontFamily: {
+              cormorant: ['"Cormorant Garamond"', "serif"],
+              dmsans: ['"DM Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-cormorant {
+        font-family: "Playfair Display", serif;
+      }
+      .text-gold {
+        color: #c5a059;
+      }
+      .bg-gold {
+        background-color: #c5a059;
+      }
+      .border-gold {
+        border-color: #c5a059;
+      }
+      .bg-dark-navy {
+        background-color: #0a0d14;
+      }
+    </style>
+    <style>
+      .hero-bg {
+        background:
+          linear-gradient(
+            to right,
+            rgba(10, 15, 30, 0.93) 45%,
+            rgba(10, 15, 30, 0.55) 100%
+          ),
+          url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=80")
+            center/cover no-repeat;
+      }
+      .nav-active {
+        border-bottom: 2px solid #b8964f;
+      }
+      input::placeholder {
+        color: rgba(255, 255, 255, 0.35);
+      }
+      .service-card:hover {
+        box-shadow: 0 4px 24px rgba(184, 150, 79, 0.13);
+      }
+      .footer-link:hover {
+        color: #b8964f !important;
+      }
+    </style>
+  </head>
+  <body class="font-dmsans text-gray-900 overflow-x-hidden">
+    <header class="bg-white border-b border-[#f0ece4] sticky top-0 z-50">
+      <div
+        class="max-w-[1200px] mx-auto px-16 h-[68px] flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="text-center">
+          <img
+            src="./images/galbo-consulting-logo.png"
+            alt="Galbo Consulting Logo"
+            class="h-10 w-auto"
+          />
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="flex items-center gap-8">
+          <a
+            href="index.html"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline nav-active pb-[2px]"
+          >
+            Home
+          </a>
+
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
+          >
+            About
+          </a>
+
+          <!-- SERVICES DROPDOWN -->
+          <div class="relative group">
+            <button
+              class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase flex items-center gap-1 focus:outline-none"
+            >
+              Services
+              <span
+                class="text-[9px] transition-transform duration-300 group-hover:rotate-180"
+              >
+                ▾
+              </span>
+            </button>
+
+            <!-- DROPDOWN MENU -->
+            <div
+              class="absolute left-0 top-full mt-4 w-[320px] bg-white border border-[#e9e4da] shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+            >
+              <div class="max-h-[500px] overflow-y-auto py-2">
+                <a
+                  href="Award&Recogniation.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Award & Recognition
+                </a>
+
+                <a
+                  href="career.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Career
+                </a>
+
+                <a
+                  href="ClientPortal.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Client Portal
+                </a>
+
+                <a
+                  href="Events.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Events
+                </a>
+
+                <a
+                  href="faq.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  FAQ
+                </a>
+
+                <a
+                  href="GlobalOffices.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Global Offices
+                </a>
+
+                <a
+                  href="InvesterRelation.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Investor Relation
+                </a>
+
+                <a
+                  href="LegalAndCompliance.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Legal & Compliance
+                </a>
+
+                <a
+                  href="LuxuriousCorporateTestimonials.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Corporate Testimonials
+                </a>
+
+                <a
+                  href="Partnership.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Partnership
+                </a>
+
+                <a
+                  href="PhilanthropyAndFoundation.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Philanthropy & Foundation
+                </a>
+
+                <a
+                  href="Press&Media.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Press & Media
+                </a>
+
+                <a
+                  href="PrivateMembership.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Private Membership
+                </a>
+
+                <a
+                  href="SustainableConsultingWithEleganceAndImpact.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Sustainable Consulting
+                </a>
+
+                <a
+                  href="Webinars&InsightsHubDesign.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Webinars & Insights Hub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
+          >
+            The Journal
+          </a>
+
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
+          >
+            Contact
+          </a>
+        </nav>
+
+        <!-- CTA BUTTON -->
+        <a
+          href="#"
+          class="border border-gold text-gold font-dmsans text-[9px] font-semibold tracking-[0.12em] uppercase px-4 py-[10px] no-underline text-center leading-tight hover:bg-gold hover:text-white transition-colors duration-200"
+        >
+          Request a<br />
+          Private Consultation
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[85vh] w-full mt-20">
+      <!-- Background Image -->
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="
+          background-image: url(&quot;./images/Event-Page/event-page-hero.jpg&quot;);
+        "
+        alt="Office Background"
+        class="w-full h-full object-cover"
+      >
+        <div class="absolute inset-0 bg-black/60"></div>
+      </div>
+
+      <!-- Content -->
+      <div
+        class="relative max-w-7xl mx-auto px-4 h-full flex flex-col justify-center"
+      >
+        <!-- Breadcrumbs -->
+        <div
+          class="flex items-center gap-2 text-[10px] text-white/60 mb-12 tracking-widest"
+        >
+          <a href="#" class="hover:text-white transition-colors">Home</a>
+          <i data-lucide="chevron-right" class="w-3 h-3"></i>
+          <span class="text-white">Events</span>
+        </div>
+
+        <!-- Title Area -->
+        <div class="max-w-3xl">
+          <span
+            class="text-gold text-[10px] font-bold tracking-[0.2em] mb-4 block uppercase leading-none"
+            >Events & Engagements</span
+          >
+          <h1
+            class="text-5xl md:text-6xl text-white font-cormorant mb-8 leading-[1.1]"
+          >
+            Ideas That Inspire.<br />
+            Conversations That Create
+            <span class="text-gold italic">Impact.</span>
+          </h1>
+          <p
+            class="text-white/80 text-sm font-light leading-relaxed mb-10 max-w-xl"
+          >
+            From private roundtables to global conferences, we bring together
+            leaders, families, and experts to discuss what matters most.
+          </p>
+          <button
+            class="flex items-center gap-3 text-gold text-[10px] font-bold tracking-widest border border-gold px-6 py-3 px-8 hover:bg-gold hover:text-black transition-all"
+          >
+            VIEW UPCOMING EVENTS
+            <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="py-20 bg-[#F9F7F4] relative">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Navigation arrows (moved to top right) -->
+        <div class="absolute top-24 right-4 flex gap-4 hidden lg:flex z-10">
+          <button
+            class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-gray-500 hover:border-gold hover:text-gold transition-all"
+          >
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </button>
+          <button
+            class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-gray-500 hover:border-gold hover:text-gold transition-all"
+          >
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-16 items-start">
+          <!-- Left Intro -->
+          <div class="lg:w-[30%]">
+            <span
+              class="text-gold text-[10px] font-bold tracking-[0.2em] mb-4 block uppercase"
+              >Upcoming Events</span
+            >
+            <h2 class="text-4xl md:text-5xl font-cormorant mb-6 leading-tight">
+              Join Us at Our
+              <span class="text-gold italic">Upcoming Events</span>
+            </h2>
+            <p class="text-gray-700 text-sm leading-relaxed mb-8">
+              We host and participate in select events that foster meaningful
+              dialogue and share valuable insights.
+            </p>
+            <button
+              class="flex items-center gap-3 text-gold text-xs font-bold tracking-[0.2em] border border-gold px-8 py-4 hover:bg-gold hover:text-black transition-all uppercase"
+            >
+              VIEW ALL EVENTS
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Cards Grid -->
+          <div
+            class="lg:w-[70%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <!-- Card 1 -->
+            <div
+              class="border border-gray-100 group cursor-pointer hover:shadow-xl transition-all duration-500"
+            >
+              <div class="relative overflow-hidden aspect-[4/3]">
+                <img
+                  src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=800"
+                  alt="Dubai"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <!-- Date Badge -->
+                <div
+                  class="absolute top-0 left-0 bg-black/70 text-white py-3 px-5 flex flex-col items-center"
+                >
+                  <span class="text-xl font-bold leading-none">22</span>
+                  <span class="text-xs font-bold tracking-[0.2em] uppercase"
+                    >May</span
+                  >
+                  <span class="text-xs text-white/50">2024</span>
+                </div>
+              </div>
+              <div class="p-7">
+                <span
+                  class="text-gold text-xs font-bold tracking-widest uppercase mb-4 block"
+                  >Roundtable</span
+                >
+                <h3
+                  class="text-2xl font-cormorant mb-4 group-hover:text-gold transition-colors"
+                >
+                  Next Gen Family Offices Roundtable – Dubai
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                  A private gathering of family office leaders discussing
+                  governance, succession, and next-gen engagement.
+                </p>
+                <div
+                  class="flex items-center justify-between border-t border-gray-100 pt-4 text-xs text-gray-500 font-medium tracking-wide"
+                >
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-gold"></i>
+                    <span>Dubai, UAE</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="clock" class="w-4 h-4 text-gold"></i>
+                    <span>6:00 PM GST</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="border border-gray-100 group cursor-pointer hover:shadow-xl transition-all duration-500"
+            >
+              <div class="relative overflow-hidden aspect-[4/3]">
+                <img
+                  src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=800"
+                  alt="Singapore"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <!-- Date Badge -->
+                <div
+                  class="absolute top-0 left-0 bg-black/70 text-white py-3 px-5 flex flex-col items-center"
+                >
+                  <span class="text-xl font-bold leading-none">05</span>
+                  <span class="text-xs font-bold tracking-[0.2em] uppercase"
+                    >Jun</span
+                  >
+                  <span class="text-xs text-white/50">2024</span>
+                </div>
+              </div>
+              <div class="p-7">
+                <span
+                  class="text-gold text-xs font-bold tracking-widest uppercase mb-4 block"
+                  >Conference</span
+                >
+                <h3
+                  class="text-2xl font-cormorant mb-4 group-hover:text-gold transition-colors"
+                >
+                  Global Wealth Summit 2024 – Singapore
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                  Exploring the future of wealth, investment strategies, and
+                  sustainable legacy in a changing world.
+                </p>
+                <div
+                  class="flex items-center justify-between border-t border-gray-100 pt-4 text-xs text-gray-500 font-medium tracking-wide"
+                >
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-gold"></i>
+                    <span>Singapore</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="clock" class="w-4 h-4 text-gold"></i>
+                    <span>9:00 AM SGT</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="border border-gray-100 group cursor-pointer hover:shadow-xl transition-all duration-500"
+            >
+              <div class="relative overflow-hidden aspect-[4/3]">
+                <img
+                  src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=800"
+                  alt="London"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <!-- Date Badge -->
+                <div
+                  class="absolute top-0 left-0 bg-black/70 text-white py-3 px-5 flex flex-col items-center"
+                >
+                  <span class="text-xl font-bold leading-none">18</span>
+                  <span class="text-xs font-bold tracking-[0.2em] uppercase"
+                    >Sep</span
+                  >
+                  <span class="text-xs text-white/50">2024</span>
+                </div>
+              </div>
+              <div class="p-7">
+                <span
+                  class="text-gold text-xs font-bold tracking-widest uppercase mb-4 block"
+                  >Panel Discussion</span
+                >
+                <h3
+                  class="text-2xl font-cormorant mb-4 group-hover:text-gold transition-colors"
+                >
+                  Cross-Border Wealth Planning – London
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                  Expert panel discussion on managing global assets, tax
+                  efficiency, and cross-border structuring.
+                </p>
+                <div
+                  class="flex items-center justify-between border-t border-gray-100 pt-4 text-xs text-gray-500 font-medium tracking-wide"
+                >
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-gold"></i>
+                    <span>London, UK</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="clock" class="w-4 h-4 text-gold"></i>
+                    <span>5:30 PM BST</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Past Events Section -->
+    <section class="py-24 bg-[#F9F7F4]">
+      <div class="max-w-7xl mx-auto px-4 flex gap-2">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+          <div>
+            <span
+              class="text-gold text-[11px] font-bold tracking-[0.25em] mb-4 block uppercase leading-none"
+            >
+              Past Events
+            </span>
+
+            <h2
+              class="text-3xl md:text-5xl font-cormorant leading-[1.1] tracking-tight"
+            >
+              Moments That <span class="text-gold italic">Matter</span>
+            </h2>
+
+            <p
+              class="text-sm md:text-base text-gray-700 mt-6 max-w-md leading-relaxed"
+            >
+              A glimpse into the impactful conversations and connections we've
+              been part of.
+            </p>
+          </div>
+        </div>
+
+        <!-- Past Events Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Past 1 -->
+          <div>
+            <div
+              class="relative aspect-[4/3] bg-gray-200 mb-4 overflow-hidden group cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=600"
+                alt="Family Governance Forum"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+            <span
+              class="text-gold text-[10px] font-bold tracking-widest uppercase block mb-2"
+              >14 MAR 2024</span
+            >
+            <h4
+              class="text-base font-semibold mb-2 hover:text-gold cursor-pointer transition-colors"
+            >
+              Family Governance Forum – Zurich
+            </h4>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Insights on building resilient family governance for generations
+              to come.
+            </p>
+          </div>
+          <!-- Past 2 -->
+          <div>
+            <div
+              class="relative aspect-[4/3] bg-gray-200 mb-4 overflow-hidden group cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=600"
+                alt="Investing in a New Era"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+            <span
+              class="text-gold text-[10px] font-bold tracking-widest uppercase block mb-2"
+              >28 FEB 2024</span
+            >
+            <h4
+              class="text-base font-semibold mb-2 hover:text-gold cursor-pointer transition-colors"
+            >
+              Investing in a New Era – New York
+            </h4>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Discussing investment megatrends and capital allocation
+              strategies.
+            </p>
+          </div>
+          <!-- Past 3 -->
+          <div>
+            <div
+              class="relative aspect-[4/3] bg-gray-200 mb-4 overflow-hidden group cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=600"
+                alt="Philanthropy Roundtable"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+            <span
+              class="text-gold text-[10px] font-bold tracking-widest uppercase block mb-2"
+              >10 JAN 2024</span
+            >
+            <h4
+              class="text-base font-semibold mb-2 hover:text-gold cursor-pointer transition-colors"
+            >
+              Philanthropy Roundtable – Geneva
+            </h4>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Exploring the role of philanthropy in driving sustainable impact.
+            </p>
+          </div>
+          <!-- Past 4 -->
+          <div>
+            <div
+              class="relative aspect-[4/3] bg-gray-200 mb-4 overflow-hidden group cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=600"
+                alt="Wealth & Legacy Conference"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+            <span
+              class="text-gold text-[10px] font-bold tracking-widest uppercase block mb-2"
+              >05 DEC 2023</span
+            >
+            <h4
+              class="text-base font-semibold mb-2 hover:text-gold cursor-pointer transition-colors"
+            >
+              Wealth & Legacy Conference – Dubai
+            </h4>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Strategies for wealth preservation and intergenerational legacy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CTA BAND ═══════════ -->
+    <section class="bg-navy-cta py-14 border border-white/50">
+      <div
+        class="max-w-[1200px] mx-auto px-16 flex items-center justify-between gap-12"
+      >
+        <div class="flex items-center gap-7">
+          <svg
+            width="60"
+            height="70"
+            viewBox="0 0 60 70"
+            fill="none"
+            class="flex-shrink-0"
+          >
+            <path
+              d="M30 3L4 14v23c0 17 11 28 26 32 15-4 26-15 26-32V14L30 3z"
+              fill="#b8964f"
+            />
+            <text
+              x="30"
+              y="46"
+              text-anchor="middle"
+              font-family="Cormorant Garamond,serif"
+              font-size="28"
+              font-weight="600"
+              fill="#0d1b2a"
+            >
+              G
+            </text>
+          </svg>
+          <div>
+            <h2
+              class="font-cormorant text-[30px] font-semibold text-white leading-[1.2]"
+            >
+              Your Goals. Our Counsel. Exceptional Results.
+            </h2>
+            <p class="font-dmsans text-[13px] text-white/60 mt-2 leading-[1.6]">
+              Let's discuss how we can help you navigate opportunities with
+              confidence and achieve lasting success.
+            </p>
+          </div>
+        </div>
+        <a
+          href="#"
+          class="inline-flex items-center justify-center h-[38px] px-8 bg-[#b8861b] border border-[#8f6a14] rounded-md text-white font-dmsans text-[10px] font-bold tracking-[0.08em] uppercase no-underline whitespace-nowrap hover:bg-[#a87918] transition-all duration-200"
+        >
+          Request a Private Consultation
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="bg-navy-cta pt-16">
+      <div class="max-w-[1200px] mx-auto px-16">
+        <!-- Main grid: 5 columns -->
+
+        <div
+          class="grid grid-cols-[200px_130px_240px_190px_190px] gap-12 pb-14"
+        >
+          <!-- Col 1 — Brand -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <!-- Logo -->
+            <div class="mb-6">
+              <div>
+                <img src="/images/galbo-consulting-logo-dark.png" alt="" />
+              </div>
+            </div>
+
+            <p
+              class="font-dmsans text-[10px] text-white leading-[2] max-w-[260px]"
+              style="font-weight: 400"
+            >
+              Boutique advisory firm in Cyprus for real estate, corporate and
+              high-net-worth clients.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="flex items-center gap-3 mt-8">
+              <!-- LinkedIn -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.92)"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.92)"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="5" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1.2"
+                    fill="rgba(255,255,255,0.92)"
+                    stroke="none"
+                  />
+                </svg>
+              </a>
+              <!-- YouTube -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 1.96A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 1.95C5.12 20 12 20 12 20s6.88 0 8.6-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"
+                    stroke="rgba(255,255,255,0.92)"
+                    stroke-width="1.7"
+                  />
+                  <polygon
+                    points="9.75 15.02 15.5 12 9.75 8.98"
+                    fill="rgba(255,255,255,0.92)"
+                  />
+                </svg>
+              </a>
+              <!-- Facebook -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.92)"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 2 — Quick Links -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <h4
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5"
+            >
+              Quick Links
+            </h4>
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >About Us</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >Services</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >The Journal</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Col 3 — Services -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <h4
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5"
+            >
+              Services
+            </h4>
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Family Office Management</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Real Estate Acquisition</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Real Estate Entrepreneur Representation</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Banking & Asset Management Advisory</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Corporate Structuring</a
+            >
+          </div>
+
+          <!-- Col 4 — Contact -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <h4
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5"
+            >
+              Contact
+            </h4>
+
+            <div class="flex gap-[10px] mb-4 items-start">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0 mt-[3px]"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span class="font-dmsans text-[13px] text-white leading-[1.65]"
+                >Pissouri, Cyprus<br />(Between Limassol and Paphos)</span
+              >
+            </div>
+
+            <div class="flex gap-[10px] mb-4 items-center">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.09 1.22 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"
+                />
+              </svg>
+              <a
+                href="tel:+35725000194"
+                class="font-dmsans text-[13px] text-white no-underline"
+                >+357 25 000 194</a
+              >
+            </div>
+
+            <div class="flex gap-[10px] mb-4 items-center">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <a
+                href="mailto:info@galbo.consulting"
+                class="font-dmsans text-[13px] text-white no-underline"
+                >info@galbo.consulting</a
+              >
+            </div>
+
+            <div class="flex gap-[10px] items-start">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0 mt-[3px]"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span class="font-dmsans text-[13px] text-white leading-[1.65]"
+                >Mon – Fri: 9:00 – 17:00<br />(Cyprus time)</span
+              >
+            </div>
+          </div>
+
+          <!-- Col 5 — Stay Informed -->
+          <div class="flex flex-col max-w-[230px]">
+            <h4
+              class="font-dmsans text-[11px] font-semibold tracking-[0.08em] uppercase text-white mb-4"
+            >
+              Stay Informed
+            </h4>
+
+            <p class="font-dmsans text-[13px] text-white/75 mb-5 leading-snug">
+              Subscribe to our insights
+            </p>
+
+            <!-- Input -->
+            <input
+              type="email"
+              placeholder="Your email address"
+              class="w-full h-[46px] bg-white border border-[#d9d9d9] rounded-md text-[#1d1d1d] placeholder:text-[#8d8d8d] font-dmsans text-[13px] px-5 outline-none mb-5 focus:border-[#b8861b] transition-colors duration-200"
+            />
+
+            <!-- Button -->
+            <button
+              class="w-[128px] h-[46px] bg-[#b8861b] border border-[#9a7418] rounded-md text-white font-dmsans text-[11px] font-semibold tracking-[0.03em] uppercase cursor-pointer hover:bg-[#a87918] transition-all duration-200"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        <!-- end grid -->
+
+        <!-- Bottom bar -->
+        <div
+          class="border-t border-white/50 py-5 flex items-center justify-between"
+        >
+          <p class="font-dmsans text-[11.5px] text-white">
+            © 2025 Galbo Consulting. All rights reserved.
+          </p>
+          <div class="flex items-center gap-7">
+            <a
+              href="#"
+              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              >Terms & Conditions</a
+            >
+            <a
+              href="#"
+              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              >General Service Agreement</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galbo Consulting | ESG & Sustainability</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: "#0d1b2a",
+              "navy-cta": "#0d1b2a",
+              gold: "#b8861b",
+              "gold-light": "#b8964f",
+              "beige-bg": "#f9f7f2",
+            },
+            fontFamily: {
+              heading: ["Cormorant Garamond", "serif"],
+              body: ["DM Sans", "sans-serif"],
+              cormorant: ["Cormorant Garamond", "serif"],
+              dmsans: ["DM Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .font-heading {
+        font-family: "Cormorant Garamond", serif;
+      }
+      .font-body {
+        font-family: "DM Sans", sans-serif;
+      }
+      .nav-active {
+        border-bottom: 2px solid #b8861b;
+      }
+      .footer-link:hover {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-navy font-body antialiased">
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <header class="bg-white border-b border-[#f0ece4] sticky top-0 z-50">
+      <div
+        class="max-w-[1200px] mx-auto px-16 h-[68px] flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="text-center">
+          <img
+            src="./images/galbo-consulting-logo.png"
+            alt="Galbo Consulting Logo"
+            class="h-10 w-auto"
+          />
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="flex items-center gap-8">
+          <a
+            href="index.html"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline nav-active pb-[2px]"
+          >
+            Home
+          </a>
+
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
+          >
+            About
+          </a>
+
+          <!-- SERVICES DROPDOWN -->
+          <div class="relative group">
+            <button
+              class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase flex items-center gap-1 focus:outline-none"
+            >
+              Services
+              <span
+                class="text-[9px] transition-transform duration-300 group-hover:rotate-180"
+              >
+                ▾
+              </span>
+            </button>
+
+            <!-- DROPDOWN MENU -->
+            <div
+              class="absolute left-0 top-full mt-4 w-[320px] bg-white border border-[#e9e4da] shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+            >
+              <div class="max-h-[500px] overflow-y-auto py-2">
+                <a
+                  href="Award&Recogniation.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Award & Recognition
+                </a>
+
+                <a
+                  href="career.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Career
+                </a>
+
+                <a
+                  href="ClientPortal.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Client Portal
+                </a>
+
+                <a
+                  href="Events.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Events
+                </a>
+
+                <a
+                  href="faq.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  FAQ
+                </a>
+
+                <a
+                  href="GlobalOffices.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Global Offices
+                </a>
+
+                <a
+                  href="InvesterRelation.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Investor Relation
+                </a>
+
+                <a
+                  href="LegalAndCompliance.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Legal & Compliance
+                </a>
+
+                <a
+                  href="LuxuriousCorporateTestimonials.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Corporate Testimonials
+                </a>
+
+                <a
+                  href="Partnership.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Partnership
+                </a>
+
+                <a
+                  href="PhilanthropyAndFoundation.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Philanthropy & Foundation
+                </a>
+
+                <a
+                  href="Press&Media.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Press & Media
+                </a>
+
+                <a
+                  href="PrivateMembership.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Private Membership
+                </a>
+
+                <a
+                  href="SustainableConsultingWithEleganceAndImpact.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Sustainable Consulting
+                </a>
+
+                <a
+                  href="Webinars&InsightsHubDesign.html"
+                  class="block px-5 py-3 text-[12px] font-dmsans text-navy hover:bg-[#f8f5ef] no-underline transition"
+                >
+                  Webinars & Insights Hub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
+          >
+            The Journal
+          </a>
+
+          <a
+            href="#"
+            class="font-dmsans text-[11px] font-medium tracking-wider text-navy uppercase no-underline"
+          >
+            Contact
+          </a>
+        </nav>
+
+        <!-- CTA BUTTON -->
+        <a
+          href="#"
+          class="border border-gold text-gold font-dmsans text-[9px] font-semibold tracking-[0.12em] uppercase px-4 py-[10px] no-underline text-center leading-tight hover:bg-gold hover:text-white transition-colors duration-200"
+        >
+          Request a<br />
+          Private Consultation
+        </a>
+      </div>
+    </header>
+
+    <!-- ═══════════ HERO SECTION ═══════════ -->
+    <section class="relative min-h-[640px] flex items-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2070&auto=format&fit=crop"
+          alt="Lake Landscape"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-[#0d1b2a]/40"></div>
+        <!-- Large G Background -->
+        <div
+          class="absolute right-0 top-10 opacity-10 pointer-events-none transform translate-x-1/4 scale-[2]"
+        >
+          <svg width="600" height="700" viewBox="0 0 60 70" fill="none">
+            <path
+              d="M30 3L4 14v23c0 17 11 28 26 32 15-4 26-15 26-32V14L30 3z"
+              stroke="white"
+              stroke-width="0.5"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div class="max-w-[1240px] mx-auto px-16 relative z-10 w-full text-white">
+        <div class="flex items-center gap-2 mb-10">
+          <span
+            class="text-[11px] font-medium tracking-[0.15em] uppercase text-white/50"
+            >Home</span
+          >
+          <span class="text-white/30 text-xs">›</span>
+          <span
+            class="text-[11px] font-medium tracking-[0.15em] uppercase text-white"
+            >ESG & Sustainability</span
+          >
+        </div>
+
+        <div class="max-w-[700px]">
+          <h6
+            class="text-gold-light font-dmsans text-[10px] font-bold tracking-[0.25em] uppercase mb-5"
+          >
+            ESG & Sustainability
+          </h6>
+          <h1
+            class="font-heading text-[68px] leading-[1.05] italic font-medium mb-3"
+          >
+            Sustainable Thinking.<br />
+            <span class="not-italic text-gold-light font-bold"
+              >Enduring Impact.</span
+            >
+          </h1>
+          <p
+            class="font-dmsans text-base leading-[1.7] text-white/80 mt-8 mb-12 max-w-[480px]"
+          >
+            At Galbo Consulting, we integrate environmental, social, and
+            governance principles into every strategy we create—for a better
+            today and a more prosperous tomorrow.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-4 border border-gold-light text-gold-light px-8 py-4 text-[10px] font-bold tracking-[0.18em] uppercase hover:bg-gold-light hover:text-white transition-all duration-300"
+          >
+            Our Commitment to a Sustainable Future
+            <svg
+              width="20"
+              height="12"
+              viewBox="0 0 20 12"
+              fill="none"
+              class="flex-shrink-0"
+            >
+              <path
+                d="M14 1L19 6L14 11"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M1 6H19"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ OUR APPROACH ═══════════ -->
+    <section class="bg-black py-24 text-white border-t">
+      <div class="max-w-[1240px] mx-auto px-16">
+        <div class="grid lg:grid-cols-[1fr_2fr] gap-20">
+          <div class="max-w-[360px]">
+            <h6
+              class="text-gold-light font-dmsans text-[10px] font-bold tracking-[0.25em] uppercase mb-4"
+            >
+              Our Approach
+            </h6>
+            <h2 class="font-heading text-[48px] leading-[1.1] mb-8 italic">
+              Responsible Today.<br />
+              <span class="not-italic">Resilient Tomorrow.</span>
+            </h2>
+            <p class="text-white/60 text-[13.5px] leading-[1.8] font-light">
+              We partner with our clients and communities to drive long-term
+              value through responsible practices, ethical governance, and a
+              commitment to protecting our planet.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pt-10">
+            <!-- Feature 1 -->
+            <div
+              class="flex flex-col items-center text-center border-r border-white/10 pr-5"
+            >
+              <div
+                class="w-16 h-16 rounded-full border border-gold-light flex items-center justify-center mb-6"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#b8964f"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M11 20a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-2Z"
+                  />
+                  <path d="M12 14V4" />
+                  <path d="m16 8-4-4-4 4" />
+                </svg>
+              </div>
+              <h4 class="font-heading text-[20px] font-medium mb-4">
+                Environmental
+              </h4>
+              <p class="text-white/50 text-[11px] leading-[1.8] font-light">
+                We support initiatives that protect natural resources, reduce
+                emissions, and promote a low-carbon future.
+              </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div
+              class="flex flex-col items-center text-center border-r border-white/10 pr-5"
+            >
+              <div
+                class="w-16 h-16 rounded-full border border-gold-light flex items-center justify-center mb-6"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#b8964f"
+                  stroke-width="1.5"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <h4 class="font-heading text-[20px] font-medium mb-4">Social</h4>
+              <p class="text-white/50 text-[11px] leading-[1.8] font-light">
+                We invest in people, communities, and opportunities that create
+                inclusive and equitable outcomes.
+              </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div
+              class="flex flex-col items-center text-center border-r border-white/10 pr-5"
+            >
+              <div
+                class="w-16 h-16 rounded-full border border-gold-light flex items-center justify-center mb-6"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#b8964f"
+                  stroke-width="1.5"
+                >
+                  <path d="M3 21h18M5 21V7l7-4 7 4v14M10 21V10h4v11" />
+                </svg>
+              </div>
+              <h4 class="font-heading text-[20px] font-medium mb-4">
+                Governance
+              </h4>
+              <p class="text-white/50 text-[11px] leading-[1.8] font-light">
+                We uphold the highest standards of integrity, transparency, and
+                accountability in all that we do.
+              </p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div
+              class="flex flex-col items-center text-center border-r border-white/10 pr-5"
+            >
+              <div
+                class="w-16 h-16 rounded-full border border-gold-light flex items-center justify-center mb-6"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#b8964f"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                  />
+                </svg>
+              </div>
+              <h4 class="font-heading text-[20px] font-medium mb-4">
+                Long-Term Value
+              </h4>
+              <p class="text-white/50 text-[11px] leading-[1.8] font-light">
+                We believe sustainable business practices lead to stronger
+                performance and lasting generational impact.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ OUR IMPACT ═══════════ -->
+    <section class="bg-beige-bg py-24">
+      <div class="max-w-[1240px] mx-auto px-16">
+        <div
+          class="flex flex-col lg:flex-row items-start justify-between gap-16"
+        >
+          <div class="max-w-[340px]">
+            <h6
+              class="text-gold font-dmsans text-[10px] font-bold tracking-[0.25em] uppercase mb-4"
+            >
+              Our Impact
+            </h6>
+            <h2
+              class="font-heading text-navy text-[42px] leading-[1.15] mb-2 font-medium"
+            >
+              Driving Measurable<br />
+              Change Worldwide.
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 w-full lg:flex-1">
+            <!-- Stat 1 -->
+            <div
+              class="flex flex-col items-center text-center border-r border-gray/10 pr-2"
+            >
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#b8861b"
+                stroke-width="1"
+                class="mb-5"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path
+                  d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+              <span
+                class="font-heading text-[48px] text-gold italic font-light leading-none mb-3"
+                >25+</span
+              >
+              <span
+                class="font-dmsans text-[10px] font-bold tracking-[0.08em] uppercase text-[#8d8d8d] leading-snug"
+                >Countries<br />
+                Impacted</span
+              >
+            </div>
+            <!-- Stat 2 -->
+            <div
+              class="flex flex-col items-center text-center border-r border-gray/10 pr-2"
+            >
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#b8861b"
+                stroke-width="1"
+                class="mb-5"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              <span
+                class="font-heading text-[48px] text-gold italic font-light leading-none mb-3"
+                >120+</span
+              >
+              <span
+                class="font-dmsans text-[10px] font-bold tracking-[0.08em] uppercase text-[#8d8d8d] leading-snug"
+                >Sustainability<br />
+                Initiatives</span
+              >
+            </div>
+            <!-- Stat 3 -->
+            <div
+              class="flex flex-col items-center text-center border-r border-gray/10 pr-4"
+            >
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#b8861b"
+                stroke-width="1"
+                class="mb-5"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+              <span
+                class="font-heading text-[48px] text-gold italic font-light leading-none mb-3"
+                >€1.2B+</span
+              >
+              <span
+                class="font-dmsans text-[10px] font-bold tracking-[0.08em] uppercase text-[#8d8d8d] leading-snug"
+                >Deployed in Sustainable<br />
+                Investments</span
+              >
+            </div>
+            <!-- Stat 4 -->
+            <div
+              class="flex flex-col items-center text-center border-r border-gray/10 pr-2"
+            >
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#b8861b"
+                stroke-width="1"
+                class="mb-5"
+              >
+                <path
+                  d="M17.5 19a3.5 3.5 0 1 1-5.95-2.47c.23-.21.43-.45.59-.72.63-1.03 2.1-1.03 2.73 0 .16.27.36.51.59.72A3.5 3.5 0 0 1 17.5 19Z"
+                />
+              </svg>
+              <span
+                class="font-heading text-[48px] text-gold italic font-light leading-none mb-3"
+                >35%</span
+              >
+              <span
+                class="font-dmsans text-[10px] font-bold tracking-[0.08em] uppercase text-[#8d8d8d] leading-snug"
+                >Average Emission<br />
+                Reduction Supported</span
+              >
+            </div>
+            <!-- Stat 5 -->
+            <div class="flex flex-col items-center text-center">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#b8861b"
+                stroke-width="1"
+                class="mb-5"
+              >
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+              </svg>
+              <span
+                class="font-heading text-[48px] text-gold italic font-light leading-none mb-3"
+                >50,000+</span
+              >
+              <span
+                class="font-dmsans text-[10px] font-bold tracking-[0.08em] uppercase text-[#8d8d8d] leading-snug"
+                >Lives Positively<br />
+                Impacted</span
+              >
+            </div>
+          </div>
+        </div>
+        <p
+          class="text-center font-dmsans text-[11px] text-[#8d8d8d] mt-20 italic"
+        >
+          Impact figures represent cumulative results across our global
+          initiatives and partnerships.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════ OUR INITIATIVES ═══════════ -->
+    <section class="bg-navy py-24">
+      <div class="max-w-[1240px] mx-auto px-16">
+        <div class="flex flex-col md:flex-row items-end justify-between mb-16">
+          <div>
+            <h6
+              class="text-gold-light font-dmsans text-[10px] font-bold tracking-[0.25em] uppercase mb-4"
+            >
+              Our Initiatives
+            </h6>
+            <h2 class="font-heading text-white text-[48px] leading-[1.1] mb-4">
+              Investing in a Better Future
+            </h2>
+            <p class="text-white/50 text-[14px]">
+              We focus on initiatives that create meaningful, long-lasting
+              impact across the planet.
+            </p>
+          </div>
+          <a
+            href="#"
+            class="border border-gold-light/40 text-gold-light px-8 py-3.5 text-[10px] font-bold tracking-[0.12em] uppercase hover:bg-gold-light hover:text-white transition-all duration-300 mt-8 md:mt-0"
+          >
+            Explore All Initiatives →
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card 1 -->
+          <div class="group cursor-pointer">
+            <div class="relative h-[240px] overflow-hidden mb-[-24px]">
+              <img
+                src="https://www.bing.com/th/id/OIP.HUjod9YAAcy8X_wEa8DSegHaHa?w=193&h=194&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-navy/20"></div>
+              <div
+                class="absolute -bottom-0 left-1/2 -translate-x-1/2 w-12 h-12 bg-gold-light rounded-full flex items-center justify-center border-4 border-navy z-10 transition-transform duration-300 group-hover:scale-110"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="1.5"
+                >
+                  <path d="M12 3v18M12 21l-4-4M12 21l4-4" />
+                </svg>
+              </div>
+            </div>
+            <div class="bg-white p-8 pt-12 flex flex-col min-h-[220px]">
+              <h4 class="font-heading text-[22px] font-semibold text-navy mb-4">
+                Clean Energy Transition
+              </h4>
+              <p class="text-[#666] text-[13px] leading-[1.7] mb-8 font-light">
+                Supporting the shift to renewable energy and low-carbon
+                solutions for a sustainable economy.
+              </p>
+              <a
+                href="#"
+                class="text-gold text-[10px] font-bold tracking-[0.15em] uppercase mt-auto flex items-center gap-2 group-hover:gap-4 transition-all"
+                >Learn More →</a
+              >
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="group cursor-pointer">
+            <div class="relative h-[240px] overflow-hidden mb-[-24px]">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-navy/20"></div>
+              <div
+                class="absolute -bottom-0 left-1/2 -translate-x-1/2 w-12 h-12 bg-gold-light rounded-full flex items-center justify-center border-4 border-navy z-10 transition-transform duration-300 group-hover:scale-110"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="1.5"
+                >
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                </svg>
+              </div>
+            </div>
+            <div class="bg-white p-8 pt-12 flex flex-col min-h-[220px]">
+              <h4 class="font-heading text-[22px] font-semibold text-navy mb-4">
+                Education & Empowerment
+              </h4>
+              <p class="text-[#666] text-[13px] leading-[1.7] mb-8 font-light">
+                Investing in quality education and skills development to empower
+                future generations.
+              </p>
+              <a
+                href="#"
+                class="text-gold text-[10px] font-bold tracking-[0.15em] uppercase mt-auto flex items-center gap-2 group-hover:gap-4 transition-all"
+                >Learn More →</a
+              >
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="group cursor-pointer">
+            <div class="relative h-[240px] overflow-hidden mb-[-24px]">
+              <img
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=800&auto=format&fit=crop"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-navy/20"></div>
+              <div
+                class="absolute -bottom-0 left-1/2 -translate-x-1/2 w-12 h-12 bg-gold-light rounded-full flex items-center justify-center border-4 border-navy z-10 transition-transform duration-300 group-hover:scale-110"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM12 2v10M12 12 7 7"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="bg-white p-8 pt-12 flex flex-col min-h-[220px]">
+              <h4 class="font-heading text-[22px] font-semibold text-navy mb-4">
+                Conservation & Biodiversity
+              </h4>
+              <p class="text-[#666] text-[13px] leading-[1.7] mb-8 font-light">
+                Protecting ecosystems and biodiversity through conservation
+                projects and sustainable land use.
+              </p>
+              <a
+                href="#"
+                class="text-gold text-[10px] font-bold tracking-[0.15em] uppercase mt-auto flex items-center gap-2 group-hover:gap-4 transition-all"
+                >Learn More →</a
+              >
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="group cursor-pointer">
+            <div class="relative h-[240px] overflow-hidden mb-[-24px]">
+              <img
+                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=800&auto=format&fit=crop"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-navy/20"></div>
+              <div
+                class="absolute -bottom-0 left-1/2 -translate-x-1/2 w-12 h-12 bg-gold-light rounded-full flex items-center justify-center border-4 border-navy z-10 transition-transform duration-300 group-hover:scale-110"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="bg-white p-8 pt-12 flex flex-col min-h-[220px]">
+              <h4 class="font-heading text-[22px] font-semibold text-navy mb-4">
+                Community Development
+              </h4>
+              <p class="text-[#666] text-[13px] leading-[1.7] mb-8 font-light">
+                Building stronger communities through healthcare,
+                infrastructure, and social impact programs.
+              </p>
+              <a
+                href="#"
+                class="text-gold text-[10px] font-bold tracking-[0.15em] uppercase mt-auto flex items-center gap-2 group-hover:gap-4 transition-all"
+                >Learn More →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PARTNERSHIPS ═══════════ -->
+    <section class="bg-white py-24">
+      <div class="max-w-[1240px] mx-auto px-16">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-20 border-b border-[#f0ece4] "
+        >
+          <div class="max-w-[440px]">
+            <h6
+              class="text-gold font-dmsans text-[10px] font-bold tracking-[0.25em] uppercase mb-4"
+            >
+              Together for Greater Impact
+            </h6>
+            <h2 class="font-heading text-navy text-[36px] leading-[1.2] mb-6">
+              Stronger Partnerships.<br />
+              Stronger Planet.
+            </h2>
+            <p class="text-[#666] text-[13.5px] leading-[1.8] font-light">
+              We collaborate with global organizations, institutions, and
+              changemakers to accelerate solutions for people and the planet.
+            </p>
+          </div>
+
+          <div
+            class="flex-1 grid grid-cols-2 md:grid-cols-4 gap-12 items-center "
+          >
+            <img
+              src="https://www.bing.com/th/id/OIP.8RZXpw7x3D5Au7H9TqJgmAHaEc?w=536&h=270&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+              alt="WEF"
+              class="h-15 w-auto object-contain mx-auto"
+            />
+            <img
+              src="https://www.bing.com/th/id/OIP.XU1Sx-4xYH-eIbF6-7OJUAHaHa?w=536&h=270&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+              alt="UNEP"
+               class="h-15 w-auto object-contain mx-auto"
+            />
+            <img
+              src="https://www.bing.com/th/id/OIP.mYPlsoHI-0OGXroMn3DrugHaHa?w=193&h=193&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+              alt="PRI"
+              class="h-15 w-auto object-contain mx-auto"
+            />
+            <img
+              src=https://www.bing.com/th/id/OIP.KPe8ewlDwBQ3sg0Bl5xB0AHaD4?w=295&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+              alt="CDP"
+               class="h-15 w-auto object-contain mx-auto"
+            />
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <!-- ═══════════ CTA BAND (PROVIDED) ═══════════ -->
+    <section class="bg-navy-cta py-14 border border-white/50">
+      <div
+        class="max-w-[1200px] mx-auto px-16 flex items-center justify-between gap-12"
+      >
+        <div class="flex items-center gap-7">
+          <svg
+            width="60"
+            height="70"
+            viewBox="0 0 60 70"
+            fill="none"
+            class="flex-shrink-0"
+          >
+            <path
+              d="M30 3L4 14v23c0 17 11 28 26 32 15-4 26-15 26-32V14L30 3z"
+              fill="#b8964f"
+            />
+            <text
+              x="30"
+              y="46"
+              text-anchor="middle"
+              font-family="Cormorant Garamond,serif"
+              font-size="28"
+              font-weight="600"
+              fill="#0d1b2a"
+            >
+              G
+            </text>
+          </svg>
+          <div>
+            <h2
+              class="font-cormorant text-[30px] font-semibold text-white leading-[1.2]"
+            >
+              Your Goals. Our Counsel. Exceptional Results.
+            </h2>
+            <p class="font-dmsans text-[13px] text-white/60 mt-2 leading-[1.6]">
+              Let's discuss how we can help you navigate opportunities with
+              confidence and achieve lasting success.
+            </p>
+          </div>
+        </div>
+        <a
+          href="#"
+          class="inline-flex items-center justify-center h-[38px] px-8 bg-[#b8861b] border border-[#8f6a14] rounded-md text-white font-dmsans text-[10px] font-bold tracking-[0.08em] uppercase no-underline whitespace-nowrap hover:bg-[#a87918] transition-all duration-200"
+        >
+          Request a Private Consultation
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="bg-navy-cta pt-16">
+      <div class="max-w-[1200px] mx-auto px-16">
+        <!-- Main grid: 5 columns -->
+
+        <div
+          class="grid grid-cols-[200px_130px_240px_190px_190px] gap-12 pb-14"
+        >
+          <!-- Col 1 — Brand -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <!-- Logo -->
+            <div class="mb-6">
+              <div>
+                <img src="/images/galbo-consulting-logo-dark.png" alt="" />
+              </div>
+            </div>
+
+            <p
+              class="font-dmsans text-[10px] text-white leading-[2] max-w-[260px]"
+              style="font-weight: 400"
+            >
+              Boutique advisory firm in Cyprus for real estate, corporate and
+              high-net-worth clients.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="flex items-center gap-3 mt-8">
+              <!-- LinkedIn -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.92)"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.92)"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="5" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1.2"
+                    fill="rgba(255,255,255,0.92)"
+                    stroke="none"
+                  />
+                </svg>
+              </a>
+              <!-- YouTube -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 1.96A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 1.95C5.12 20 12 20 12 20s6.88 0 8.6-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"
+                    stroke="rgba(255,255,255,0.92)"
+                    stroke-width="1.7"
+                  />
+                  <polygon
+                    points="9.75 15.02 15.5 12 9.75 8.98"
+                    fill="rgba(255,255,255,0.92)"
+                  />
+                </svg>
+              </a>
+              <!-- Facebook -->
+              <a
+                href="#"
+                style="
+                  width: 36px;
+                  height: 36px;
+                  min-width: 36px;
+                  border-radius: 50%;
+                  border: 1px solid rgba(255, 255, 255, 0.55);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-decoration: none;
+                  transition: border-color 0.3s;
+                "
+                onmouseover="this.style.borderColor = 'rgba(255,255,255,1)'"
+                onmouseout="this.style.borderColor = 'rgba(255,255,255,0.55)'"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.92)"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 2 — Quick Links -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <h4
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5"
+            >
+              Quick Links
+            </h4>
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >About Us</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >Services</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >The Journal</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-snug transition-colors duration-150"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Col 3 — Services -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <h4
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5"
+            >
+              Services
+            </h4>
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Family Office Management</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Real Estate Acquisition</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Real Estate Entrepreneur Representation</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Banking & Asset Management Advisory</a
+            >
+            <a
+              href="#"
+              class="footer-link font-dmsans text-[13px] text-white no-underline block mb-[13px] leading-[1.45] transition-colors duration-150"
+              >Corporate Structuring</a
+            >
+          </div>
+
+          <!-- Col 4 — Contact -->
+          <div class="pr-10 border-r border-white/50 flex flex-col">
+            <h4
+              class="font-dmsans text-[10.5px] font-bold tracking-[0.18em] uppercase text-white mb-5"
+            >
+              Contact
+            </h4>
+
+            <div class="flex gap-[10px] mb-4 items-start">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0 mt-[3px]"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span class="font-dmsans text-[13px] text-white leading-[1.65]"
+                >Pissouri, Cyprus<br />(Between Limassol and Paphos)</span
+              >
+            </div>
+
+            <div class="flex gap-[10px] mb-4 items-center">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.09 1.22 2 2 0 012.07 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"
+                />
+              </svg>
+              <a
+                href="tel:+35725000194"
+                class="font-dmsans text-[13px] text-white no-underline"
+                >+357 25 000 194</a
+              >
+            </div>
+
+            <div class="flex gap-[10px] mb-4 items-center">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <a
+                href="mailto:info@galbo.consulting"
+                class="font-dmsans text-[13px] text-white no-underline"
+                >info@galbo.consulting</a
+              >
+            </div>
+
+            <div class="flex gap-[10px] items-start">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="flex-shrink-0 mt-[3px]"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span class="font-dmsans text-[13px] text-white leading-[1.65]"
+                >Mon – Fri: 9:00 – 17:00<br />(Cyprus time)</span
+              >
+            </div>
+          </div>
+
+          <!-- Col 5 — Stay Informed -->
+          <div class="flex flex-col max-w-[230px]">
+            <h4
+              class="font-dmsans text-[11px] font-semibold tracking-[0.08em] uppercase text-white mb-4"
+            >
+              Stay Informed
+            </h4>
+
+            <p class="font-dmsans text-[13px] text-white/75 mb-5 leading-snug">
+              Subscribe to our insights
+            </p>
+
+            <!-- Input -->
+            <input
+              type="email"
+              placeholder="Your email address"
+              class="w-full h-[46px] bg-white border border-[#d9d9d9] rounded-md text-[#1d1d1d] placeholder:text-[#8d8d8d] font-dmsans text-[13px] px-5 outline-none mb-5 focus:border-[#b8861b] transition-colors duration-200"
+            />
+
+            <!-- Button -->
+            <button
+              class="w-[128px] h-[46px] bg-[#b8861b] border border-[#9a7418] rounded-md text-white font-dmsans text-[11px] font-semibold tracking-[0.03em] uppercase cursor-pointer hover:bg-[#a87918] transition-all duration-200"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        <!-- end grid -->
+
+        <!-- Bottom bar -->
+        <div
+          class="border-t border-white/50 py-5 flex items-center justify-between"
+        >
+          <p class="font-dmsans text-[11.5px] text-white">
+            © 2025 Galbo Consulting. All rights reserved.
+          </p>
+          <div class="flex items-center gap-7">
+            <a
+              href="#"
+              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              >Terms & Conditions</a
+            >
+            <a
+              href="#"
+              class="font-dmsans text-[11.5px] text-white no-underline hover:text-white/70 transition-colors duration-150"
+              >General Service Agreement</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
